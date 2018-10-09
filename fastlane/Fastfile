@@ -1,0 +1,32 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Builds and runs unit tests"
+  lane :build_and_test do
+    scan(scheme: "CivicConnect-Example",
+    	code_coverage: true,
+    	device: "iPhone 8")
+  end
+
+  desc "Generates and outputs code coverage"
+  lane :code_coverage do
+    xcov(workspace: "CivicConnect.xcworkspace",
+      scheme: "CivicConnect-Example",
+      include_targets: "CivicConnect.framework",
+      output_directory: "ci_output/xcov")
+  end
+end

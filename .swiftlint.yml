@@ -1,0 +1,19 @@
+excluded:
+ - Pods
+
+force_try: error
+force_cast: error
+shorthand_operator: warning
+
+cyclomatic_complexity: 12
+file_length: 550
+function_body_length: 80
+function_parameter_count: 8
+line_length: 150
+type_body_length: 300
+variable_name:
+  min_length:
+    error: 1
+    warning: 1
+  excluded:
+    - N

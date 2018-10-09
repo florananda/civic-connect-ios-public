@@ -1,0 +1,16 @@
+PODS:
+  - CivicConnect (0.1.0)
+
+DEPENDENCIES:
+  - CivicConnect (from `.`)
+
+EXTERNAL SOURCES:
+  CivicConnect:
+    :path: "."
+
+SPEC CHECKSUMS:
+  CivicConnect: a6c2ec9dcaeeeb445e1f1bcde450ec3991f4d0c3
+
+PODFILE CHECKSUM: 29c829d44500b0eebc6d37ec178ca1c74bc7ea73
+
+COCOAPODS: 1.5.3

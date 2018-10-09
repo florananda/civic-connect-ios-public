@@ -1,0 +1,63 @@
+# iOS CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/ios-migrating-from-1-2/ for more details
+#
+version: 2
+jobs:
+  build-and-test:
+
+    macos:
+      xcode: "9.3.0"
+
+    environment:
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Podfile.lock" }}
+          # Find the most recent cache
+          - v1-dependencies-
+
+      - run: 
+          name: "Bundle Install"
+          command: bundle install
+
+      - run:
+          name: "Fetch CocoaPods Specs"
+          command: |
+            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+
+      - run:
+          name: "Install CocoaPods"
+          command: pod install
+
+      - save_cache:
+          paths:
+            - Pods
+          key: v1-dependencies-{{ checksum "Podfile.lock" }}
+
+      - run:
+          name: "Build And Run Tests"
+          command: bundle exec fastlane build_and_test
+
+      - run:
+          name: "Gather Code Coverage"
+          command: bundle exec fastlane code_coverage
+
+      - run:
+          name: "Check Danger"
+          command: bundle exec danger
+
+      - store_artifacts:
+          path: ci_output
+          destination: ci_output
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build-and-test

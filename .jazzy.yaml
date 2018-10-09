@@ -1,0 +1,7 @@
+author: Civic Technologies
+author_url: https://civic.com/
+github_url: https://github.com/civic-community/
+module: CivicConnect
+output: docs
+theme: fullwidth
+xcodebuild_arguments: [-workspace, 'CivicConnect.xcworkspace', -scheme, 'CivicConnect']

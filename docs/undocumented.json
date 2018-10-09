@@ -1,0 +1,89 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 12,
+      "symbol": "ConnectBundle.applicationIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 13,
+      "symbol": "ConnectBundle.mobileApplicationIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 14,
+      "symbol": "ConnectBundle.secret",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 15,
+      "symbol": "ConnectBundle.redirectScheme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 16,
+      "symbol": "ConnectBundle.urlSchemes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 22,
+      "symbol": "Bundle.applicationIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 27,
+      "symbol": "Bundle.mobileApplicationIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 32,
+      "symbol": "Bundle.secret",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 37,
+      "symbol": "Bundle.redirectScheme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 42,
+      "symbol": "Bundle.urlSchemes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/UI/ConnectButton.swift",
+      "line": 99,
+      "symbol": "ConnectButton.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/UI/ConnectButton.swift",
+      "line": 103,
+      "symbol": "ConnectButton.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/justinguedes/Work/Civic/code/ios/connect"
+}
