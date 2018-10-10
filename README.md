@@ -1,6 +1,6 @@
 # iOS Civic Connect
 
-[![CircleCI](https://circleci.com/gh/civicteam/ios-civic-connect.svg?style=svg&circle-token=3e2858464d8c675aa960504bb575530777fc770a)](https://circleci.com/gh/civicteam/ios-civic-connect)
+[![CircleCI](https://circleci.com/gh/civicteam/civic-connect-ios-public.svg?style=svg&circle-token=c354636aa17d0a8e4d67046086a0071f2bda1172)](https://circleci.com/gh/civicteam/civic-connect-ios-public)
 
 [![Version](https://img.shields.io/cocoapods/v/CivicConnect.svg?style=flat)](https://cocoapods.org/pods/CivicConnect)		
 [![License](https://img.shields.io/cocoapods/l/CivicConnect.svg?style=flat)](https://cocoapods.org/pods/CivicConnect)		
