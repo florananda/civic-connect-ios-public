@@ -1,0 +1,6 @@
+framework module CivicConnect {
+  umbrella header "CivicConnect-umbrella.h"
+
+  export *
+  module * { export * }
+}

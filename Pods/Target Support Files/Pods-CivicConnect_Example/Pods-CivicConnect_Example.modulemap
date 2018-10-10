@@ -1,0 +1,6 @@
+framework module Pods_CivicConnect_Example {
+  umbrella header "Pods-CivicConnect_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

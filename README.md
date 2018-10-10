@@ -31,7 +31,13 @@ pod 'CivicConnect'
 
 ### Carthage
 
-Support coming soon.
+To integrate CivicConnect into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```
+github "civicteam/civic-connect-ios-public"
+```
+
+Run `carthage update` to build the framework and drag the built CivicConnect.framework into your Xcode project.
 
 ## Getting Started
 
