@@ -1,20 +1,63 @@
-# Contributing to iOS Civic Connect
-Thank you for contributing to this project.
+# How to Contribute
+We’re still working out the kinks to make contributing to this project as easy and transparent as possible, but we’re not quite there yet. Hopefully this document makes the process for contributing clear and answers some questions that you may have.
 
-## Introduction
-This project provides a way for a partner app to integrate with the Civic Identity ecosystem. It contains a library that helps the partner app obtain information about a user with the users consent using the Civic Secure Identity iOS Application. This project also contains a sample app that shows how to use the library.
+# Code of Conduct
+Civic has adopted a [Code of Conduct](CODE_OF_CONDUCT.md) that we expect project participants to adhere to. Please read the full text so that you can understand what actions will and will not be tolerated.
 
-Note: If you integrate this library into your app, you need to obtain an application identifier and secret from the [Civic Integration Portal](https://integrate.civic.com) as well as fill in your iOS app bundle ID in order for us to whitelist the app and give it access to the APIs.
+# Contributors & Team Members Development
+Most internal changes made by Civic engineers will be synced to GitHub. Civic use this code in production. The team is likely to have an enterprise version of the code containing specific environment details and that part is not synced with the code here. 
+Changes from the community are handled through GitHub pull requests which go through our review process. Once a change made on GitHub is approved, it will be imported to the Civic internal repositories.
 
-## Questions
-If you have questions about this project, consult the [Civic Help Center](https://support.civic.com).
+# Branch Organization
+We will do our best to keep the master branch in good shape, with tests passing at all times. But in order to move fast, we will make API changes that your application might not be compatible with. We recommend that you use the latest stable and published version.
+If you send a pull request, please do it against the master branch. We maintain stable branches for major versions separately.We accept pull requests against latest major branch directly if it is a bugfix related to its version. This fix will be also applied to the master branch by the Core team.
 
-## Issues
-Log issues on this git repo. Please provide as much information as possible about the issue. If you have a fix for the issue please make a pull request.
+# Semantic Versioning
+This software follows semantic versioning. We release patch versions for bug fixes, minor versions for new features, and major versions for any breaking changes. When we make breaking changes, we also introduce deprecation warnings in a minor version so that our users learn about the upcoming changes and migrate their code in advance.
+Every significant change is documented in the changelog file.
 
-## Features
-Please discuss feature requests with us first as we can't guarantee that a pull request for a feature will be included.
+# Bugs
+## Where to Find Known Issues
+We are using GitHub Issues for our public bugs. Core team will keep a close eye on this and try to make it clear when we have an internal fix in progress. Before filing a new task, try to make sure your problem doesn’t already exist.
+## Reporting New Issues
+The best way to get your bug fixed is to provide a reduced test case.
+
+# How to Get in Touch
+
+* GitHub Issues: Create a ticket with the specific tag: [question] ; [feature request]; [suggestion] ; [discussion]
+* If you have questions about this project, consult the [Civic Help Center](https://support.civic.com).
+
+# Proposing a Change
+If you intend to change the public API, or make any non-trivial changes to the implementation, we recommend filing an issue. This lets us reach an agreement on your proposal before you put significant effort into it.
+If you’re only fixing a bug, it’s fine to submit a pull request right away but we still recommend to file an issue detailing what you’re fixing. This is helpful in case we don’t accept that specific fix but want to keep track of the issue.
+
+# Your First Pull Request
+Working on your first Pull Request? You can learn how from this free video series:
+[How to Contribute](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github) to an Open Source Project on GitHub
+If you decide to fix an issue, please be sure to check the comment thread in case somebody is already working on a fix. If nobody is working on it at the moment, please leave a comment stating that you intend to work on it so other people don’t accidentally duplicate your effort.
+If somebody claims an issue but doesn’t follow up for more than two weeks, it’s fine to take it over but you should still leave a comment.
+
+# Sending a Pull Request
+The Civic team is monitoring for pull requests. We will review your pull request and either merge it, request changes to it, or close it with an explanation.
+Before submitting a pull request, please make sure the following is done:
+Fork the repository and create your branch from master.
+Run `pod install` in the repository root.
+If you’ve fixed a bug or added code that should be tested, add tests!
+Ensure the test suite passes (`fastlane build_and_test`). 
+If you haven’t already, complete the CLA.
+
+# Contributor License Agreement (CLA)
+By contributing to Civic projects, you agree that your contributions will be licensed under its MIT license.
+Contribution Prerequisites
+
+# Prerequisites
+Please follow [README](README.md) instructions.
+
+# Development Workflow
+Please follow [README](README.md) instructions.
 
 ## Getting started
 This repo is built using Xcode and Cocoapods. You will need to obtain an application identifier and secret from the [Civic Integration Portal](https://integrate.civic.com) as well as fill in the bundle ID for your iOS app. In your Info.plist you will supply the application identifier under `CivicApplicationIdentifier` and secret under `CivicSecret`.
 
+# License
+By contributing to Civic projects, you agree that your contributions will be licensed under its MIT license.
