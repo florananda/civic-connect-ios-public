@@ -12,11 +12,22 @@ class RepeatTimer {
     private let timeInterval: TimeInterval
     private let execution: (RepeatTimer) -> Void
     
+    private var timeOut: TimeInterval?
+    private var timeOutExecution: (() -> Void)?
+    
     private var timer: DispatchSourceTimer?
     
     init(timeInterval: TimeInterval, execution: @escaping (RepeatTimer) -> Void) {
         self.timeInterval = timeInterval
         self.execution = execution
+    }
+    
+    func setTimeOut(_ timeout: TimeInterval) {
+        self.timeOut = timeout
+    }
+    
+    func setTimeOutExecution(_ timeoutExecution: @escaping () -> Void) {
+        self.timeOutExecution = timeoutExecution
     }
     
     var isValid: Bool {
@@ -31,6 +42,10 @@ class RepeatTimer {
                 return
             }
             
+            guard !weakSelf.executeTimeOutExecutionIfTimedOut() else {
+                return
+            }
+            
             weakSelf.execution(weakSelf)
         }
         timer?.resume()
@@ -40,6 +55,23 @@ class RepeatTimer {
         timer?.setEventHandler {}
         timer?.cancel()
         timer = nil
+    }
+    
+    func executeTimeOutExecutionIfTimedOut() -> Bool {
+        guard var timeOut = timeOut else {
+            return false
+        }
+        
+        print("EXECUTE")
+        timeOut -= timeInterval
+        self.timeOut = timeOut
+        if timeOut <= 0 {
+            invalidate()
+            timeOutExecution?()
+            return true
+        }
+        
+        return false
     }
     
     deinit {
