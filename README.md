@@ -212,6 +212,20 @@ connect.stopPollingForUserData()
 [connect stopPollingForUserData];
 ```
 
+#### Reset
+
+You can reset the status of the of `Connect` instance by calling the `Connect.reset()` function.
+
+##### Swift
+```swift
+connect.reset()
+```
+
+##### Objective-C
+```objc
+[connect reset];
+```
+
 #### Connect Button
 
 If you would like a Civic styled button, you can use the `ConnectButton` class which is just a subclass of `UIButton`. In order to create one, you will need to provide a `Connect` instance, a `ConnectDelegate` and optionally the `ScopeRequestType`:
