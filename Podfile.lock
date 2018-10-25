@@ -1,5 +1,5 @@
 PODS:
-  - CivicConnect (1.0.0)
+  - CivicConnect (1.0.1)
 
 DEPENDENCIES:
   - CivicConnect (from `.`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  CivicConnect: 0cacd302c9ff742936f17e8571f1d65e56d971a3
+  CivicConnect: c099580aba8f6a791b955b16d02e620d6eaa3801
 
 PODFILE CHECKSUM: 29c829d44500b0eebc6d37ec178ca1c74bc7ea73
 

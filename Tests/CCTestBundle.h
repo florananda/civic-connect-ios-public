@@ -17,7 +17,9 @@ NS_SWIFT_NAME(TestBundle)
 @property (nonatomic, readonly, copy) NSString *secret;
 @property (nonatomic, readonly, copy) NSString *redirectScheme;
 @property (nonatomic, readonly, copy) NSArray<NSString *> *urlSchemes;
+@property (nonatomic, readonly) BOOL devMode;
 
+- (nonnull instancetype)initWithApplicationIdentifier:(nullable NSString *)applicationIdentifier mobileApplicationIdentifier:(nullable NSString *)mobileApplicationIdentifier secret:(nullable NSString *)secret redirectScheme:(nullable NSString *)redirectScheme urlSchemes:(nullable NSArray<NSString *> *)urlSchemes devMode:(BOOL)devMode;
 - (nonnull instancetype)initWithApplicationIdentifier:(nullable NSString *)applicationIdentifier mobileApplicationIdentifier:(nullable NSString *)mobileApplicationIdentifier secret:(nullable NSString *)secret redirectScheme:(nullable NSString *)redirectScheme urlSchemes:(nullable NSArray<NSString *> *)urlSchemes;
 
 @end
