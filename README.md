@@ -291,6 +291,7 @@ The following table shows the potential errors that can occur via the library:
 | userCancelled | 923 | User cancelled scope request. |
 | verifyError | 924 | Error occurred during verification. |
 | userDataNotAvailable | 202 | User data is still not available. Try poll again later. |
+| scopeRequestTimeOut | 925 | Scope request timed out. |
 | verificationFailed | 931 | Failed to verify the response. |
 | decryptionFailed | 932 | Failed to decrypt response data. |
 | decodingFailed | 997 | Failed to decode the json to an object. |
