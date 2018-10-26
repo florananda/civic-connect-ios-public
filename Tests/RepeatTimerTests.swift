@@ -13,57 +13,69 @@ import XCTest
 class RepeatTimerTests: XCTestCase {
 
     func testShouldExecuteBlockTwice() {
-        var counter = 0
-        let expectations = [expectation(description: "first"), expectation(description: "second")]
-        let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.01) { _ in
-            expectations[counter].fulfill()
-            counter += 1
+        let counterExpectation = expectation(description: "counter")
+        counterExpectation.expectedFulfillmentCount = 2
+        let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.001) { _ in
+            counterExpectation.fulfill()
         }
         
         repeatTimer.fire()
-        waitForExpectations(timeout: 2) { error in
+        waitForExpectations(timeout: 1) { error in
             XCTAssertNil(error)
-            XCTAssertEqual(2, counter)
         }
     }
     
     func testShouldInvalidateTimerBeforeExecutingThreeTimes() {
+        let counterExpectation = expectation(description: "counter")
+        counterExpectation.expectedFulfillmentCount = 2
+        counterExpectation.assertForOverFulfill = true
         var counter = 0
         let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.001) { timer in
+            counterExpectation.fulfill()
             counter += 1
             if counter == 2 { timer.invalidate() }
         }
         
         repeatTimer.fire()
-        usleep(5000) // 5ms
-        XCTAssertEqual(2, counter)
+        waitForExpectations(timeout: 1) { error in
+            XCTAssertNil(error)
+        }
     }
     
     func testShouldTimeoutBeforeExecutingThreeTimes() {
-        var counter = 0
+        let counterExpectation = expectation(description: "counter")
+        counterExpectation.expectedFulfillmentCount = 2
+        counterExpectation.assertForOverFulfill = true
         let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.001) { timer in
-            counter += 1
+            counterExpectation.fulfill()
         }
         repeatTimer.setTimeOut(0.001 * 3)
         
         repeatTimer.fire()
-        usleep(5000) // 5ms
-        XCTAssertEqual(2, counter)
+        waitForExpectations(timeout: 1) { error in
+            XCTAssertNil(error)
+        }
     }
     
     func testShouldExecuteTimeoutBlockWhenTimerTimesOut() {
-        var counter = 0
+        let counterExpectation = expectation(description: "counter")
+        counterExpectation.expectedFulfillmentCount = 3
+        counterExpectation.assertForOverFulfill = true
+        var executedTimeOut = false
         let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.001) { timer in
-            counter += 1
+            counterExpectation.fulfill()
         }
         repeatTimer.setTimeOut(0.001 * 3)
         repeatTimer.setTimeOutExecution {
-            counter += 10
+            executedTimeOut = true
+            counterExpectation.fulfill()
         }
         
         repeatTimer.fire()
-        usleep(5000) // 5ms
-        XCTAssertEqual(12, counter)
+        waitForExpectations(timeout: 1) { error in
+            XCTAssertNil(error)
+            XCTAssertTrue(executedTimeOut)
+        }
     }
 
 }
