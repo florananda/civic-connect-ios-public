@@ -62,7 +62,6 @@ class RepeatTimer {
             return false
         }
         
-        print("EXECUTE")
         timeOut -= timeInterval
         self.timeOut = timeOut
         if timeOut <= 0 {
