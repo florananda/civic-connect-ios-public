@@ -40,6 +40,14 @@ import Foundation
         return Connect(sessionProvider: mockProvider, applicationIdentifier: applicationIdentifier, mobileApplicationIdentifier: mobileApplicationIdentifier, secret: secret, redirectScheme: redirectScheme)
     }
     
+    func serviceUnderTest(withProvider provider: CivicConnect.ConnectSessionProvider) -> Connect {
+        mockService = MockConnectService()
+        mockProvider = MockConnectSessionProvider()
+        mockSession = MockConnectSession()
+
+        return Connect(sessionProvider: provider, applicationIdentifier: applicationIdentifier, mobileApplicationIdentifier: mobileApplicationIdentifier, secret: secret, redirectScheme: redirectScheme)
+    }
+
     @objc public var sessionCanHandleUrl: Bool {
         set {
             mockSession.canHandleResult = newValue

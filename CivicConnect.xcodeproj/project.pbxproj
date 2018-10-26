@@ -29,6 +29,7 @@
 		8C66BA452136A1A200D17A3F /* ConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C66BA442136A1A200D17A3F /* ConnectTests.swift */; };
 		8C66BA472136A1BC00D17A3F /* CCConnectObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66BA462136A1BC00D17A3F /* CCConnectObjcTests.m */; };
 		8C66BA4B2136A38E00D17A3F /* CCTestBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66BA4A2136A38E00D17A3F /* CCTestBundle.m */; };
+		8C72D2392181D02D00A87AB9 /* WeakReferenceConnectSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C72D2382181D02D00A87AB9 /* WeakReferenceConnectSessionProvider.swift */; };
 		8C768D822153B72B0090A7A0 /* SelectScopeRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C768D812153B72B0090A7A0 /* SelectScopeRequestViewController.swift */; };
 		8CA0A58E2139241D002ED820 /* MockConnectSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0A58D2139241D002ED820 /* MockConnectSessionProvider.swift */; };
 		8CA0A590213924DE002ED820 /* MockConnectSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0A58F213924DE002ED820 /* MockConnectSession.swift */; };
@@ -86,6 +87,7 @@
 		8C66BA462136A1BC00D17A3F /* CCConnectObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCConnectObjcTests.m; sourceTree = "<group>"; };
 		8C66BA492136A38E00D17A3F /* CCTestBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCTestBundle.h; sourceTree = "<group>"; };
 		8C66BA4A2136A38E00D17A3F /* CCTestBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCTestBundle.m; sourceTree = "<group>"; };
+		8C72D2382181D02D00A87AB9 /* WeakReferenceConnectSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakReferenceConnectSessionProvider.swift; sourceTree = "<group>"; };
 		8C768D812153B72B0090A7A0 /* SelectScopeRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectScopeRequestViewController.swift; sourceTree = "<group>"; };
 		8CA0A58D2139241D002ED820 /* MockConnectSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConnectSessionProvider.swift; sourceTree = "<group>"; };
 		8CA0A58F213924DE002ED820 /* MockConnectSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConnectSession.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				8C66BA492136A38E00D17A3F /* CCTestBundle.h */,
 				8C66BA4A2136A38E00D17A3F /* CCTestBundle.m */,
 				8C3766D02138271700E5B611 /* TestHttpRequest.swift */,
+				8C72D2382181D02D00A87AB9 /* WeakReferenceConnectSessionProvider.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				8C083AF22139411D004E98E6 /* CCMockConnectDelegate.m in Sources */,
 				8C3766C921381D7400E5B611 /* MockHttpClient.swift in Sources */,
 				8C66BA4B2136A38E00D17A3F /* CCTestBundle.m in Sources */,
+				8C72D2392181D02D00A87AB9 /* WeakReferenceConnectSessionProvider.swift in Sources */,
 				8C3766D12138271700E5B611 /* TestHttpRequest.swift in Sources */,
 				8C083AE82139273C004E98E6 /* MockAsynchronousRunner.swift in Sources */,
 				8C083AEF2139357C004E98E6 /* MockConnectDelegate.swift in Sources */,

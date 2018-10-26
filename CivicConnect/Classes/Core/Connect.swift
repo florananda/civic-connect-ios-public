@@ -165,4 +165,9 @@ public class Connect: NSObject {
         session?.stopPollingForUserData()
     }
     
+    /// Invalidates the current `ConnectSession`.
+    @objc public func reset() {
+        session = .none
+    }
+
 }

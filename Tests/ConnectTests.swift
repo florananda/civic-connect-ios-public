@@ -192,4 +192,20 @@ class ConnectTests: XCTestCase {
         XCTAssertTrue(helper.didStopPollingForUserData)
     }
     
+    func testShouldResetConnectSession() {
+        var mockSession: MockConnectSession? = MockConnectSession()
+        let provider = WeakReferenceConnectSessionProvider(session: mockSession!)
+        let serviceUnderTest = helper.serviceUnderTest(withProvider: provider)
+
+        // Create session
+        serviceUnderTest.connect(withType: .basicSignup, delegate: MockConnectDelegate())
+        mockSession = .none
+
+        XCTAssertNotNil(provider.session)
+
+        serviceUnderTest.reset()
+
+        XCTAssertNil(provider.session)
+    }
+
 }
