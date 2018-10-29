@@ -51,6 +51,7 @@ extension ConnectError {
     static let userCancelled = ConnectError(statusCode: 923, message: "User cancelled.")
     static let verifyError = ConnectError(statusCode: 924, message: "Error occurred during verification.")
     static let userDataNotAvailable = ConnectError(statusCode: 202, message: "User data is still not available. Try poll again later.")
+    static let scopeRequestTimeOut = ConnectError(statusCode: 925, message: "Scope request timed out.")
     
     // Security Errors
     

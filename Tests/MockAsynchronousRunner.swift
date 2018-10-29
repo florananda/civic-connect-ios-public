@@ -13,6 +13,7 @@ import Foundation
 class MockAsynchronousRunner: CivicConnect.AsynchronousRunner {
     
     var fireOffTimer: () -> Void = {}
+    var fireOffException: () -> Void = {}
     
     func runInBackground(_ execute: @escaping () -> Void) {
         execute()
@@ -21,6 +22,7 @@ class MockAsynchronousRunner: CivicConnect.AsynchronousRunner {
     func repeatInBackground(withInterval timeInterval: TimeInterval, _ execute: @escaping (CivicConnect.RepeatTimer) -> Void) -> CivicConnect.RepeatTimer {
         let timer = CivicConnect.RepeatTimer(timeInterval: timeInterval, execution: { _ in })
         fireOffTimer = { execute(timer) }
+        fireOffException = { [weak timer] in _ = timer?.executeTimeOutExecutionIfTimedOut() }
         return timer
     }
     
