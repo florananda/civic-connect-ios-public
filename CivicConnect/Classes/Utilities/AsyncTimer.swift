@@ -9,7 +9,8 @@ import Foundation
 
 class AsyncTimer {
     
-    private let timeInterval: TimeInterval
+    private let deadline: TimeInterval
+    private let timeInterval: TimeInterval?
     private let execution: (AsyncTimer) -> Void
     
     private var timeOut: TimeInterval?
@@ -18,10 +19,17 @@ class AsyncTimer {
     private var timer: DispatchSourceTimer?
     
     init(timeInterval: TimeInterval, execution: @escaping (AsyncTimer) -> Void) {
+        self.deadline = 0
         self.timeInterval = timeInterval
         self.execution = execution
     }
     
+    init(deadline: TimeInterval, execution: @escaping (AsyncTimer) -> Void) {
+        self.deadline = deadline
+        self.timeInterval = .none
+        self.execution = execution
+    }
+
     func setTimeOut(_ timeout: TimeInterval) {
         self.timeOut = timeout
     }
@@ -35,8 +43,13 @@ class AsyncTimer {
     }
     
     func fire() {
+        guard let timeInterval = timeInterval else {
+            fireOnceOff()
+            return
+        }
+
         timer = DispatchSource.makeTimerSource()
-        timer?.schedule(deadline: .now(), repeating: self.timeInterval)
+        timer?.schedule(deadline: .now() + deadline, repeating: timeInterval)
         timer?.setEventHandler { [weak self] in
             guard let weakSelf = self else {
                 return
@@ -51,6 +64,20 @@ class AsyncTimer {
         timer?.resume()
     }
     
+    private func fireOnceOff() {
+        timer = DispatchSource.makeTimerSource()
+        timer?.schedule(deadline: .now() + deadline)
+        timer?.setEventHandler { [weak self] in
+            guard let weakSelf = self else {
+                return
+            }
+            
+            weakSelf.execution(weakSelf)
+            weakSelf.invalidate()
+        }
+        timer?.resume()
+    }
+
     func invalidate() {
         timer?.setEventHandler {}
         timer?.cancel()
@@ -58,8 +85,9 @@ class AsyncTimer {
     }
     
     func executeTimeOutExecutionIfTimedOut() -> Bool {
-        guard var timeOut = timeOut else {
-            return false
+        guard var timeOut = timeOut,
+            let timeInterval = timeInterval else {
+                return false
         }
         
         timeOut -= timeInterval

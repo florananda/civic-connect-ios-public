@@ -77,5 +77,18 @@ class AsyncTimerTests: XCTestCase {
             XCTAssertTrue(executedTimeOut)
         }
     }
+    
+    func testShouldExecuteAfterTimeInterval() {
+        let executionExpectation = expectation(description: "execution")
+        let timer = CivicConnect.AsyncTimer(deadline: 0.05) { _ in
+            executionExpectation.fulfill()
+        }
+        
+        timer.fire()
+        waitForExpectations(timeout: 0.1) { error in
+            XCTAssertNil(error)
+            XCTAssertFalse(timer.isValid)
+        }
+    }
 
 }
