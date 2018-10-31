@@ -15,7 +15,7 @@ class AsynchronousProvider {
         runner.runInBackground(execute)
     }
     
-    static func repeatInBackground(withInterval timeInterval: TimeInterval, _ execute: @escaping (RepeatTimer) -> Void) -> RepeatTimer {
+    static func repeatInBackground(withInterval timeInterval: TimeInterval, _ execute: @escaping (AsyncTimer) -> Void) -> AsyncTimer {
         return runner.repeatInBackground(withInterval: timeInterval, execute)
     }
     

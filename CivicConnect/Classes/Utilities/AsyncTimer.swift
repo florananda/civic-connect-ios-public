@@ -1,5 +1,5 @@
 //
-//  RepeatTimer.swift
+//  AsyncTimer.swift
 //  CivicConnect
 //
 //  Created by Justin Guedes on 2018/09/04.
@@ -7,17 +7,17 @@
 
 import Foundation
 
-class RepeatTimer {
+class AsyncTimer {
     
     private let timeInterval: TimeInterval
-    private let execution: (RepeatTimer) -> Void
+    private let execution: (AsyncTimer) -> Void
     
     private var timeOut: TimeInterval?
     private var timeOutExecution: (() -> Void)?
     
     private var timer: DispatchSourceTimer?
     
-    init(timeInterval: TimeInterval, execution: @escaping (RepeatTimer) -> Void) {
+    init(timeInterval: TimeInterval, execution: @escaping (AsyncTimer) -> Void) {
         self.timeInterval = timeInterval
         self.execution = execution
     }

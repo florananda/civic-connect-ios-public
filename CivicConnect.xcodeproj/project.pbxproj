@@ -30,7 +30,7 @@
 		8C66BA472136A1BC00D17A3F /* CCConnectObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66BA462136A1BC00D17A3F /* CCConnectObjcTests.m */; };
 		8C66BA4B2136A38E00D17A3F /* CCTestBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66BA4A2136A38E00D17A3F /* CCTestBundle.m */; };
 		8C72D2392181D02D00A87AB9 /* WeakReferenceConnectSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C72D2382181D02D00A87AB9 /* WeakReferenceConnectSessionProvider.swift */; };
-		8C72D23B2181E3F800A87AB9 /* RepeatTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C72D23A2181E3F800A87AB9 /* RepeatTimerTests.swift */; };
+		8C72D23B2181E3F800A87AB9 /* AsyncTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C72D23A2181E3F800A87AB9 /* AsyncTimerTests.swift */; };
 		8C768D822153B72B0090A7A0 /* SelectScopeRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C768D812153B72B0090A7A0 /* SelectScopeRequestViewController.swift */; };
 		8CA0A58E2139241D002ED820 /* MockConnectSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0A58D2139241D002ED820 /* MockConnectSessionProvider.swift */; };
 		8CA0A590213924DE002ED820 /* MockConnectSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA0A58F213924DE002ED820 /* MockConnectSession.swift */; };
@@ -89,7 +89,7 @@
 		8C66BA492136A38E00D17A3F /* CCTestBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCTestBundle.h; sourceTree = "<group>"; };
 		8C66BA4A2136A38E00D17A3F /* CCTestBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCTestBundle.m; sourceTree = "<group>"; };
 		8C72D2382181D02D00A87AB9 /* WeakReferenceConnectSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakReferenceConnectSessionProvider.swift; sourceTree = "<group>"; };
-		8C72D23A2181E3F800A87AB9 /* RepeatTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTimerTests.swift; sourceTree = "<group>"; };
+		8C72D23A2181E3F800A87AB9 /* AsyncTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncTimerTests.swift; sourceTree = "<group>"; };
 		8C768D812153B72B0090A7A0 /* SelectScopeRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectScopeRequestViewController.swift; sourceTree = "<group>"; };
 		8CA0A58D2139241D002ED820 /* MockConnectSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConnectSessionProvider.swift; sourceTree = "<group>"; };
 		8CA0A58F213924DE002ED820 /* MockConnectSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConnectSession.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				8CCA773C2141665F00B53506 /* GetEncryptedUserDataRequestTests.swift */,
 				8C3766C52138144A00E5B611 /* HttpClientImplementationTests.swift */,
 				8CCA773621415F5800B53506 /* ObjcConnectDelegateWrapperTests.swift */,
-				8C72D23A2181E3F800A87AB9 /* RepeatTimerTests.swift */,
+				8C72D23A2181E3F800A87AB9 /* AsyncTimerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -448,7 +448,7 @@
 			files = (
 				8C3766CB21381E4000E5B611 /* ConnectServiceImplementationTests.swift in Sources */,
 				8C66BA472136A1BC00D17A3F /* CCConnectObjcTests.m in Sources */,
-				8C72D23B2181E3F800A87AB9 /* RepeatTimerTests.swift in Sources */,
+				8C72D23B2181E3F800A87AB9 /* AsyncTimerTests.swift in Sources */,
 				8C083AEB213927AD004E98E6 /* ConnectHelper.swift in Sources */,
 				8C083B042139655D004E98E6 /* DefaultConnectSessionTests.swift in Sources */,
 				8C083AF621394D3F004E98E6 /* DispatchQueueAsynchronousRunnerTests.swift in Sources */,
