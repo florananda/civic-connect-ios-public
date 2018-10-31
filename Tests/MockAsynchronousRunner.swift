@@ -26,6 +26,12 @@ class MockAsynchronousRunner: CivicConnect.AsynchronousRunner {
         return timer
     }
     
+    func executeInBackground(afterInterval timeInterval: TimeInterval, _ execute: @escaping (CivicConnect.AsyncTimer) -> Void) -> CivicConnect.AsyncTimer {
+        let timer = CivicConnect.AsyncTimer(timeInterval: timeInterval, execution: { _ in })
+        fireOffTimer = { execute(timer) }
+        return timer
+    }
+    
     func runOnMain(_ execute: @escaping () -> Void) {
         execute()
     }

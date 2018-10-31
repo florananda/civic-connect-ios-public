@@ -173,6 +173,31 @@ class DefaultConnectSessionTests: XCTestCase {
         XCTAssertEqual(expectedUrl, mockLauncher.lastLaunchUrl)
     }
     
+    func testShouldThrowScopeRequestTimeOutErrorWhenStartingSessionAndTimeOutIsReached() {
+        let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 0)
+        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
+
+        let mockDelegate = MockConnectDelegate()
+        let mockLauncher = MockLauncher()
+        let mockService = MockConnectService()
+
+        mockService.getScopeRequestResult = response
+
+        let serviceUnderTest = CivicConnect.DefaultConnectSession(applicationIdentifier: applicationIdentifier,
+                                                                  mobileApplicationIdentifier: mobileApplicationIdentifier,
+                                                                  secret: secret,
+                                                                  redirectScheme: nil,
+                                                                  launcher: mockLauncher,
+                                                                  service: mockService)
+        serviceUnderTest.delegate = mockDelegate
+
+        serviceUnderTest.start(.basicSignup)
+        mockAsyncRunner.fireOffTimer()
+
+        XCTAssertEqual(expectedUrl, mockLauncher.lastLaunchUrl)
+        XCTAssertEqual(ConnectError.scopeRequestTimeOut, mockDelegate.lastError)
+    }
+
     func testShouldThrowErrorWhenGettingScopeRequestFailsWhenStartingSession() {
         let expectedError = ConnectError.unknown
         
@@ -213,7 +238,7 @@ class DefaultConnectSessionTests: XCTestCase {
                                                                   secret: secret,
                                                                   redirectScheme: redirectScheme)
         
-        let url = URL(string: "test://\(serviceUnderTest.pollKeyword)?\(serviceUnderTest.timeOutKeyword)=10")!
+        let url = URL(string: "test://\(serviceUnderTest.pollKeyword)")!
         let result = serviceUnderTest.canHandle(url: url)
         
         XCTAssertTrue(result)

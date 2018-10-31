@@ -11,7 +11,6 @@ class DefaultConnectSession: ConnectSession {
     
     let pollKeyword = "pollForData"
     let pollingInterval: TimeInterval = 5
-    let timeOutKeyword = "timeout"
     
     let originatorString = Config.current.originatorIdentifier
     
@@ -27,6 +26,7 @@ class DefaultConnectSession: ConnectSession {
     
     var response: GetScopeRequestResponse?
     var pollingTimer: AsyncTimer?
+    var timeOutTimer: AsyncTimer?
     
     init(applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?, launcher: Launcher = UIApplicationLauncher(), service: ConnectService = ConnectServiceImplementation()) {
         self.applicationIdentifier = applicationIdentifier
@@ -112,6 +112,10 @@ private extension DefaultConnectSession {
         }
         
         self.response = response
+        self.timeOutTimer = AsynchronousProvider.executeInBackground(afterInterval: TimeInterval(5)) { [weak self] _ in
+            self?.scopeRequestTimedOut()
+        }
+        
         let url = buildUrl(withScopeRequestString: response.scopeRequestString)
         launchOnMain(url)
     }
@@ -249,6 +253,13 @@ private extension DefaultConnectSession {
         AsynchronousProvider.runOnMain { [weak self] in
             self?.delegate?.connectDidChangeStatus(status)
         }
+    }
+    
+    func scopeRequestTimedOut() {
+        pollingTimer?.invalidate()
+        pollingTimer = .none
+        timeOutTimer = .none
+        sendErrorFeedback(.scopeRequestTimeOut)
     }
     
 }
