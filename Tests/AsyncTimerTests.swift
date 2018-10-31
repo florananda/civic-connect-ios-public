@@ -1,5 +1,5 @@
 //
-//  RepeatTimerTests.swift
+//  AsyncTimerTests.swift
 //  CivicConnect_Tests
 //
 //  Created by Justin Guedes on 2018/10/25.
@@ -10,12 +10,12 @@ import XCTest
 
 @testable import CivicConnect
 
-class RepeatTimerTests: XCTestCase {
+class AsyncTimerTests: XCTestCase {
 
     func testShouldExecuteBlockTwice() {
         let counterExpectation = expectation(description: "counter")
         counterExpectation.expectedFulfillmentCount = 2
-        let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.001) { _ in
+        let repeatTimer = CivicConnect.AsyncTimer(timeInterval: 0.001) { _ in
             counterExpectation.fulfill()
         }
         
@@ -30,7 +30,7 @@ class RepeatTimerTests: XCTestCase {
         counterExpectation.expectedFulfillmentCount = 2
         counterExpectation.assertForOverFulfill = true
         var counter = 0
-        let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.001) { timer in
+        let repeatTimer = CivicConnect.AsyncTimer(timeInterval: 0.001) { timer in
             counterExpectation.fulfill()
             counter += 1
             if counter == 2 { timer.invalidate() }
@@ -46,7 +46,7 @@ class RepeatTimerTests: XCTestCase {
         let counterExpectation = expectation(description: "counter")
         counterExpectation.expectedFulfillmentCount = 2
         counterExpectation.assertForOverFulfill = true
-        let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.001) { timer in
+        let repeatTimer = CivicConnect.AsyncTimer(timeInterval: 0.001) { timer in
             counterExpectation.fulfill()
         }
         repeatTimer.setTimeOut(0.001 * 3)
@@ -62,7 +62,7 @@ class RepeatTimerTests: XCTestCase {
         counterExpectation.expectedFulfillmentCount = 3
         counterExpectation.assertForOverFulfill = true
         var executedTimeOut = false
-        let repeatTimer = CivicConnect.RepeatTimer(timeInterval: 0.001) { timer in
+        let repeatTimer = CivicConnect.AsyncTimer(timeInterval: 0.001) { timer in
             counterExpectation.fulfill()
         }
         repeatTimer.setTimeOut(0.001 * 3)

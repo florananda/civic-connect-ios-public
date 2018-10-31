@@ -13,8 +13,8 @@ class DispatchQueueAsynchronousRunner: AsynchronousRunner {
         DispatchQueue.global().async(execute: execute)
     }
     
-    func repeatInBackground(withInterval timeInterval: TimeInterval, _ execute: @escaping (RepeatTimer) -> Void) -> RepeatTimer {
-        let timer = RepeatTimer(timeInterval: timeInterval, execution: execute)
+    func repeatInBackground(withInterval timeInterval: TimeInterval, _ execute: @escaping (AsyncTimer) -> Void) -> AsyncTimer {
+        let timer = AsyncTimer(timeInterval: timeInterval, execution: execute)
         timer.fire()
         return timer
     }

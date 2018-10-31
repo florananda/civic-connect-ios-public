@@ -9,6 +9,6 @@ import Foundation
 
 protocol AsynchronousRunner {
     func runInBackground(_ execute: @escaping () -> Void)
-    func repeatInBackground(withInterval: TimeInterval, _ execute: @escaping (RepeatTimer) -> Void) -> RepeatTimer
+    func repeatInBackground(withInterval: TimeInterval, _ execute: @escaping (AsyncTimer) -> Void) -> AsyncTimer
     func runOnMain(_ execute: @escaping () -> Void)
 }

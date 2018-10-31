@@ -270,7 +270,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertTrue(result)
         XCTAssertEqual("123456", mockDelegate.lastUserData?.userId)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldReturnTrueAndThrowErrorWhenHandlingUrlTimesOut() {
@@ -289,7 +289,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertTrue(result)
         XCTAssertEqual(ConnectError.scopeRequestTimeOut, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldReturnFalseWhenHandlingUrlReceivesInvalidUrl() {
@@ -329,7 +329,7 @@ class DefaultConnectSessionTests: XCTestCase {
         mockAsyncRunner.fireOffTimer()
         
         XCTAssertEqual("123456", mockDelegate.lastUserData?.userId)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldReturnUserDataWhenPollingForUserDataAndAuthCodeReturnsDataDispatchedAction() {
@@ -357,7 +357,7 @@ class DefaultConnectSessionTests: XCTestCase {
         mockAsyncRunner.fireOffTimer()
         
         XCTAssertEqual("123456", mockDelegate.lastUserData?.userId)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndVerificationOfResponseFails() {
@@ -386,7 +386,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertEqual(ConnectError.verificationFailed, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndDecodingOfResponseFails() {
@@ -415,7 +415,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertEqual(ConnectError.decodingFailed, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndGetAuthCodeFails() {
@@ -439,7 +439,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertEqual(authCodeError, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndGetUserDataFails() {
@@ -465,7 +465,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertEqual(userDataError, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndAuthCodeReturnsBrowserType() {
@@ -489,7 +489,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertEqual(ConnectError.authenticationUnknownError, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndAuthCodeReturnsMobileUpgradeAction() {
@@ -513,7 +513,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertEqual(ConnectError.mobileUpgrade, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndAuthCodeReturnsUserCancelledAction() {
@@ -537,7 +537,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertEqual(ConnectError.userCancelled, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndAuthCodeReturnsVerifyErrorAction() {
@@ -561,7 +561,7 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertEqual(ConnectError.verifyError, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowInvalidSessionWhenPollingForDataAndSessionHasNotBeenStarted() {
@@ -578,7 +578,7 @@ class DefaultConnectSessionTests: XCTestCase {
         mockAsyncRunner.fireOffTimer()
         
         XCTAssertEqual(ConnectError.invalidSession, mockDelegate.lastError)
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldThrowErrorWhenPollingForUserDataAndAuthCodeReturns202StatusCode() {
@@ -601,7 +601,7 @@ class DefaultConnectSessionTests: XCTestCase {
         mockAsyncRunner.fireOffTimer()
         
         XCTAssertNil(mockDelegate.lastUserData)
-        XCTAssertNotNil(serviceUnderTest.timer)
+        XCTAssertNotNil(serviceUnderTest.pollingTimer)
     }
     
     func testShouldStopPollingForUserData() {
@@ -610,11 +610,11 @@ class DefaultConnectSessionTests: XCTestCase {
                                                                   secret: secret,
                                                                   redirectScheme: redirectScheme)
         
-        serviceUnderTest.timer = CivicConnect.RepeatTimer(timeInterval: 2, execution: { _ in })
+        serviceUnderTest.pollingTimer = CivicConnect.AsyncTimer(timeInterval: 2, execution: { _ in })
         
         serviceUnderTest.stopPollingForUserData()
         
-        XCTAssertNil(serviceUnderTest.timer)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
 }

@@ -26,7 +26,7 @@ class DefaultConnectSession: ConnectSession {
     private let service: ConnectService
     
     var response: GetScopeRequestResponse?
-    var timer: RepeatTimer?
+    var pollingTimer: AsyncTimer?
     
     init(applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?, launcher: Launcher = UIApplicationLauncher(), service: ConnectService = ConnectServiceImplementation()) {
         self.applicationIdentifier = applicationIdentifier
@@ -68,12 +68,12 @@ class DefaultConnectSession: ConnectSession {
     }
     
     func startPollingForUserData(_ timeOut: TimeInterval?) {
-        let isTimerValid = timer?.isValid ?? false
+        let isTimerValid = pollingTimer?.isValid ?? false
         guard !isTimerValid else {
             return
         }
 
-        timer = AsynchronousProvider.repeatInBackground(withInterval: pollingInterval) { [weak self] timer in
+        pollingTimer = AsynchronousProvider.repeatInBackground(withInterval: pollingInterval) { [weak self] timer in
             guard let weakSelf = self else {
                 timer.invalidate()
                 return
@@ -84,17 +84,17 @@ class DefaultConnectSession: ConnectSession {
         }
         
         if let timeOut = timeOut {
-            timer?.setTimeOut(timeOut)
-            timer?.setTimeOutExecution { [weak self] in
+            pollingTimer?.setTimeOut(timeOut)
+            pollingTimer?.setTimeOutExecution { [weak self] in
                 self?.sendErrorFeedback(.scopeRequestTimeOut)
-                self?.timer = nil
+                self?.pollingTimer = nil
             }
         }
     }
     
     func stopPollingForUserData() {
-        timer?.invalidate()
-        timer = nil
+        pollingTimer?.invalidate()
+        pollingTimer = nil
     }
     
 }
@@ -171,7 +171,7 @@ private extension DefaultConnectSession {
         return try service.getScopeRequest(request)
     }
     
-    func getUserData(_ timer: RepeatTimer) {
+    func getUserData(_ timer: AsyncTimer) {
         do {
             let authCodeResponse = try getAuthCode(withUUID: response?.uuid)
             let encryptedUserDataResponse = try getEncryptedUserData(withAuthCodeResponse: authCodeResponse)
@@ -187,7 +187,7 @@ private extension DefaultConnectSession {
         }
         
         timer.invalidate()
-        self.timer = nil
+        self.pollingTimer = nil
     }
     
     func getAuthCode(withUUID uuid: String?) throws -> GetAuthCodeResponse {
