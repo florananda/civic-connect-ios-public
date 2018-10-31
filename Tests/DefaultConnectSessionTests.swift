@@ -32,7 +32,7 @@ class DefaultConnectSessionTests: XCTestCase {
     
     func testShouldLaunchCorrectUrlWhenStartingSession() {
         let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 10)
-        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData?timeout%3D10&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
+        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
         
         let mockDelegate = MockConnectDelegate()
         let mockLauncher = MockLauncher()
@@ -56,7 +56,7 @@ class DefaultConnectSessionTests: XCTestCase {
     
     func testShouldLaunchCorrectUrlWhenStartingSessionForAnonymousLogin() {
         let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 10)
-        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData?timeout%3D10&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
+        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
         
         let mockDelegate = MockConnectDelegate()
         let mockLauncher = MockLauncher()
@@ -80,7 +80,7 @@ class DefaultConnectSessionTests: XCTestCase {
     
     func testShouldLaunchCorrectUrlWhenStartingSessionForProofOfResidence() {
         let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 10)
-        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData?timeout%3D10&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
+        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
         
         let mockDelegate = MockConnectDelegate()
         let mockLauncher = MockLauncher()
@@ -104,7 +104,7 @@ class DefaultConnectSessionTests: XCTestCase {
     
     func testShouldLaunchCorrectUrlWhenStartingSessionForProofOfIdentity() {
         let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 10)
-        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData?timeout%3D10&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
+        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
         
         let mockDelegate = MockConnectDelegate()
         let mockLauncher = MockLauncher()
@@ -128,7 +128,7 @@ class DefaultConnectSessionTests: XCTestCase {
     
     func testShouldLaunchCorrectUrlWhenStartingSessionForProofOfAge() {
         let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 10)
-        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData?timeout%3D10&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
+        let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$redirectURL=test%253A%252F%252FpollForData&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
         
         let mockDelegate = MockConnectDelegate()
         let mockLauncher = MockLauncher()
@@ -270,25 +270,6 @@ class DefaultConnectSessionTests: XCTestCase {
         
         XCTAssertTrue(result)
         XCTAssertEqual("123456", mockDelegate.lastUserData?.userId)
-        XCTAssertNil(serviceUnderTest.pollingTimer)
-    }
-    
-    func testShouldReturnTrueAndThrowErrorWhenHandlingUrlTimesOut() {
-        let mockDelegate = MockConnectDelegate()
-        let mockService = MockConnectService()
-        let serviceUnderTest = CivicConnect.DefaultConnectSession(applicationIdentifier: applicationIdentifier,
-                                                                  mobileApplicationIdentifier: mobileApplicationIdentifier,
-                                                                  secret: secret,
-                                                                  redirectScheme: redirectScheme,
-                                                                  service: mockService)
-        serviceUnderTest.delegate = mockDelegate
-        
-        let url = URL(string: "test://\(serviceUnderTest.pollKeyword)?\(serviceUnderTest.timeOutKeyword)=0")!
-        let result = serviceUnderTest.handle(url: url)
-        mockAsyncRunner.fireOffException()
-        
-        XCTAssertTrue(result)
-        XCTAssertEqual(ConnectError.scopeRequestTimeOut, mockDelegate.lastError)
         XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     
