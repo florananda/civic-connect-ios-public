@@ -56,18 +56,11 @@ class DefaultConnectSession: ConnectSession {
             return false
         }
         
-        let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-        let timeOutItem = components?.queryItems?.first(where: { $0.name == "timeout" })
-        let timeOut = TimeInterval(timeOutItem?.value ?? "")
-        startPollingForUserData(timeOut)
+        startPollingForUserData()
         return true
     }
     
     func startPollingForUserData() {
-        startPollingForUserData(.none)
-    }
-    
-    func startPollingForUserData(_ timeOut: TimeInterval?) {
         let isTimerValid = pollingTimer?.isValid ?? false
         guard !isTimerValid else {
             return
@@ -82,14 +75,6 @@ class DefaultConnectSession: ConnectSession {
             weakSelf.sendStatusFeedback(.pollingForUserData)
             weakSelf.getUserData(timer)
         }
-        
-        if let timeOut = timeOut {
-            pollingTimer?.setTimeOut(timeOut)
-            pollingTimer?.setTimeOutExecution { [weak self] in
-                self?.sendErrorFeedback(.scopeRequestTimeOut)
-                self?.pollingTimer = nil
-            }
-        }
     }
     
     func stopPollingForUserData() {
@@ -101,13 +86,11 @@ class DefaultConnectSession: ConnectSession {
 
 private extension DefaultConnectSession {
     
-    func redirectUrlString(withTimeOut timeOut: Int) -> String? {
+    var redirectUrlString: String? {
         return redirectScheme?
             .appending("://")
             .appending(pollKeyword)
-            .addingPercentEncoding(withAllowedCharacters: .uriAllowed)?
-            .appending("?")
-            .appending("\(timeOutKeyword)=\(timeOut)")
+            .addingPercentEncoding(withAllowedCharacters: .uriAllowed)
     }
     
     var fallbackUrlString: String? {
@@ -129,17 +112,17 @@ private extension DefaultConnectSession {
         }
         
         self.response = response
-        let url = buildUrl(withScopeRequestString: response.scopeRequestString, timeout: response.timeout)
+        let url = buildUrl(withScopeRequestString: response.scopeRequestString)
         launchOnMain(url)
     }
     
-    func buildUrl(withScopeRequestString scopeRequestString: String, timeout: Int) -> URL? {
+    func buildUrl(withScopeRequestString scopeRequestString: String) -> URL? {
         let encodedScopeRequestString = scopeRequestString.addingPercentEncoding(withAllowedCharacters: .uriAllowed)
         var urlComponents = URLComponents(string: Config.current.civicAppLink)
         
         let originatorUrlQueryItem = URLQueryItem(name: "$originator", value: originatorString)
         let scopeRequestQueryItem = URLQueryItem(name: "$scoperequest", value: encodedScopeRequestString)
-        let redirectUrlQueryItem = URLQueryItem(name: "$redirectURL", value: redirectUrlString(withTimeOut: timeout))
+        let redirectUrlQueryItem = URLQueryItem(name: "$redirectURL", value: redirectUrlString)
         let fallbackUrlQueryItem = URLQueryItem(name: "$fallback_url", value: fallbackUrlString)
         
         let queryItems = redirectScheme != nil ?
