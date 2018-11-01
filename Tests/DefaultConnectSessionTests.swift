@@ -174,7 +174,7 @@ class DefaultConnectSessionTests: XCTestCase {
     }
     
     func testShouldThrowScopeRequestTimeOutErrorWhenStartingSessionAndTimeOutIsReached() {
-        let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 0)
+        let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 2)
         let expectedUrl = URL(string: "\(CivicConnect.Config.current.civicAppLink)?$originator=\(CivicConnect.Config.current.originatorIdentifier)&$scoperequest=test&$fallback_url=itms-apps%253A%252F%252Fitunes.apple.com%252Fapp%252Fid1141956958")
 
         let mockDelegate = MockConnectDelegate()
@@ -196,6 +196,7 @@ class DefaultConnectSessionTests: XCTestCase {
 
         XCTAssertEqual(expectedUrl, mockLauncher.lastLaunchUrl)
         XCTAssertEqual(ConnectError.scopeRequestTimeOut, mockDelegate.lastError)
+        XCTAssertEqual(2, mockAsyncRunner.executeInBackgroundTimeInterval)
     }
 
     func testShouldThrowErrorWhenGettingScopeRequestFailsWhenStartingSession() {

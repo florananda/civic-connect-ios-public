@@ -112,7 +112,7 @@ private extension DefaultConnectSession {
         }
         
         self.response = response
-        self.timeOutTimer = AsynchronousProvider.executeInBackground(afterInterval: TimeInterval(5)) { [weak self] _ in
+        self.timeOutTimer = AsynchronousProvider.executeInBackground(afterInterval: TimeInterval(response.timeout)) { [weak self] _ in
             self?.scopeRequestTimedOut()
         }
         
