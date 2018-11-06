@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           CivicConnect Docs
         </a>
-         (81% documented)
+         (79% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -111,7 +111,7 @@
             
             <h1 id='ios-civic-connect' class='heading'>iOS Civic Connect</h1>
 
-<p><a href="https://circleci.com/gh/civicteam/ios-civic-connect"><img src="https://circleci.com/gh/civicteam/ios-civic-connect.svg?style=svg&circle-token=3e2858464d8c675aa960504bb575530777fc770a" alt="CircleCI"></a></p>
+<p><a href="https://circleci.com/gh/civicteam/civic-connect-ios-public"><img src="https://circleci.com/gh/civicteam/civic-connect-ios-public.svg?style=svg&circle-token=c354636aa17d0a8e4d67046086a0071f2bda1172" alt="CircleCI"></a></p>
 
 <p><a href="https://cocoapods.org/pods/CivicConnect"><img src="https://img.shields.io/cocoapods/v/CivicConnect.svg?style=flat" alt="Version"></a><br>
 <a href="https://cocoapods.org/pods/CivicConnect"><img src="https://img.shields.io/cocoapods/l/CivicConnect.svg?style=flat" alt="License"></a><br>
@@ -125,8 +125,8 @@
 
 <ul>
 <li>iOS 8.0+</li>
-<li>Xcode 8.3+</li>
-<li>Swift 3.1+</li>
+<li>Xcode 10+</li>
+<li>Swift 4+</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
 <h3 id='cocoapods' class='heading'>Cocoapods</h3>
@@ -137,7 +137,11 @@ it, simply add the following line to your Podfile:</p>
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
-<p>Support coming soon.</p>
+<p>To integrate CivicConnect into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "civicteam/civic-connect-ios-public"
+</code></pre>
+
+<p>Run <code>carthage update</code> to build the framework and drag the built CivicConnect.framework into your Xcode project.</p>
 <h2 id='getting-started' class='heading'>Getting Started</h2>
 <h3 id='sample-app' class='heading'>Sample App</h3>
 
@@ -176,18 +180,39 @@ it, simply add the following line to your Podfile:</p>
 <td>No</td>
 <td>Scheme used to open the third party app. (This requires the third party to add a <code>URL Types</code> scheme in the <code>Info.plist</code> file.</td>
 </tr>
+<tr>
+<td>DevMode</td>
+<td>No</td>
+<td>Whether the SDK will use the development environment or not.</td>
+</tr>
 </tbody></table>
 <h5 id='swift' class='heading'>Swift</h5>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">connect</span> <span class="o">=</span> <span class="kt">Connect</span><span class="p">(</span><span class="nv">applicationIdentifier</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">APPLICATION</span> <span class="kt">IDENTIFIER</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span> 
                       <span class="nv">mobileApplicationIdentifier</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">MOBILE</span> <span class="kt">APPLICATION</span> <span class="kt">IDENTIFIER</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span> 
                       <span class="nv">secret</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">SECRET</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span>
                       <span class="nv">redirectScheme</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">REDIRECT</span> <span class="kt">SCHEME</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="c1">// OR</span>
+
+<span class="k">let</span> <span class="nv">connect</span> <span class="o">=</span> <span class="kt">Connect</span><span class="p">(</span><span class="nv">applicationIdentifier</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">APPLICATION</span> <span class="kt">IDENTIFIER</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span> 
+                      <span class="nv">mobileApplicationIdentifier</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">MOBILE</span> <span class="kt">APPLICATION</span> <span class="kt">IDENTIFIER</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span> 
+                      <span class="nv">secret</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">SECRET</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span>
+                      <span class="nv">redirectScheme</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">REDIRECT</span> <span class="kt">SCHEME</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span>
+                      <span class="nv">devMode</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">DEV</span> <span class="kt">MODE</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
 <h5 id='objective-c' class='heading'>Objective-C</h5>
 <pre class="highlight objective_c"><code><span class="n">CCConnect</span> <span class="o">*</span><span class="n">connect</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CCConnect</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithApplicationIdentifier</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">APPLICATION</span> <span class="n">IDENTIFIER</span> <span class="n">HERE</span><span class="o">&gt;</span>
                                           <span class="nf">mobileApplicationIdentifier</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">MOBILE</span> <span class="n">APPLICATION</span> <span class="n">IDENTIFIER</span> <span class="n">HERE</span><span class="o">&gt;</span>
                                                                <span class="n">secret</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">SECRET</span> <span class="n">HERE</span><span class="o">&gt;</span>
                                                        <span class="n">redirectScheme</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">REDIRECT</span> <span class="n">SCHEME</span> <span class="n">HERE</span><span class="o">&gt;</span><span class="p">];</span>
+
+<span class="c1">// OR
+</span>
+<span class="n">CCConnect</span> <span class="o">*</span><span class="n">connect</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CCConnect</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithApplicationIdentifier</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">APPLICATION</span> <span class="n">IDENTIFIER</span> <span class="n">HERE</span><span class="o">&gt;</span>
+                                          <span class="nf">mobileApplicationIdentifier</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">MOBILE</span> <span class="n">APPLICATION</span> <span class="n">IDENTIFIER</span> <span class="n">HERE</span><span class="o">&gt;</span>
+                                                               <span class="n">secret</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">SECRET</span> <span class="n">HERE</span><span class="o">&gt;</span>
+                                                       <span class="n">redirectScheme</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">REDIRECT</span> <span class="n">SCHEME</span> <span class="n">HERE</span><span class="o">&gt;</span>
+                                                              <span class="n">devMode</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">DEV</span> <span class="n">MODE</span> <span class="n">HERE</span><span class="o">&gt;</span><span class="p">];</span>
 </code></pre>
 
 <p>A convenient way to initialize the library is to load the fields via the <code>Info.plist</code>:</p>
@@ -227,6 +252,11 @@ it, simply add the following line to your Podfile:</p>
 <tr>
 <td>CivicRedirectScheme</td>
 <td><code>String</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td>CivicDevMode</td>
+<td><code>Boolean</code></td>
 <td>No</td>
 </tr>
 </tbody></table>
@@ -361,6 +391,15 @@ it, simply add the following line to your Podfile:</p>
 <h5 id='objective-c' class='heading'>Objective-C</h5>
 <pre class="highlight objective_c"><code><span class="p">[</span><span class="n">connect</span> <span class="nf">stopPollingForUserData</span><span class="p">];</span>
 </code></pre>
+<h4 id='reset' class='heading'>Reset</h4>
+
+<p>You can reset the status of the of <code><a href="Classes/Connect.html">Connect</a></code> instance by calling the <code><a href="Classes/Connect.html#/c:@M@CivicConnect@objc(cs)CCConnect(im)reset">Connect.reset()</a></code> function.</p>
+<h5 id='swift' class='heading'>Swift</h5>
+<pre class="highlight swift"><code><span class="n">connect</span><span class="o">.</span><span class="nf">reset</span><span class="p">()</span>
+</code></pre>
+<h5 id='objective-c' class='heading'>Objective-C</h5>
+<pre class="highlight objective_c"><code><span class="p">[</span><span class="n">connect</span> <span class="nf">reset</span><span class="p">];</span>
+</code></pre>
 <h4 id='connect-button' class='heading'>Connect Button</h4>
 
 <p>If you would like a Civic styled button, you can use the <code><a href="Classes/ConnectButton.html">ConnectButton</a></code> class which is just a subclass of <code>UIButton</code>. In order to create one, you will need to provide a <code><a href="Classes/Connect.html">Connect</a></code> instance, a <code><a href="Protocols/ConnectDelegate.html">ConnectDelegate</a></code> and optionally the <code><a href="Enums/ScopeRequestType.html">ScopeRequestType</a></code>:</p>
@@ -471,6 +510,11 @@ it, simply add the following line to your Podfile:</p>
 <td>User data is still not available. Try poll again later.</td>
 </tr>
 <tr>
+<td>scopeRequestTimeOut</td>
+<td>925</td>
+<td>Scope request timed out.</td>
+</tr>
+<tr>
 <td>verificationFailed</td>
 <td>931</td>
 <td>Failed to verify the response.</td>
@@ -542,6 +586,27 @@ it, simply add the following line to your Podfile:</p>
 <td>Endpoint Request Timed-out Exception.</td>
 </tr>
 </tbody></table>
+<h2 id='faq' class='heading'>FAQ</h2>
+<h3 id='what-do-we-use-for-the-redirect-scheme' class='heading'>What do we use for the redirect scheme?</h3>
+
+<p>You can use any unique scheme that is valid for your app.</p>
+<h3 id='how-do-we-get-the-code-uiimage-code-from-the-code-userinfo-code' class='heading'>How do we get the <code>UIImage</code> from the <code><a href="Classes/UserInfo.html">UserInfo</a></code>?</h3>
+
+<p>Some <code><a href="Classes/UserInfo.html">UserInfo</a></code> objects have a value encoded in base 64, an example would be for the <code>documents.genericId.image</code> <code><a href="Classes/UserInfo.html">UserInfo</a></code> object, we would decode to an <code>UIImage</code> with the following code snippet:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decodeBase64ToImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt">UserInfo</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="kt">Data</span><span class="p">(</span><span class="nv">base64Encoded</span><span class="p">:</span> <span class="n">userInfo</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="o">.</span><span class="n">ignoreUnknownCharacters</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">nil</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='what-does-it-mean-when-i-get-code-unauthorized-no-platforms-found-for-provided-app_id-code' class='heading'>What does it mean when I get <code>Unauthorized: no platforms found for provided app_id</code>?</h3>
+
+<p>It means you have supplied the incorrect Application Identifier. Please ensure you have the correct App ID from the <a href="https://integrate.civic.com/login">Integration Portal</a> under the configured application.</p>
+<h3 id='what-does-it-mean-when-i-get-code-unauthorized-mobileid-not-found-in-partner-platform-list-code' class='heading'>What does it mean when I get <code>Unauthorized: mobileId not found in partner platform list</code>?</h3>
+
+<p>It means you have not supplied the correct Bundle ID or have not configured your mobile application on the <a href="https://integrate.civic.com/login">Integration Portal</a>.</p>
 <h2 id='author' class='heading'>Author</h2>
 
 <p>See also the list of <a href="https://github.com/civicteam/ios-civic-connect/contributors">contributors</a> who participated in this project.</p>
@@ -559,7 +624,7 @@ it, simply add the following line to your Podfile:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://civic.com/" target="_blank" rel="external">Civic Technologies</a>. All rights reserved. (Last updated: 2018-10-01)</p>
+      <p>&copy; 2018 <a class="link" href="https://civic.com/" target="_blank" rel="external">Civic Technologies</a>. All rights reserved. (Last updated: 2018-11-06)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
