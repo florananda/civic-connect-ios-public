@@ -15,8 +15,8 @@ This library allows you to connect to the Civic Secure Identity iOS application 
 ## Requirements
 
 - iOS 8.0+
-- Xcode 8.3+
-- Swift 3.1+
+- Xcode 10+
+- Swift 4+
 
 ## Installation
 
@@ -309,6 +309,34 @@ The following table shows the potential errors that can occur via the server api
 | tooManyRequests | 429 | Your request was throttled by our gateway. |
 | internalServer | 500 | We had a problem with our server. Try again later. |
 | timeOut | 504 | Endpoint Request Timed-out Exception. |
+
+## FAQ
+
+### What do we use for the redirect scheme?
+
+You can use any unique scheme that is valid for your app.
+
+### How do we get the `UIImage` from the `UserInfo`?
+
+Some `UserInfo` objects have a value encoded in base 64, an example would be for the `documents.genericId.image` `UserInfo` object, we would decode to an `UIImage` with the following code snippet:
+
+```swift
+func decodeBase64ToImage(_ userInfo: UserInfo) -> UIImage? {
+    guard let data = Data(base64Encoded: userInfo.value, options: .ignoreUnknownCharacters) else {
+    return nil
+    }
+
+    return UIImage(data: data)
+}
+```
+
+### What does it mean when I get `Unauthorized: no platforms found for provided app_id`?
+
+It means you have supplied the incorrect Application Identifier. Please ensure you have the correct App ID from the [Integration Portal](https://integrate.civic.com/login) under the configured application.
+
+### What does it mean when I get `Unauthorized: mobileId not found in partner platform list`?
+
+It means you have not supplied the correct Bundle ID or have not configured your mobile application on the [Integration Portal](https://integrate.civic.com/login).
 
 ## Author
 
