@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Config: Equatable {
+struct Config {
     let endpoint: String
     let civicAppLink: String
     let originatorIdentifier: String
@@ -15,14 +15,8 @@ struct Config: Equatable {
 
 extension Config {
     
-    static let devConfig = Config(endpoint: "https://kw9lj3a57c.execute-api.us-east-1.amazonaws.com/dev/",
-                                  civicAppLink: "https://civicapp.app.link",
-                                  originatorIdentifier: "civic-connect")
-
-    static let prodConfig = Config(endpoint: "https://api.civic.com/sip/prod",
-                                   civicAppLink: "https://civicapp.app.link",
-                                   originatorIdentifier: "civic-connect")
-
-    static var current = Config.prodConfig
+    static var current = Config(endpoint: "https://api.civic.com/sip/prod",
+                                civicAppLink: "https://civicapp.app.link",
+                                originatorIdentifier: "civic-connect")
     
 }

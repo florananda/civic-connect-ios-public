@@ -35,8 +35,6 @@
 	<string>1</string>
 	<key>CivicApplicationIdentifier</key>
 	<string>&lt;INSERT HERE&gt;</string>
-	<key>CivicDevMode</key>
-	<true/>
 	<key>CivicRedirectScheme</key>
 	<string>civicconnectlink</string>
 	<key>CivicSecret</key>

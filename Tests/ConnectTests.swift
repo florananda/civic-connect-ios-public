@@ -65,20 +65,6 @@ class ConnectTests: XCTestCase {
         XCTAssertThrowsError(try Connect.initialize(withBundle: bundle), "Connect never threw an error.")
     }
     
-    func testShouldInitializeConnectWithNonDevModeFromBundleThatReturnsNonNilApplicationIdentifierAndMobileApplicationIdentifierAndSecretAndFalseForDevMode() {
-        let bundle = TestBundle(applicationIdentifier: "applicationIdentifier", mobileApplicationIdentifier: "com.civic.connect.sample", secret: "testSecret", redirectScheme: nil, urlSchemes: nil, devMode: false)
-
-        XCTAssertNoThrow(try Connect.initialize(withBundle: bundle), "Connect threw an error when it was not suppose to.")
-        XCTAssertEqual(CivicConnect.Config.current, CivicConnect.Config.prodConfig)
-    }
-
-    func testShouldInitializeConnectWithDevModeFromBundleThatReturnsNonNilApplicationIdentifierAndMobileApplicationIdentifierAndSecretAndTrueForDevMode() {
-        let bundle = TestBundle(applicationIdentifier: "applicationIdentifier", mobileApplicationIdentifier: "com.civic.connect.sample", secret: "testSecret", redirectScheme: nil, urlSchemes: nil, devMode: true)
-
-        XCTAssertNoThrow(try Connect.initialize(withBundle: bundle), "Connect threw an error when it was not suppose to.")
-        XCTAssertEqual(CivicConnect.Config.current, CivicConnect.Config.devConfig)
-    }
-
     func testShouldStartSession() {
         let mockDelegate = MockConnectDelegate()
         let serviceUnderTest = helper.serviceUnderTest

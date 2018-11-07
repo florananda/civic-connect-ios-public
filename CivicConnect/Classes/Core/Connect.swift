@@ -44,10 +44,6 @@ private func getRedirectSchemeFrom(bundle: ConnectBundle) throws -> String? {
     return redirectScheme
 }
 
-private func getDevModeFrom(bundle: ConnectBundle) -> Bool {
-    return bundle.devMode
-}
-
 /// The main interface between the partner app and integrating with the Civic app.
 @objc(CCConnect)
 public class Connect: NSObject {
@@ -60,13 +56,12 @@ public class Connect: NSObject {
     private let sessionProvider: ConnectSessionProvider
     private var session: ConnectSession?
     
-    init(sessionProvider: ConnectSessionProvider, applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?, devMode: Bool = false) {
+    init(sessionProvider: ConnectSessionProvider, applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?) {
         self.sessionProvider = sessionProvider
         self.applicationIdentifier = applicationIdentifier
         self.mobileApplicationIdentifier = mobileApplicationIdentifier
         self.secret = secret
         self.redirectScheme = redirectScheme
-        Config.current = devMode ? Config.devConfig : Config.prodConfig
     }
     
     /// Constructs the `Connect` class that provides an easy way for partners to integrate with the Civic app.
@@ -84,23 +79,6 @@ public class Connect: NSObject {
                   redirectScheme: redirectScheme)
     }
     
-    /// Constructs the `Connect` class that provides an easy way for partners to integrate with the Civic app.
-    ///
-    /// - Parameters:
-    ///   - applicationIdentifier: The identifier that Civic provided to the partner.
-    ///   - mobileApplicationIdentifier: The identifier of the partner app (the bundle identifier).
-    ///   - secret: The secret provided from the integration portal.
-    ///   - redirectScheme: An optional scheme that the Civic app will use to redirect to the partner app.
-    ///   - devMode: Whether to use the development environment or not.
-    @objc public convenience init(applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?, devMode: Bool) {
-        self.init(sessionProvider: DefaultConnectSessionProvider(),
-                  applicationIdentifier: applicationIdentifier,
-                  mobileApplicationIdentifier: mobileApplicationIdentifier,
-                  secret: secret,
-                  redirectScheme: redirectScheme,
-                  devMode: devMode)
-    }
-
     /// A convenience method that takes in a `Bundle` to construct the Connect class.
     ///
     /// - Parameter bundle: A bundle that provides the application, mobile identifiers.
@@ -111,8 +89,7 @@ public class Connect: NSObject {
         let mobileApplicationIdentifier = try getMobileApplicationIdentifierFrom(bundle: bundle)
         let secret = try getSecretFrom(bundle: bundle)
         let redirectScheme = try getRedirectSchemeFrom(bundle: bundle)
-        let devMode = getDevModeFrom(bundle: bundle)
-        return Connect(applicationIdentifier: applicationIdentifier, mobileApplicationIdentifier: mobileApplicationIdentifier, secret: secret, redirectScheme: redirectScheme, devMode: devMode)
+        return Connect(applicationIdentifier: applicationIdentifier, mobileApplicationIdentifier: mobileApplicationIdentifier, secret: secret, redirectScheme: redirectScheme)
     }
     
     @available(*, obsoleted: 1)
