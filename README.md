@@ -59,7 +59,6 @@ Before being able to use the library, you will need to initialize it with the co
 | Mobile Application Identifier | Yes | Identifier used by the mobile app. |
 | Secret | Yes | Secret provided to the partner via the Integration Portal. |
 | Redirect Scheme | No | Scheme used to open the third party app. (This requires the third party to add a `URL Types` scheme in the `Info.plist` file. |
-| DevMode | No | Whether the SDK will use the development environment or not. |
 
 ##### Swift
 ```swift
@@ -67,14 +66,6 @@ let connect = Connect(applicationIdentifier: <INSERT APPLICATION IDENTIFIER HERE
                       mobileApplicationIdentifier: <INSERT MOBILE APPLICATION IDENTIFIER HERE>, 
                       secret: <INSERT SECRET HERE>,
                       redirectScheme: <INSERT REDIRECT SCHEME HERE>)
-
-// OR
-
-let connect = Connect(applicationIdentifier: <INSERT APPLICATION IDENTIFIER HERE>, 
-                      mobileApplicationIdentifier: <INSERT MOBILE APPLICATION IDENTIFIER HERE>, 
-                      secret: <INSERT SECRET HERE>,
-                      redirectScheme: <INSERT REDIRECT SCHEME HERE>,
-                      devMode: <INSERT DEV MODE HERE>)
 ```
 
 ##### Objective-C
@@ -83,14 +74,6 @@ CCConnect *connect = [[CCConnect alloc] initWithApplicationIdentifier:<INSERT AP
                                           mobileApplicationIdentifier:<INSERT MOBILE APPLICATION IDENTIFIER HERE>
                                                                secret:<INSERT SECRET HERE>
                                                        redirectScheme:<INSERT REDIRECT SCHEME HERE>];
-
-// OR
-
-CCConnect *connect = [[CCConnect alloc] initWithApplicationIdentifier:<INSERT APPLICATION IDENTIFIER HERE>
-                                          mobileApplicationIdentifier:<INSERT MOBILE APPLICATION IDENTIFIER HERE>
-                                                               secret:<INSERT SECRET HERE>
-                                                       redirectScheme:<INSERT REDIRECT SCHEME HERE>
-                                                              devMode:<INSERT DEV MODE HERE>];
 ```
 
 A convenient way to initialize the library is to load the fields via the `Info.plist`:
@@ -115,7 +98,6 @@ The library will look through the `Info.plist` to find the following fields:
 | CivicApplicationIdentifier | `String` | Yes |
 | CivicSecret | `String` | Yes |
 | CivicRedirectScheme | `String` | No |
-| CivicDevMode | `Boolean` | No |
 
 Please note: `CivicRedirectScheme` requires you to add a `URL Type` to the `Info.plist` with an identifier and at least one scheme. The scheme needs to be equal to the `CivicRedirectScheme` field.
 

@@ -14,7 +14,6 @@ import Foundation
     var secret: String? { get }
     var redirectScheme: String? { get }
     var urlSchemes: [String] { get }
-    var devMode: Bool { get }
 }
 
 /// Uses the `Bundle`s' info plist
@@ -56,9 +55,4 @@ extension Bundle: ConnectBundle {
         }
     }
     
-    public var devMode: Bool {
-        let devModeKey = "CivicDevMode"
-        return infoDictionary?[devModeKey] as? Bool ?? false
-    }
-
 }
