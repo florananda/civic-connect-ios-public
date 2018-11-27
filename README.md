@@ -1,4 +1,4 @@
-# iOS Civic Connect
+# iOS Civic App Connect
 
 [![CircleCI](https://circleci.com/gh/civicteam/civic-connect-ios-public.svg?style=svg&circle-token=c354636aa17d0a8e4d67046086a0071f2bda1172)](https://circleci.com/gh/civicteam/civic-connect-ios-public)
 
@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/CivicConnect.svg?style=flat)](https://cocoapods.org/pods/CivicConnect)		
 [![Platform](https://img.shields.io/cocoapods/p/CivicConnect.svg?style=flat)](https://cocoapods.org/pods/CivicConnect)
 
-CivicConnect is a library that allows a third party to connect with the Civic Secure Identity iOS app.
+Civic App Connect is a library that allows a third party to connect with the Civic Secure Identity iOS app.
 
 ## Introduction
 
@@ -22,7 +22,7 @@ This library allows you to connect to the Civic Secure Identity iOS application 
 
 ### Cocoapods
 
-CivicConnect is available through [CocoaPods](https://cocoapods.org). To install
+Civic App Connect is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -31,7 +31,7 @@ pod 'CivicConnect'
 
 ### Carthage
 
-To integrate CivicConnect into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate Civic App Connect into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```
 github "civicteam/civic-connect-ios-public"
@@ -330,4 +330,4 @@ Find contributing guidelines in the [CONTRIBUTING](CONTRIBUTING.md) file.
 
 ## License
 
-CivicConnect is available under the MIT license. See the [LICENSE](LICENSE.md) file for more info.
+Civic App Connect is available under the MIT license. See the [LICENSE](LICENSE.md) file for more info.

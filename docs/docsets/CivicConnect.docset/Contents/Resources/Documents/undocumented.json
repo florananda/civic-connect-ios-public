@@ -37,36 +37,50 @@
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 22,
+      "line": 17,
+      "symbol": "ConnectBundle.devMode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 23,
       "symbol": "Bundle.applicationIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 27,
+      "line": 28,
       "symbol": "Bundle.mobileApplicationIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 32,
+      "line": 33,
       "symbol": "Bundle.secret",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 37,
+      "line": 38,
       "symbol": "Bundle.redirectScheme",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 42,
+      "line": 43,
       "symbol": "Bundle.urlSchemes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
+      "line": 59,
+      "symbol": "Bundle.devMode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
