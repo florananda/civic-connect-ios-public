@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           CivicConnect Docs
         </a>
-         (79% documented)
+         (81% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -109,7 +109,7 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='ios-civic-connect' class='heading'>iOS Civic Connect</h1>
+            <h1 id='ios-civic-app-connect' class='heading'>iOS Civic App Connect</h1>
 
 <p><a href="https://circleci.com/gh/civicteam/civic-connect-ios-public"><img src="https://circleci.com/gh/civicteam/civic-connect-ios-public.svg?style=svg&circle-token=c354636aa17d0a8e4d67046086a0071f2bda1172" alt="CircleCI"></a></p>
 
@@ -117,7 +117,7 @@
 <a href="https://cocoapods.org/pods/CivicConnect"><img src="https://img.shields.io/cocoapods/l/CivicConnect.svg?style=flat" alt="License"></a><br>
 <a href="https://cocoapods.org/pods/CivicConnect"><img src="https://img.shields.io/cocoapods/p/CivicConnect.svg?style=flat" alt="Platform"></a></p>
 
-<p>CivicConnect is a library that allows a third party to connect with the Civic Secure Identity iOS app.</p>
+<p>Civic App Connect is a library that allows a third party to connect with the Civic Secure Identity iOS app.</p>
 <h2 id='introduction' class='heading'>Introduction</h2>
 
 <p>This library allows you to connect to the Civic Secure Identity iOS application using the integration portal API. In order to use this library you will need to register yourself on the <a href="https://integrate.civic.com/login">Integration Portal</a>. Once registered you&rsquo;ll be able to provide the necessary information to the library to be able to connect your own iOS application to the Civic Secure Identity iOS application. The library also provides a Civic styled button that can be customized for your needs, or you could rather initiate the flow in any way you see fit for your application.</p>
@@ -131,13 +131,13 @@
 <h2 id='installation' class='heading'>Installation</h2>
 <h3 id='cocoapods' class='heading'>Cocoapods</h3>
 
-<p>CivicConnect is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+<p>Civic App Connect is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
 it, simply add the following line to your Podfile:</p>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'CivicConnect'</span>
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
-<p>To integrate CivicConnect into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<p>To integrate Civic App Connect into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
 <pre class="highlight plaintext"><code>github "civicteam/civic-connect-ios-public"
 </code></pre>
 
@@ -180,39 +180,18 @@ it, simply add the following line to your Podfile:</p>
 <td>No</td>
 <td>Scheme used to open the third party app. (This requires the third party to add a <code>URL Types</code> scheme in the <code>Info.plist</code> file.</td>
 </tr>
-<tr>
-<td>DevMode</td>
-<td>No</td>
-<td>Whether the SDK will use the development environment or not.</td>
-</tr>
 </tbody></table>
 <h5 id='swift' class='heading'>Swift</h5>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">connect</span> <span class="o">=</span> <span class="kt">Connect</span><span class="p">(</span><span class="nv">applicationIdentifier</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">APPLICATION</span> <span class="kt">IDENTIFIER</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span> 
                       <span class="nv">mobileApplicationIdentifier</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">MOBILE</span> <span class="kt">APPLICATION</span> <span class="kt">IDENTIFIER</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span> 
                       <span class="nv">secret</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">SECRET</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span>
                       <span class="nv">redirectScheme</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">REDIRECT</span> <span class="kt">SCHEME</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">)</span>
-
-<span class="c1">// OR</span>
-
-<span class="k">let</span> <span class="nv">connect</span> <span class="o">=</span> <span class="kt">Connect</span><span class="p">(</span><span class="nv">applicationIdentifier</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">APPLICATION</span> <span class="kt">IDENTIFIER</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span> 
-                      <span class="nv">mobileApplicationIdentifier</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">MOBILE</span> <span class="kt">APPLICATION</span> <span class="kt">IDENTIFIER</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span> 
-                      <span class="nv">secret</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">SECRET</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span>
-                      <span class="nv">redirectScheme</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">REDIRECT</span> <span class="kt">SCHEME</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">,</span>
-                      <span class="nv">devMode</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">DEV</span> <span class="kt">MODE</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
 <h5 id='objective-c' class='heading'>Objective-C</h5>
 <pre class="highlight objective_c"><code><span class="n">CCConnect</span> <span class="o">*</span><span class="n">connect</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CCConnect</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithApplicationIdentifier</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">APPLICATION</span> <span class="n">IDENTIFIER</span> <span class="n">HERE</span><span class="o">&gt;</span>
                                           <span class="nf">mobileApplicationIdentifier</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">MOBILE</span> <span class="n">APPLICATION</span> <span class="n">IDENTIFIER</span> <span class="n">HERE</span><span class="o">&gt;</span>
                                                                <span class="n">secret</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">SECRET</span> <span class="n">HERE</span><span class="o">&gt;</span>
                                                        <span class="n">redirectScheme</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">REDIRECT</span> <span class="n">SCHEME</span> <span class="n">HERE</span><span class="o">&gt;</span><span class="p">];</span>
-
-<span class="c1">// OR
-</span>
-<span class="n">CCConnect</span> <span class="o">*</span><span class="n">connect</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CCConnect</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithApplicationIdentifier</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">APPLICATION</span> <span class="n">IDENTIFIER</span> <span class="n">HERE</span><span class="o">&gt;</span>
-                                          <span class="nf">mobileApplicationIdentifier</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">MOBILE</span> <span class="n">APPLICATION</span> <span class="n">IDENTIFIER</span> <span class="n">HERE</span><span class="o">&gt;</span>
-                                                               <span class="n">secret</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">SECRET</span> <span class="n">HERE</span><span class="o">&gt;</span>
-                                                       <span class="n">redirectScheme</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">REDIRECT</span> <span class="n">SCHEME</span> <span class="n">HERE</span><span class="o">&gt;</span>
-                                                              <span class="n">devMode</span><span class="o">:&lt;</span><span class="n">INSERT</span> <span class="n">DEV</span> <span class="n">MODE</span> <span class="n">HERE</span><span class="o">&gt;</span><span class="p">];</span>
 </code></pre>
 
 <p>A convenient way to initialize the library is to load the fields via the <code>Info.plist</code>:</p>
@@ -252,11 +231,6 @@ it, simply add the following line to your Podfile:</p>
 <tr>
 <td>CivicRedirectScheme</td>
 <td><code>String</code></td>
-<td>No</td>
-</tr>
-<tr>
-<td>CivicDevMode</td>
-<td><code>Boolean</code></td>
 <td>No</td>
 </tr>
 </tbody></table>
@@ -615,7 +589,7 @@ it, simply add the following line to your Podfile:</p>
 <p>Find contributing guidelines in the <a href="CONTRIBUTING.md">CONTRIBUTING</a> file.</p>
 <h2 id='license' class='heading'>License</h2>
 
-<p>CivicConnect is available under the MIT license. See the <a href="LICENSE.md">LICENSE</a> file for more info.</p>
+<p>Civic App Connect is available under the MIT license. See the <a href="LICENSE.md">LICENSE</a> file for more info.</p>
 
           </div>
         </section>
@@ -624,7 +598,7 @@ it, simply add the following line to your Podfile:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://civic.com/" target="_blank" rel="external">Civic Technologies</a>. All rights reserved. (Last updated: 2018-11-06)</p>
+      <p>&copy; 2018 <a class="link" href="https://civic.com/" target="_blank" rel="external">Civic Technologies</a>. All rights reserved. (Last updated: 2018-11-27)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
