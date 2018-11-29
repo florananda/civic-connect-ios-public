@@ -278,6 +278,7 @@ class DefaultConnectSessionTests: XCTestCase {
                                                                          signature: "6f31ebd6d3bf58baa070340789569a97375ced6c978273fbc6b897aa27374f27e45f4d061bbaab668f8810bd89468b07d4636292d7dfc962217dffa8fd96febd6b929f7714926bd722e82942b9c4cba56948d5b51ef57e2270a5e13d2b2cf2c1cbb4f41a2317f3b7b69e3de59c49467c2583b515be3a2b52b210f3c5f128a0e0")
         
         let mockDelegate = MockConnectDelegate()
+        mockDelegate.shouldFetchUserData = true
         let mockService = MockConnectService()
         let serviceUnderTest = CivicConnect.DefaultConnectSession(applicationIdentifier: applicationIdentifier,
                                                                   mobileApplicationIdentifier: mobileApplicationIdentifier,
@@ -336,6 +337,31 @@ class DefaultConnectSessionTests: XCTestCase {
         mockAsyncRunner.fireOffTimer()
         
         XCTAssertEqual("123456", mockDelegate.lastUserData?.userId)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
+    }
+
+    func testShouldOnlyReturnTokenWhenPollingForUserDataAndDelegateReturnsFalseForFetchingUserData() {
+        let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 0)
+        let authCodeResponse = CivicConnect.GetAuthCodeResponse(authResponse: "jwtToken", statusCode: 200, message: .none, action: .dataReceived, type: .code)
+
+        let mockDelegate = MockConnectDelegate()
+        let mockService = MockConnectService()
+        let serviceUnderTest = CivicConnect.DefaultConnectSession(applicationIdentifier: applicationIdentifier,
+                                                                  mobileApplicationIdentifier: mobileApplicationIdentifier,
+                                                                  secret: secret,
+                                                                  redirectScheme: redirectScheme,
+                                                                  service: mockService)
+        serviceUnderTest.delegate = mockDelegate
+        serviceUnderTest.response = response
+
+        mockDelegate.shouldFetchUserData = false
+        mockService.getAuthCodeRequestResult = authCodeResponse
+
+        serviceUnderTest.startPollingForUserData()
+        mockAsyncRunner.fireOffTimer()
+
+        XCTAssertEqual("jwtToken", mockDelegate.lastToken)
+        XCTAssertNil(mockDelegate.lastUserData)
         XCTAssertNil(serviceUnderTest.pollingTimer)
     }
     

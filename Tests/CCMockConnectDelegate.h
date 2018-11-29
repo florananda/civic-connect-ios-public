@@ -17,4 +17,8 @@
 
 @property (nonatomic) enum CCConnectStatus lastStatus;
 
+@property (nonatomic, strong) NSString *lastToken;
+
+@property (nonatomic) BOOL shouldFetchUserData;
+
 @end

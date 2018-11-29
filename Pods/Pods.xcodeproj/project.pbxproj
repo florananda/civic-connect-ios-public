@@ -7,58 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00ADCF0C14E04F9ACFACA3124E9ACA16 /* GetScopeRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6343698A4084318CE69E60C5576DD89 /* GetScopeRequestResponse.swift */; };
-		0277DF0AA04D30D0F8E7C072A3D16258 /* ConnectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D4BE5C96E39DC21D6AB06D0823F94 /* ConnectError.swift */; };
-		08B71E9B0570D317141DA48F9BB9F58C /* DispatchQueueAsynchronousRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C642516E2EC85A2F0DE7A2E99E6E64 /* DispatchQueueAsynchronousRunner.swift */; };
-		148B9374314723CD5C03B4F3530744E0 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C4F56A93E25AE274A5D174ED4F4811 /* HttpRequest.swift */; };
-		1F714A09A5F40B6068EEB4D7BDDC0DAC /* DefaultConnectSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58222EC72E1F7AEBAE9C479637215BFF /* DefaultConnectSessionProvider.swift */; };
-		245F4D908B2E1D736F0412AF6E514D2A /* AuthCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D628BF421AB844EEE0156025204E21 /* AuthCodeType.swift */; };
-		2A0C1EBFAAEC045EB02F4A6819875504 /* VerificationLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFEFC8313F01B366CDB322DA98A6B47 /* VerificationLevel.swift */; };
+		09E561245F2C8CEFD9B179D8E77798D2 /* GetScopeRequestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D356DA5BFCADEF618AAB9D4A1C743 /* GetScopeRequestRequest.swift */; };
+		140434D5783B7CFF2C3352A71C0D52E6 /* ScopeRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1AA78E19B56DA1C1723C5111A2A807 /* ScopeRequestType.swift */; };
+		1617E43B2800739AE1757C3778185402 /* GetAuthCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073A810AB4957ACA36659066F7EE7F5 /* GetAuthCodeRequest.swift */; };
+		1A6AC1FA3AAA126E0AAC531F546A3EBE /* AuthCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24D096104EBCB742F26923C2CFB7FA /* AuthCodeType.swift */; };
+		1B3A230B3B64CEB44B61D015821E5858 /* ConnectBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D9F5B8C4EEBACC7130E59F1D3A215 /* ConnectBundle.swift */; };
 		2A8EADF8F6F8CC2A1585B320BFD4B34D /* CivicConnect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F052DEEF2786E812F0B66E5700316BE1 /* CivicConnect.bundle */; };
-		32C9D9351E8F074C1D12F4721F835EFC /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 367BABD7369679420A18C5F0E3C2F592 /* logo@3x.png */; };
-		331EEF10FB2771D376CA7007FD04CE82 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F77F1AD456E611686183BD4B07CDD54 /* logo@2x.png */; };
-		34E8CC1D0AF370034EC76F5FEE8BA052 /* GetAuthCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F4AE44E018698DDD87CB856F12E6A /* GetAuthCodeRequest.swift */; };
+		2F47E4F222587020C6C09664537B6371 /* DefaultConnectSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F4E6A8C813D4A6D9C24DB94013783 /* DefaultConnectSession.swift */; };
+		32C9D9351E8F074C1D12F4721F835EFC /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E62095784BA9BF359661A9E23DE7769 /* logo@3x.png */; };
+		331EEF10FB2771D376CA7007FD04CE82 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87D02204C43B596C2D92BE9264B18970 /* logo@2x.png */; };
+		356BED3E250947989044092016AD3882 /* Connect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A96D91BB5FC00C8A4300223DD84605 /* Connect.swift */; };
 		35C67DDFD44C57927571ACCE06A49C16 /* Pods-CivicConnect_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74531B42DB80996F90750ECFEC712023 /* Pods-CivicConnect_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35EF03C1CD05227C960A616F1E4146FF /* Connect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148B632AF2F4EF6903526387078FACC6 /* Connect.swift */; };
-		36F6BEB8BA363F2731F6C8CBC0EDD0E9 /* ScopeRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97E73D426F6180D741D38B92CB54B0B /* ScopeRequestType.swift */; };
-		39B59DF59FFB27832449AA515942F9D3 /* CCConnectSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F8CC0DB0376420E6248181C6B146E7 /* CCConnectSecurity.m */; };
+		3979CFF35953050F3A6A76406137EE34 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6143FCB49961F13444A7BF353F3E7E12 /* UserInfo.swift */; };
 		3BC140C3A817D4CEAB556D2EBFCF3538 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */; };
+		3BE3E5309D81B39A1A5B7753DF728469 /* AuthCodeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF0C7951C280037CDBA826A0BC80440 /* AuthCodeAction.swift */; };
+		3FFB8837D8A4EFF3343511EB92289C0F /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835F4D815D56024CD76BEEE6CD83344D /* Launcher.swift */; };
+		43F512292388CA5DB8D38D3CCE3F44C9 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88EE4A7F5D12A3AD7AE86DA17B5AA0 /* HttpRequest.swift */; };
+		45F96E095C17DCE14A1D7D1276F306A6 /* AsynchronousRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC42AB795EB4489480A274CFCDD23C68 /* AsynchronousRunner.swift */; };
+		475C8F7FE26B0C727731E2FF37F79B4C /* UIApplicationLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C43E54C90C5FA701888BE9639AC8F4 /* UIApplicationLauncher.swift */; };
 		48ADC10FE45FB8CFFD5E260F4F128659 /* Pods-CivicConnect_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3412CE5680097EA8306F14D0199CCA45 /* Pods-CivicConnect_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C2DA2055965DACC86B1955D00E7EE43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */; };
-		4F30C8C973A1C70A82F90BEFA21C3E15 /* ConnectBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F37558434A40AED14DADED35026FDEB /* ConnectBundle.swift */; };
-		51D06C2191DF11F5270537D4DF46333B /* GetScopeRequestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DA87679B74042C4CDDF49131157F4 /* GetScopeRequestRequest.swift */; };
-		52E3D2CB899F83641E3FD9B5272C1035 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FBE2A112F04E16C149F2C8304BC9AA /* HttpClient.swift */; };
+		4C58D3AFE788118310168C7BED022BD5 /* GetEncryptedUserDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB148A93657FDA8442ECBCD36CBE3E /* GetEncryptedUserDataRequest.swift */; };
+		51488C7971D54D70B06DBBBEF6382415 /* DefaultConnectSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004E740A17D379478923A6939E8B4F2D /* DefaultConnectSessionProvider.swift */; };
+		559008FAF99B3EA5132BAD597B9F7A6A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79490B1CE42A293900909C48201C777E /* UserData.swift */; };
 		5623AB9CFD5E265EDA179C3A0ECE3F34 /* Pods-CivicConnect_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B59365DF1B542DDEE585F72E9A86367 /* Pods-CivicConnect_Example-dummy.m */; };
-		56AE2378E3C9A153EA60D8073322E6F7 /* ConnectSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A3CF90A21E5E35F1770BF31B9273F /* ConnectSession.swift */; };
-		63427B52377CBAA6FACE3371B41F4C21 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090EE7981BF710C867122B174536311 /* Launcher.swift */; };
-		6994FE5B34E42373F5FED707BAB1D0ED /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6879E735011767CADBEADE4F02F7F6 /* loading@2x.png */; };
-		6B9814A48C34B18DFB9FEB53E4E88BBA /* ConnectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25EC416A2638E320F0E809F8228BB1 /* ConnectDelegate.swift */; };
-		746E7C1C83735AAE56E15A8B1BD38F05 /* loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 175BA781F153D5400DF7AC0EAF5752B0 /* loading@3x.png */; };
-		7A5040A2AD91E99C06542CF2E24B0463 /* AsynchronousProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926127008807699B043FAAA5D781CBFE /* AsynchronousProvider.swift */; };
-		7C0D83F1BA57BD2BADFC01EC84903093 /* ConnectStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636A3486351B846C6A17B44B1BC2628 /* ConnectStatus.swift */; };
+		5F9EAF25F35761CDB82FD50ED534675E /* ConnectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE8642FFA2373B0F0F4468722F10D36 /* ConnectError.swift */; };
+		62C6DFFBBC449B808E6C58539D56C197 /* VerificationLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22E6392B97ADCF86ADB9CC3AD34DA9 /* VerificationLevel.swift */; };
+		6994FE5B34E42373F5FED707BAB1D0ED /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B80801535728610EF634CDFF98F7A54 /* loading@2x.png */; };
+		6FA6D96940769696639E70DAE1F3A794 /* ConnectSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F1E8EDE014EE28D29DF82A182DA3B /* ConnectSession.swift */; };
+		746E7C1C83735AAE56E15A8B1BD38F05 /* loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDC3B8C8B18C4BCA38CCC15E466BCCD /* loading@3x.png */; };
 		8416532AD1AF8403BFE80537F9CDE6FF /* Pods-CivicConnect_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43042CD2E53451BEB65506C7AA46181D /* Pods-CivicConnect_Tests-dummy.m */; };
-		89B11E5C09E71BD8B9A0F97C21AB8623 /* DefaultConnectSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79270C019900CBD18DDB45DF6BFF76 /* DefaultConnectSession.swift */; };
-		8AAC09E64436271A58683637A7A9FA14 /* CCConnectSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = F1AEED148913C7A0FF8A4DF1301D79E3 /* CCConnectSecurity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AD7A2CF3524F2D193C5009CF9240A60 /* AsyncTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A65E1D39FF15258F8688520581700D /* AsyncTimer.swift */; };
-		8D53CB5076DEB0E48DBECF3EC290A856 /* CivicConnect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E1E278D538FA88BFA73E2AE00319E /* CivicConnect-dummy.m */; };
-		8FB512394B3016670D0EED721295287D /* AuthCodeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15848067738DA4149885C6B9FF4CBB94 /* AuthCodeAction.swift */; };
-		901AD940F96C8EEAC74199147AA62D89 /* GetEncryptedUserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E2C8725BC0CE44E43CEE9AC394540B /* GetEncryptedUserDataResponse.swift */; };
-		9481295F1C855307871C4C2E4D0BB751 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1AEFB809FCACF931D9B9208502B2E0 /* DeviceInfo.swift */; };
-		963B854845C51DE020218245CFFD1096 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E368F89F0E7E77F5A453EE92F84D86CB /* logo.png */; };
+		8AAC09E64436271A58683637A7A9FA14 /* CCConnectSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C27E90CD305029D19F41AA9648D9CE9 /* CCConnectSecurity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		963B854845C51DE020218245CFFD1096 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F80650C84311ADFD1800878577832D9 /* logo.png */; };
 		9B09A4335FC7593685F65108E10E65D3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7570261E6ACC7105B21202B26AE43D97 /* Security.framework */; };
-		A0EBF6A8C4ED531301E076F5ACA9CBB3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F872B40DB7F9FF692EE98C31F0B105 /* UserData.swift */; };
-		ABDF87DEB3AAB8AB50785E707960C8A3 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D41BFD6D10AC93E3A16FFE7A6AC2B70 /* loading.png */; };
-		AD2DDB2D33E4D9A5965822144669B458 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B87A5E1C453FF39BFCD833BCB0E3D /* UserInfo.swift */; };
-		AE0FABD8853A9A25DD0B6566B93B966F /* ConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52ED95C30C4D1005EA45EB082A0CD0 /* ConnectButton.swift */; };
-		BED9E5F58BF6E1B7227A9B4C286E69EB /* GetEncryptedUserDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EA8AC5C4FCBCEC66CFF080650EA4E2 /* GetEncryptedUserDataRequest.swift */; };
-		C2DE9040A468D37AB70769A4B071F25D /* GetAuthCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCD70570CEE577EC0DE02ADCBC7F07 /* GetAuthCodeResponse.swift */; };
-		C6941D6CACF4126142ED18EB48847D40 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38472DA3A84BA5C66507209D747269 /* Config.swift */; };
-		CE37B1A33ADF4DCD2C95E65E750DD4BE /* UIApplicationLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A51A6072DB069B9F4E4F3A5AAD266 /* UIApplicationLauncher.swift */; };
+		9B5C419AF4B678A475D3A3A0ADC89777 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F29323A8A6624F94F350FBE4B56AA93 /* DeviceInfo.swift */; };
+		A3AA172961A9A85D0109663B9C9E758E /* AsyncTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742C4CD63A87959B583B513B0CC1C090 /* AsyncTimer.swift */; };
+		A457C2F26236135C9368F82E0B220082 /* ConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF183CC911FBEE7F9F942A4469B8B17 /* ConnectService.swift */; };
+		AB6308A1680634991C8550232E2F1F34 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B9640754095CCACA9BFCCC272FD43 /* Config.swift */; };
+		ABDF87DEB3AAB8AB50785E707960C8A3 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AF7A488F26732225EFD22AD18C44D /* loading.png */; };
+		B2CF44FD654205E0A76389E66C5B0F80 /* CivicConnect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7782FC3D67AFA5F1E9CF8370E7D1D /* CivicConnect-dummy.m */; };
+		C6373815553ABE9C9D81CEC4A07E6635 /* ConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7AE656005F23962D19C07D5E75689 /* ConnectButton.swift */; };
+		C879E2382A2E8640318C286F7DFEACF4 /* ConnectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D78111F78A61EF4B9A2C85E4902B415 /* ConnectDelegate.swift */; };
+		CA00CF0DD1409AA9B4858C8268199FAC /* DispatchQueueAsynchronousRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B2616E2F69D6473C11D8E87E570CB /* DispatchQueueAsynchronousRunner.swift */; };
+		D2F11D3206CD664AE89C539CADB43514 /* ConnectSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ABA9413126F31F4F9218026985326 /* ConnectSessionProvider.swift */; };
 		D6DE94B6CBB146BE3E48893D613DD265 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */; };
-		DAEBC0909F9271BF95BFD34C227499ED /* ConnectSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E025FADA84230B75DE1442892045908 /* ConnectSessionProvider.swift */; };
-		E3C286F5660735B47FE9E002CEA428A6 /* AsynchronousRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CBD2A8204D67E9036498422EDCB5 /* AsynchronousRunner.swift */; };
-		E5756FD95320484383ADA0165396E6C1 /* CivicConnect-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B12E44AAA7660749F5D84AF959E4AAF3 /* CivicConnect-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDD560474A64D946E69489E8A6148245 /* ConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220C3110D0986608E880D869221AB94E /* ConnectService.swift */; };
+		E0872EF28052D785A4E45B444430D8FC /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053720562B175128B90B1C681FC30585 /* HttpClient.swift */; };
+		E1DAFAF2E4015159A9BB60A92417136A /* ConnectStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FFC3C76A0FC43FA9CD33ECE2C55AD2 /* ConnectStatus.swift */; };
+		E1FA1DE580C263EE8F9C5BC825AC375B /* AsynchronousProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A27BDCA9CEC69044E1F4E65AF4AF5E /* AsynchronousProvider.swift */; };
+		E23D0E87B4F4DAB6BCC54493C7A26C0C /* GetScopeRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726FEC029485B653A2AA81565A960F27 /* GetScopeRequestResponse.swift */; };
+		E5756FD95320484383ADA0165396E6C1 /* CivicConnect-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FC30AB70F2DF6EAD6B1101A533647D /* CivicConnect-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E809F9EFA3C8A9E6ADF63139E3C83903 /* GetEncryptedUserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14084B1AA1ED75DA04E325C3F4DA0D5D /* GetEncryptedUserDataResponse.swift */; };
+		E93C1156FD539CF40918E4B335041A2A /* GetAuthCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037971A2C51F8E0632DBC9482084BAA1 /* GetAuthCodeResponse.swift */; };
+		F6A96154539BA64FE5F52F3933528E69 /* CCConnectSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = F939A0ADB8257BE23359871DFE9B9A66 /* CCConnectSecurity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,145 +86,147 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0260E4E167BD29F2C4E001AAEA883527 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Extensions.html; path = docs/Extensions.html; sourceTree = "<group>"; };
-		02A65E1D39FF15258F8688520581700D /* AsyncTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncTimer.swift; sourceTree = "<group>"; };
-		04AE9A023C21243D1D4BE039D30F8361 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
-		058533FD2AC3CC6680A01B397EC15CDD /* ConnectDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ConnectDelegate.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Protocols/ConnectDelegate.html; sourceTree = "<group>"; };
-		0CEB905EF6415485263CE47EDB6046BA /* jazzy.search.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.search.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/jazzy.search.js; sourceTree = "<group>"; };
-		0E025FADA84230B75DE1442892045908 /* ConnectSessionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectSessionProvider.swift; sourceTree = "<group>"; };
-		0E6879E735011767CADBEADE4F02F7F6 /* loading@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading@2x.png"; path = "CivicConnect/Assets/loading@2x.png"; sourceTree = "<group>"; };
-		1013B90655DF7B03B8E56780CD108216 /* spinner.gif */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.gif; name = spinner.gif; path = docs/img/spinner.gif; sourceTree = "<group>"; };
-		146756CCD1A27789ECEFAA265B9DEB88 /* ConnectStatus.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ConnectStatus.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Enums/ConnectStatus.html; sourceTree = "<group>"; };
-		148B632AF2F4EF6903526387078FACC6 /* Connect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Connect.swift; sourceTree = "<group>"; };
-		15848067738DA4149885C6B9FF4CBB94 /* AuthCodeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthCodeAction.swift; sourceTree = "<group>"; };
-		1686CB89ABC26AF282B7E250E8A11443 /* UserData.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UserData.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/UserData.html; sourceTree = "<group>"; };
-		16E2C8725BC0CE44E43CEE9AC394540B /* GetEncryptedUserDataResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetEncryptedUserDataResponse.swift; sourceTree = "<group>"; };
-		175BA781F153D5400DF7AC0EAF5752B0 /* loading@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading@3x.png"; path = "CivicConnect/Assets/loading@3x.png"; sourceTree = "<group>"; };
-		176E63E1E13D718178776B9CF4E4C7EA /* Bundle.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Bundle.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Extensions/Bundle.html; sourceTree = "<group>"; };
-		17F872B40DB7F9FF692EE98C31F0B105 /* UserData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		181F497247AA04708188654CB1545EA2 /* CivicConnect.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CivicConnect.xcconfig; sourceTree = "<group>"; };
-		2090EE7981BF710C867122B174536311 /* Launcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
-		220C3110D0986608E880D869221AB94E /* ConnectService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectService.swift; sourceTree = "<group>"; };
-		2326C07F7CC2F33903A4C4152224E32B /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
+		004E740A17D379478923A6939E8B4F2D /* DefaultConnectSessionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultConnectSessionProvider.swift; sourceTree = "<group>"; };
+		005BD9482FD93FC88D60738B72E1DAE0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037971A2C51F8E0632DBC9482084BAA1 /* GetAuthCodeResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetAuthCodeResponse.swift; sourceTree = "<group>"; };
+		0407C46EA4E84BC4D41F86C7226EC61B /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
+		053720562B175128B90B1C681FC30585 /* HttpClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		08A6C29FD804D16813CA6D9A2A827659 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
+		09C36C276670A52927225AEF8BE8FC5E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0C27E90CD305029D19F41AA9648D9CE9 /* CCConnectSecurity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCConnectSecurity.h; sourceTree = "<group>"; };
+		0D1F1E8EDE014EE28D29DF82A182DA3B /* ConnectSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectSession.swift; sourceTree = "<group>"; };
+		12402C5FD849C48E894E4F5FD868B1B6 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Enums.html; sourceTree = "<group>"; };
+		126D9F5B8C4EEBACC7130E59F1D3A215 /* ConnectBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectBundle.swift; sourceTree = "<group>"; };
+		14084B1AA1ED75DA04E325C3F4DA0D5D /* GetEncryptedUserDataResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetEncryptedUserDataResponse.swift; sourceTree = "<group>"; };
+		165119149A01E012BAC95211CE6DDA06 /* Bundle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Bundle.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Extensions/Bundle.html; sourceTree = "<group>"; };
+		17349404B20E9CCDC8733F2D5C25DF6E /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
+		1B80801535728610EF634CDFF98F7A54 /* loading@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading@2x.png"; path = "CivicConnect/Assets/loading@2x.png"; sourceTree = "<group>"; };
+		1D5C7670AD3E6B79CCFECBD086D02AFE /* CivicConnect.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CivicConnect.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1D84CD9AB0CBBBFBAC4A6DDA9FFF6B78 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
+		1EB21812AD98D3524F8064F9820C95F7 /* ConnectDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectDelegate.html; path = docs/Protocols/ConnectDelegate.html; sourceTree = "<group>"; };
+		1F80650C84311ADFD1800878577832D9 /* logo.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = logo.png; path = CivicConnect/Assets/logo.png; sourceTree = "<group>"; };
+		239E681A390ED5175E7F467A5980D0EB /* Bundle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Bundle.html; path = docs/Extensions/Bundle.html; sourceTree = "<group>"; };
+		245A8D9F3DFAF193623DEAA28C4B8B85 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
 		247FABFC8381FFB5D81083DDFD8DBDE4 /* Pods-CivicConnect_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CivicConnect_Example-frameworks.sh"; sourceTree = "<group>"; };
-		2A1AEFB809FCACF931D9B9208502B2E0 /* DeviceInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
-		2A35338A7B162A3FBD998BD8453F48D7 /* ConnectButton.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ConnectButton.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/ConnectButton.html; sourceTree = "<group>"; };
-		2A514B1E4469CB7B12C6E36F34F43D41 /* spinner.gif */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.gif; name = spinner.gif; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/img/spinner.gif; sourceTree = "<group>"; };
-		2C25EC416A2638E320F0E809F8228BB1 /* ConnectDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectDelegate.swift; sourceTree = "<group>"; };
-		2CFDE7D7DA1BF58DEE12DE4900A53F1E /* CivicConnect.tgz */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = CivicConnect.tgz; path = docs/docsets/CivicConnect.tgz; sourceTree = "<group>"; };
+		274A8B2EA577ED627DC18D7BB3BDE3F9 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
+		289A3868605001E3D2180AAA49C0FE22 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
+		2FFD1459829BDC1AEE73ED97EC4FFC05 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
+		33E859A82D98DAC383483727567D0469 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Extensions.html; path = docs/Extensions.html; sourceTree = "<group>"; };
 		3412CE5680097EA8306F14D0199CCA45 /* Pods-CivicConnect_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CivicConnect_Tests-umbrella.h"; sourceTree = "<group>"; };
-		342609479D8CDAACAAB405C25F25DCAB /* typeahead.jquery.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = typeahead.jquery.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/typeahead.jquery.js; sourceTree = "<group>"; };
 		35481A1AA40891BBBA8CB97804D6669E /* Pods-CivicConnect_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CivicConnect_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		360DB47B306159967173E44F80DB43BC /* lunr.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = lunr.min.js; path = docs/js/lunr.min.js; sourceTree = "<group>"; };
-		367BABD7369679420A18C5F0E3C2F592 /* logo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "logo@3x.png"; path = "CivicConnect/Assets/logo@3x.png"; sourceTree = "<group>"; };
-		38B46C8734199334BBCBA11822DC7680 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
-		3F77F1AD456E611686183BD4B07CDD54 /* logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "logo@2x.png"; path = "CivicConnect/Assets/logo@2x.png"; sourceTree = "<group>"; };
+		3AD27CD271300622F599C0F7399BEC8F /* spinner.gif */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.gif; name = spinner.gif; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/img/spinner.gif; sourceTree = "<group>"; };
+		3C8D1C8243A5DDD8ED56B6AD864FDD92 /* ResourceBundle-CivicConnect-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CivicConnect-Info.plist"; sourceTree = "<group>"; };
+		3FF183CC911FBEE7F9F942A4469B8B17 /* ConnectService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectService.swift; sourceTree = "<group>"; };
 		4009CD01302C2F9DDFD9CBED10A3CDC8 /* Pods-CivicConnect_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CivicConnect_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		43042CD2E53451BEB65506C7AA46181D /* Pods-CivicConnect_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CivicConnect_Tests-dummy.m"; sourceTree = "<group>"; };
-		44C642516E2EC85A2F0DE7A2E99E6E64 /* DispatchQueueAsynchronousRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DispatchQueueAsynchronousRunner.swift; sourceTree = "<group>"; };
-		47702D6FD6DCB0BF982782DDED5CD3C2 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Enums.html; path = docs/Enums.html; sourceTree = "<group>"; };
-		49C4F56A93E25AE274A5D174ED4F4811 /* HttpRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
-		4ABCD70570CEE577EC0DE02ADCBC7F07 /* GetAuthCodeResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetAuthCodeResponse.swift; sourceTree = "<group>"; };
-		4AD7693F86332CB3588A48B67F869EB8 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
-		4B0554EA61BB1ACB59010EEB22463727 /* lunr.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = lunr.min.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/lunr.min.js; sourceTree = "<group>"; };
-		4B24B585D8A26323F3E727748AD06778 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		4D7F98825A9BAE6BDF7A216EAD142BEB /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
-		549A52FEDAB30493020933359675ADAD /* ConnectButton.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ConnectButton.html; path = docs/Classes/ConnectButton.html; sourceTree = "<group>"; };
-		58222EC72E1F7AEBAE9C479637215BFF /* DefaultConnectSessionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultConnectSessionProvider.swift; sourceTree = "<group>"; };
+		4974CC7B8373FC27C5390A0F0538BD8B /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		4C2AF7A488F26732225EFD22AD18C44D /* loading.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = loading.png; path = CivicConnect/Assets/loading.png; sourceTree = "<group>"; };
+		4CDC2E0662A054D92865F28D667546C2 /* UserData.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UserData.html; path = docs/Classes/UserData.html; sourceTree = "<group>"; };
+		4E65719FD96C351A57B5B3588D5C4478 /* CivicConnect.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CivicConnect.modulemap; sourceTree = "<group>"; };
+		532574C6611239FA249A075703DCF3BB /* lunr.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = lunr.min.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/lunr.min.js; sourceTree = "<group>"; };
 		58E1B31888555DFBBF2DBAB386B8D9D2 /* Pods-CivicConnect_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CivicConnect_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		598A11EC04BFEF5E531379839BE58694 /* Connect.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Connect.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/Connect.html; sourceTree = "<group>"; };
-		5A1E1E278D538FA88BFA73E2AE00319E /* CivicConnect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CivicConnect-dummy.m"; sourceTree = "<group>"; };
-		5C44DA732FDE50B113A39BB404B5683D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E50BA81362D94A241D26DF42D94AE7F /* UserInfo.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UserInfo.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/UserInfo.html; sourceTree = "<group>"; };
-		5FC20E80931A4BAD831C6DE085FFBD8E /* CivicConnect.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CivicConnect.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5E62095784BA9BF359661A9E23DE7769 /* logo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "logo@3x.png"; path = "CivicConnect/Assets/logo@3x.png"; sourceTree = "<group>"; };
+		5ED1E4F4A763F40C7618547F138DC3ED /* typeahead.jquery.js */ = {isa = PBXFileReference; includeInIndex = 1; name = typeahead.jquery.js; path = docs/js/typeahead.jquery.js; sourceTree = "<group>"; };
+		5F14F2D300C6E3EB51161A3AD1784295 /* ConnectDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectDelegate.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Protocols/ConnectDelegate.html; sourceTree = "<group>"; };
+		5F9B0E920BACA11AB51CD2A291186A2C /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
 		603FB832B70C74F192C6AB3D2123C809 /* Pods-CivicConnect_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CivicConnect_Tests.modulemap"; sourceTree = "<group>"; };
-		650521727A98FF955473B9B31C510272 /* CivicConnect.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CivicConnect.modulemap; sourceTree = "<group>"; };
+		6073A810AB4957ACA36659066F7EE7F5 /* GetAuthCodeRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetAuthCodeRequest.swift; sourceTree = "<group>"; };
+		6143FCB49961F13444A7BF353F3E7E12 /* UserInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		64D4784AA9E81311002E5070F03CC23A /* ScopeRequestType.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ScopeRequestType.html; path = docs/Enums/ScopeRequestType.html; sourceTree = "<group>"; };
 		653F359E21E1C78567323F98E6BE0608 /* Pods-CivicConnect_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CivicConnect_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		6636A3486351B846C6A17B44B1BC2628 /* ConnectStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectStatus.swift; sourceTree = "<group>"; };
-		670C19A309D916A1282CB93D98374A4D /* ConnectBundle.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ConnectBundle.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Protocols/ConnectBundle.html; sourceTree = "<group>"; };
-		6900FB7356EBBB7B6448538F74769023 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
-		6F38472DA3A84BA5C66507209D747269 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		740A51A6072DB069B9F4E4F3A5AAD266 /* UIApplicationLauncher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplicationLauncher.swift; sourceTree = "<group>"; };
+		6C5DB99E1A16592775E795D711B211B8 /* UserInfo.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UserInfo.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/UserInfo.html; sourceTree = "<group>"; };
+		6DE475045E2CDA8BD00B0F7D83DAAD3A /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
+		6E0577A7617A13C486B8C8652585E04A /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
+		6F29323A8A6624F94F350FBE4B56AA93 /* DeviceInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		6FDC3B8C8B18C4BCA38CCC15E466BCCD /* loading@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading@3x.png"; path = "CivicConnect/Assets/loading@3x.png"; sourceTree = "<group>"; };
+		70A27BDCA9CEC69044E1F4E65AF4AF5E /* AsynchronousProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsynchronousProvider.swift; sourceTree = "<group>"; };
+		726FEC029485B653A2AA81565A960F27 /* GetScopeRequestResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetScopeRequestResponse.swift; sourceTree = "<group>"; };
+		72C43E54C90C5FA701888BE9639AC8F4 /* UIApplicationLauncher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplicationLauncher.swift; sourceTree = "<group>"; };
+		742C4CD63A87959B583B513B0CC1C090 /* AsyncTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncTimer.swift; sourceTree = "<group>"; };
 		74531B42DB80996F90750ECFEC712023 /* Pods-CivicConnect_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CivicConnect_Example-umbrella.h"; sourceTree = "<group>"; };
 		7570261E6ACC7105B21202B26AE43D97 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		75FBE2A112F04E16C149F2C8304BC9AA /* HttpClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
-		7648C49F3D5748AD5FD49C4E8C8252C3 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Classes.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
-		7683E85426C2B7B34F387F55446529FF /* ConnectError.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ConnectError.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/ConnectError.html; sourceTree = "<group>"; };
-		78F365DB66160CDB70681BD06618D58A /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Extensions.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Extensions.html; sourceTree = "<group>"; };
+		79490B1CE42A293900909C48201C777E /* UserData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		79F58085DD72DBFA90C21B376D1200C0 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
 		7B59365DF1B542DDEE585F72E9A86367 /* Pods-CivicConnect_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CivicConnect_Example-dummy.m"; sourceTree = "<group>"; };
-		7D2B882642B1DDB110930E243D610910 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
-		7E12775D6C33DA799F3505227D13A723 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
-		7EFA154C5A8B9821CADE1E8331AE8BF5 /* Pods_CivicConnect_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CivicConnect_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		831560777EA993A838D2DD614E68E1AC /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
-		8323DE7DA6A5AF0B8DEB764062CFFDEF /* UserData.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UserData.html; path = docs/Classes/UserData.html; sourceTree = "<group>"; };
+		7B5C7791B3726893EC575AD1D27E5B4B /* ConnectBundle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectBundle.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Protocols/ConnectBundle.html; sourceTree = "<group>"; };
+		7C726223C93CBBA6DF33683CBCF14FA3 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
+		7D90DE6C74DDC1602A6C32D46955B99D /* Connect.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Connect.html; path = docs/Classes/Connect.html; sourceTree = "<group>"; };
+		7EEBBA97531DD45494F9291D998944DF /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
+		7EFA154C5A8B9821CADE1E8331AE8BF5 /* Pods_CivicConnect_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CivicConnect_Example.framework; path = "Pods-CivicConnect_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA02E6FBB9AA1794D27ECFE9359CB3E /* ConnectButton.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectButton.html; path = docs/Classes/ConnectButton.html; sourceTree = "<group>"; };
+		835F4D815D56024CD76BEEE6CD83344D /* Launcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
+		83FC30AB70F2DF6EAD6B1101A533647D /* CivicConnect-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CivicConnect-umbrella.h"; sourceTree = "<group>"; };
+		87D02204C43B596C2D92BE9264B18970 /* logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "logo@2x.png"; path = "CivicConnect/Assets/logo@2x.png"; sourceTree = "<group>"; };
 		88F156A71ADFF300B0A00588A5877549 /* Pods-CivicConnect_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CivicConnect_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8D41BFD6D10AC93E3A16FFE7A6AC2B70 /* loading.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = loading.png; path = CivicConnect/Assets/loading.png; sourceTree = "<group>"; };
+		891D356DA5BFCADEF618AAB9D4A1C743 /* GetScopeRequestRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetScopeRequestRequest.swift; sourceTree = "<group>"; };
 		8D9CE341365E357A84AA64B9D19E9D5E /* Pods-CivicConnect_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CivicConnect_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8E87931799A08D031582781C0335655D /* Pods-CivicConnect_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CivicConnect_Example-resources.sh"; sourceTree = "<group>"; };
-		8EC39CFB6D6E18E3B3490189AFB3CCD3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/CivicConnect.docset/Contents/Info.plist; sourceTree = "<group>"; };
-		8F37558434A40AED14DADED35026FDEB /* ConnectBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectBundle.swift; sourceTree = "<group>"; };
+		8F1AA78E19B56DA1C1723C5111A2A807 /* ScopeRequestType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScopeRequestType.swift; sourceTree = "<group>"; };
+		8F7851A55F42417AB935D1C2BD3BC649 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/CivicConnect.docset/Contents/Info.plist; sourceTree = "<group>"; };
 		8F9A51D8723AC8AC725F752FAE43F703 /* Pods-CivicConnect_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CivicConnect_Example.modulemap"; sourceTree = "<group>"; };
-		926127008807699B043FAAA5D781CBFE /* AsynchronousProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsynchronousProvider.swift; sourceTree = "<group>"; };
+		913388A7FB853C479C14FC2CB7CEA277 /* ConnectStatus.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectStatus.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Enums/ConnectStatus.html; sourceTree = "<group>"; };
+		9166FF4C4A7E187B7072E673F0107D28 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/Enums.html; sourceTree = "<group>"; };
+		91704EC3A5233070D6C248EC161AF63C /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
 		92F9E83C03D6C2D7ED0E0D076E44FFA2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		977D4C0D2FCA8295BABBDE72B466B5AB /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
-		97D628BF421AB844EEE0156025204E21 /* AuthCodeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthCodeType.swift; sourceTree = "<group>"; };
-		9F87FEE4F671E9E741B294DBF0C91612 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
-		A0B5D3E785556910DF24685DE62CF2C9 /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = docSet.dsidx; path = docs/docsets/CivicConnect.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
-		A38AFACC4DE077E608EF761957F97C53 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
-		A3EA8AC5C4FCBCEC66CFF080650EA4E2 /* GetEncryptedUserDataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetEncryptedUserDataRequest.swift; sourceTree = "<group>"; };
-		A52A812BDC0EEBF3C41EB0C1A504463F /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
-		A55DA87679B74042C4CDDF49131157F4 /* GetScopeRequestRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetScopeRequestRequest.swift; sourceTree = "<group>"; };
-		A6343698A4084318CE69E60C5576DD89 /* GetScopeRequestResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetScopeRequestResponse.swift; sourceTree = "<group>"; };
-		A6753E9097A63291029C2A9B83A3B42E /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = index.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		943646BDAFD340C48C5FE345A68EF558 /* CCConnectDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = CCConnectDelegate.html; path = docs/Protocols/CCConnectDelegate.html; sourceTree = "<group>"; };
+		967CC9740BA6F180323BED1710EF0090 /* lunr.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = lunr.min.js; path = docs/js/lunr.min.js; sourceTree = "<group>"; };
+		96B7782FC3D67AFA5F1E9CF8370E7D1D /* CivicConnect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CivicConnect-dummy.m"; sourceTree = "<group>"; };
+		9B1D71035A7626EE846F6A3667F331DB /* spinner.gif */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.gif; name = spinner.gif; path = docs/img/spinner.gif; sourceTree = "<group>"; };
+		9D78111F78A61EF4B9A2C85E4902B415 /* ConnectDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectDelegate.swift; sourceTree = "<group>"; };
+		9FB7AE656005F23962D19C07D5E75689 /* ConnectButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectButton.swift; sourceTree = "<group>"; };
+		A04B4EDB3F5D31295AF5D3E5A029B297 /* CivicConnect.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = CivicConnect.tgz; path = docs/docsets/CivicConnect.tgz; sourceTree = "<group>"; };
+		A49A4B4E0E5E3A027B6EFB1868961C57 /* Connect.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Connect.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/Connect.html; sourceTree = "<group>"; };
+		A79BAB7BC078001AAF8871603ED064FA /* ConnectStatus.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectStatus.html; path = docs/Enums/ConnectStatus.html; sourceTree = "<group>"; };
 		A7EECE08B30F48FAE9C74068C9B35796 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7F8CC0DB0376420E6248181C6B146E7 /* CCConnectSecurity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CCConnectSecurity.m; sourceTree = "<group>"; };
-		ADC7CBD2A8204D67E9036498422EDCB5 /* AsynchronousRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsynchronousRunner.swift; sourceTree = "<group>"; };
-		AF02E2E08754C0BD6C87023CBA21A79B /* UserInfo.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UserInfo.html; path = docs/Classes/UserInfo.html; sourceTree = "<group>"; };
-		B08547948D6246B7A270D7A60AB7BF11 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
-		B12E44AAA7660749F5D84AF959E4AAF3 /* CivicConnect-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CivicConnect-umbrella.h"; sourceTree = "<group>"; };
-		B7311FFFF92A370DAE1AE5462E718822 /* Bundle.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Bundle.html; path = docs/Extensions/Bundle.html; sourceTree = "<group>"; };
+		AA8BEFB82AA3DE2F80EB76118CE8B5D8 /* ConnectButton.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectButton.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/ConnectButton.html; sourceTree = "<group>"; };
+		B0C4554D9F0F0A2A1EF9C14813DACD38 /* jazzy.search.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.search.js; path = docs/js/jazzy.search.js; sourceTree = "<group>"; };
+		B19E91A60FC79CCE4075D02322665644 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
+		B69E0C8A18700E2000755E97AACC0EF7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		B8B64FA1C7875C9F75321409321E8AC6 /* Pods-CivicConnect_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CivicConnect_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B903669F310FCAD6CC0A99FC76F8A328 /* ScopeRequestType.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ScopeRequestType.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Enums/ScopeRequestType.html; sourceTree = "<group>"; };
-		B99F4AE44E018698DDD87CB856F12E6A /* GetAuthCodeRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetAuthCodeRequest.swift; sourceTree = "<group>"; };
-		BD2B87A5E1C453FF39BFCD833BCB0E3D /* UserInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		BDF36E99CDCE1722C9C9F0B79C32D9CE /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
-		C363AA61F52C4C3EB3E9EAC7D7268C99 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
-		CC79270C019900CBD18DDB45DF6BFF76 /* DefaultConnectSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultConnectSession.swift; sourceTree = "<group>"; };
+		BA22E6392B97ADCF86ADB9CC3AD34DA9 /* VerificationLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerificationLevel.swift; sourceTree = "<group>"; };
+		BA6E65AF3DB9755FABB5F83907249159 /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/docsets/CivicConnect.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
+		BB9FCA16098D9D7F40056589DA558AEA /* typeahead.jquery.js */ = {isa = PBXFileReference; includeInIndex = 1; name = typeahead.jquery.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/typeahead.jquery.js; sourceTree = "<group>"; };
+		BD0F4E6A8C813D4A6D9C24DB94013783 /* DefaultConnectSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultConnectSession.swift; sourceTree = "<group>"; };
+		BD49D20724A0D0952986ECD41658371D /* ConnectBundle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectBundle.html; path = docs/Protocols/ConnectBundle.html; sourceTree = "<group>"; };
+		BF44D11A7AD7F20915F6DEA04590F61E /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
+		BFF0E4854D78C99440A6EA070FEC8617 /* CivicConnect-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CivicConnect-prefix.pch"; sourceTree = "<group>"; };
+		C022104F87FEB91DF1E746E33C8F8EC4 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
+		C2266F92BA81DAC2BF040EF16B960424 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/undocumented.json; sourceTree = "<group>"; };
+		C6CC493E6D72C823901930F87C152018 /* ScopeRequestType.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ScopeRequestType.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Enums/ScopeRequestType.html; sourceTree = "<group>"; };
+		C80B9640754095CCACA9BFCCC272FD43 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CA57D4881AFD8D9B17FF09FC8FA22AAE /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/badge.svg; sourceTree = "<group>"; };
+		CBDEB3F9E2E98484CFF66AEEA5EF394C /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
 		CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CF2D06C63EC71C403F6587CC2CD72F2D /* ConnectDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ConnectDelegate.html; path = docs/Protocols/ConnectDelegate.html; sourceTree = "<group>"; };
-		D098D23E262E2B6720F23F1DC6CA641A /* ResourceBundle-CivicConnect-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CivicConnect-Info.plist"; sourceTree = "<group>"; };
-		D297C6B8D697D901642ED00F61980B0C /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
-		D62761134621EA002613DF77A84BD1E4 /* ConnectStatus.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ConnectStatus.html; path = docs/Enums/ConnectStatus.html; sourceTree = "<group>"; };
-		D7BD6A2CBFD49F77045190A55700F624 /* ConnectError.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ConnectError.html; path = docs/Classes/ConnectError.html; sourceTree = "<group>"; };
+		D1837B338D06D8CDFA399EFD49A29C25 /* CCConnectDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = CCConnectDelegate.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Protocols/CCConnectDelegate.html; sourceTree = "<group>"; };
+		D2DD0644DDE9B601DEB80B0D9203DFCA /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
+		D3A96D91BB5FC00C8A4300223DD84605 /* Connect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Connect.swift; sourceTree = "<group>"; };
+		D4F1329D23141189897EFF3E56361BB5 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Extensions.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Extensions.html; sourceTree = "<group>"; };
+		D571BB4C0D023DE14070B7208F64251D /* jazzy.search.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.search.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/jazzy.search.js; sourceTree = "<group>"; };
+		D677A9F98DC3091BB5748387E930F6C7 /* ConnectError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectError.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/ConnectError.html; sourceTree = "<group>"; };
+		D72996C45559952CF87E12A54494500C /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
+		D8355F0AF343FA1C406D101E50159CAD /* UserData.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UserData.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Classes/UserData.html; sourceTree = "<group>"; };
+		DA1A34E50417E8FED19298E8F3F7BE11 /* UserInfo.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UserInfo.html; path = docs/Classes/UserInfo.html; sourceTree = "<group>"; };
 		DB353CA69DDE21137E8BA6DD32C22A23 /* Pods-CivicConnect_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CivicConnect_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DC0C51110016EA6AD5A149453E0B7BB2 /* CivicConnect-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CivicConnect-prefix.pch"; sourceTree = "<group>"; };
 		DC27C2722D73E9AE4E598F1341ADB22B /* Pods-CivicConnect_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CivicConnect_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DC52ED95C30C4D1005EA45EB082A0CD0 /* ConnectButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectButton.swift; sourceTree = "<group>"; };
-		DEFEFC8313F01B366CDB322DA98A6B47 /* VerificationLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerificationLevel.swift; sourceTree = "<group>"; };
-		DF912228FF1C1027AF24EA0A663BB819 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Enums.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Enums.html; sourceTree = "<group>"; };
+		DD88EE4A7F5D12A3AD7AE86DA17B5AA0 /* HttpRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		DEF0C7951C280037CDBA826A0BC80440 /* AuthCodeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthCodeAction.swift; sourceTree = "<group>"; };
 		DFAD4B3715314E80D75C1B6DD1DD5B95 /* Pods-CivicConnect_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CivicConnect_Tests-resources.sh"; sourceTree = "<group>"; };
-		E34FA943C4CE18DA89FFD09671B99B91 /* ConnectBundle.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ConnectBundle.html; path = docs/Protocols/ConnectBundle.html; sourceTree = "<group>"; };
-		E368F89F0E7E77F5A453EE92F84D86CB /* logo.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = logo.png; path = CivicConnect/Assets/logo.png; sourceTree = "<group>"; };
-		E3A5E0EAB27A6BA050D9A233DD00EE45 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E5795E0902CDE2E8C3F32101CAD009D4 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
-		E5F3EDD839FC9C8559D71C8A10B421EF /* jazzy.search.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.search.js; path = docs/js/jazzy.search.js; sourceTree = "<group>"; };
-		E73A3CF90A21E5E35F1770BF31B9273F /* ConnectSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectSession.swift; sourceTree = "<group>"; };
-		E7E75DAE13360AA1B8477D1F11D7C825 /* Pods_CivicConnect_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CivicConnect_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8034CCD38544AE4DE86E8AD52550F42 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
-		E8599175669B273A34D7206101690B1F /* ScopeRequestType.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ScopeRequestType.html; path = docs/Enums/ScopeRequestType.html; sourceTree = "<group>"; };
-		EB1C20A0BD75FEC1278B620FDBA77C6C /* CCConnectDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = CCConnectDelegate.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Protocols/CCConnectDelegate.html; sourceTree = "<group>"; };
-		EE43450E705878B7FDDFFF6A2FA68085 /* Connect.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Connect.html; path = docs/Classes/Connect.html; sourceTree = "<group>"; };
-		EE8D4BE5C96E39DC21D6AB06D0823F94 /* ConnectError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectError.swift; sourceTree = "<group>"; };
-		F052DEEF2786E812F0B66E5700316BE1 /* CivicConnect.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CivicConnect.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0D00EC7E0DEF9936DA9DE9D62389518 /* typeahead.jquery.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = typeahead.jquery.js; path = docs/js/typeahead.jquery.js; sourceTree = "<group>"; };
-		F1AEED148913C7A0FF8A4DF1301D79E3 /* CCConnectSecurity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CCConnectSecurity.h; sourceTree = "<group>"; };
-		F1F0818C6A2E5C4325CA637DBBCDDAAD /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
-		F5053733DA099B95056FFC21EAC42491 /* CCConnectDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = CCConnectDelegate.html; path = docs/Protocols/CCConnectDelegate.html; sourceTree = "<group>"; };
-		F586C0432B1BF51D217BE8B1AA5E2984 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Protocols.html; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
-		F7AC48A160A39A3520EF9800A3F54675 /* CivicConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CivicConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F97E73D426F6180D741D38B92CB54B0B /* ScopeRequestType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScopeRequestType.swift; sourceTree = "<group>"; };
-		FCAF6A4D62CF44684EC75A88B333E1F1 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
+		E7E75DAE13360AA1B8477D1F11D7C825 /* Pods_CivicConnect_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CivicConnect_Tests.framework; path = "Pods-CivicConnect_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC42AB795EB4489480A274CFCDD23C68 /* AsynchronousRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsynchronousRunner.swift; sourceTree = "<group>"; };
+		ED493C8F772B2C06AAAE02C4A1A2A342 /* ConnectError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ConnectError.html; path = docs/Classes/ConnectError.html; sourceTree = "<group>"; };
+		EDF79FA3445342B1429FE801FF5E19EE /* CivicConnect.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CivicConnect.xcconfig; sourceTree = "<group>"; };
+		EFBB148A93657FDA8442ECBCD36CBE3E /* GetEncryptedUserDataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetEncryptedUserDataRequest.swift; sourceTree = "<group>"; };
+		F052DEEF2786E812F0B66E5700316BE1 /* CivicConnect.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CivicConnect.bundle; path = "CivicConnect-CivicConnect.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FFC3C76A0FC43FA9CD33ECE2C55AD2 /* ConnectStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectStatus.swift; sourceTree = "<group>"; };
+		F60ABA9413126F31F4F9218026985326 /* ConnectSessionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectSessionProvider.swift; sourceTree = "<group>"; };
+		F6E1D62E2FF99C462713C4EE4B851DB3 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
+		F78B2616E2F69D6473C11D8E87E570CB /* DispatchQueueAsynchronousRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DispatchQueueAsynchronousRunner.swift; sourceTree = "<group>"; };
+		F7AC48A160A39A3520EF9800A3F54675 /* CivicConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CivicConnect.framework; path = CivicConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F939A0ADB8257BE23359871DFE9B9A66 /* CCConnectSecurity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CCConnectSecurity.m; sourceTree = "<group>"; };
+		FBE00D1BF97C607239289D754F326B43 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/CivicConnect.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
+		FBE8642FFA2373B0F0F4468722F10D36 /* ConnectError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectError.swift; sourceTree = "<group>"; };
+		FD24D096104EBCB742F26923C2CFB7FA /* AuthCodeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthCodeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,25 +265,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0000A5929374B637A30C151FC595A48C /* Bundle */ = {
+		0E47C55BCB577B277C32E5F66E8D55F9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8F37558434A40AED14DADED35026FDEB /* ConnectBundle.swift */,
+				C80B9640754095CCACA9BFCCC272FD43 /* Config.swift */,
+				D3A96D91BB5FC00C8A4300223DD84605 /* Connect.swift */,
+				9D78111F78A61EF4B9A2C85E4902B415 /* ConnectDelegate.swift */,
+				F0FFC3C76A0FC43FA9CD33ECE2C55AD2 /* ConnectStatus.swift */,
+				8F1AA78E19B56DA1C1723C5111A2A807 /* ScopeRequestType.swift */,
+				8890E8169CA77F1F28C455D89CA87147 /* Bundle */,
+				FA57C28A22E4B5F0095EE2DEE20E0D32 /* Errors */,
+				5A1BC876041179F47F7A5E505C8A1B4B /* Launcher */,
+				5CFEDA91B02EA05FC67EC7BD1C0E7AD4 /* Session */,
 			);
-			path = Bundle;
+			name = Core;
+			path = CivicConnect/Classes/Core;
 			sourceTree = "<group>";
 		};
-		062A386C9C379E9060DED7D3BAFAA147 /* Resources */ = {
+		100BBD6477EF74D3D64E086303DBF714 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8D41BFD6D10AC93E3A16FFE7A6AC2B70 /* loading.png */,
-				0E6879E735011767CADBEADE4F02F7F6 /* loading@2x.png */,
-				175BA781F153D5400DF7AC0EAF5752B0 /* loading@3x.png */,
-				E368F89F0E7E77F5A453EE92F84D86CB /* logo.png */,
-				3F77F1AD456E611686183BD4B07CDD54 /* logo@2x.png */,
-				367BABD7369679420A18C5F0E3C2F592 /* logo@3x.png */,
+				9FB7AE656005F23962D19C07D5E75689 /* ConnectButton.swift */,
 			);
-			name = Resources;
+			name = UI;
+			path = CivicConnect/Classes/UI;
+			sourceTree = "<group>";
+		};
+		155F3C564F3DB087306F03088AE55040 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				6F29323A8A6624F94F350FBE4B56AA93 /* DeviceInfo.swift */,
+				6073A810AB4957ACA36659066F7EE7F5 /* GetAuthCodeRequest.swift */,
+				EFBB148A93657FDA8442ECBCD36CBE3E /* GetEncryptedUserDataRequest.swift */,
+				891D356DA5BFCADEF618AAB9D4A1C743 /* GetScopeRequestRequest.swift */,
+				BA22E6392B97ADCF86ADB9CC3AD34DA9 /* VerificationLevel.swift */,
+			);
+			name = Requests;
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		24C7CB6399E1B487EA0F5302377FB1A2 /* Pods-CivicConnect_Example */ = {
@@ -302,33 +322,21 @@
 			path = "Target Support Files/Pods-CivicConnect_Example";
 			sourceTree = "<group>";
 		};
-		3C9AEC681EA892A9FDC32DD229751C10 /* CivicConnect */ = {
+		2EE7849FFE361F04F7A69F529E3F1B0B /* CivicConnect */ = {
 			isa = PBXGroup;
 			children = (
-				F5E5D15BBAD0D42EDFD11B030AD7AF5B /* Core */,
-				734712B837D4DDC2AD7EED995BEFF902 /* Models */,
-				C6197DF03628F839F9A79E354D90F718 /* Pod */,
-				062A386C9C379E9060DED7D3BAFAA147 /* Resources */,
-				94998E0ABC1C80DE344018D956FB8347 /* Security */,
-				B3658C0DFA59C7F8C418B1658AD2EF0D /* Services */,
-				CDCCBF1CA35D6EF5B304A8128CE8741A /* Support Files */,
-				C32B030AD2868C6B1F19726DADAB5185 /* UI */,
-				A7F95BF69A16E64F24B7E3BC2FD81C25 /* Utilities */,
+				0E47C55BCB577B277C32E5F66E8D55F9 /* Core */,
+				B89DB6CCD9000FCBAACB4486848E4275 /* Models */,
+				69B05CC7EFB7E1B342ED599AC9FD1421 /* Pod */,
+				58C2C96F5072278B4FE1E9C697304288 /* Resources */,
+				F1A740291DD471F06262C554A5EF991F /* Security */,
+				545BC8A3718B05594AAA302AAC52537A /* Services */,
+				9D8C9C8D30204B83785C8255258CCECD /* Support Files */,
+				100BBD6477EF74D3D64E086303DBF714 /* UI */,
+				DE7CE36750511C5963A691FE81E60355 /* Utilities */,
 			);
 			name = CivicConnect;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		3D039A73E69D19C9568E9B8ADDB09627 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				2A1AEFB809FCACF931D9B9208502B2E0 /* DeviceInfo.swift */,
-				B99F4AE44E018698DDD87CB856F12E6A /* GetAuthCodeRequest.swift */,
-				A3EA8AC5C4FCBCEC66CFF080650EA4E2 /* GetEncryptedUserDataRequest.swift */,
-				A55DA87679B74042C4CDDF49131157F4 /* GetScopeRequestRequest.swift */,
-				DEFEFC8313F01B366CDB322DA98A6B47 /* VerificationLevel.swift */,
-			);
-			path = Requests;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -339,19 +347,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		43E6BD2C79A85BDDD3FF4A6F86E743B9 /* Launcher */ = {
-			isa = PBXGroup;
-			children = (
-				2090EE7981BF710C867122B174536311 /* Launcher.swift */,
-				740A51A6072DB069B9F4E4F3A5AAD266 /* UIApplicationLauncher.swift */,
-			);
-			path = Launcher;
-			sourceTree = "<group>";
-		};
 		4726F046EC0547EF4EFACE62F512766B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3C9AEC681EA892A9FDC32DD229751C10 /* CivicConnect */,
+				2EE7849FFE361F04F7A69F529E3F1B0B /* CivicConnect */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -367,6 +366,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		545BC8A3718B05594AAA302AAC52537A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3FF183CC911FBEE7F9F942A4469B8B17 /* ConnectService.swift */,
+				EC40930A99C9DF003F04F8EE392380C6 /* HttpClient */,
+				155F3C564F3DB087306F03088AE55040 /* Requests */,
+				C28A8E5186FBF2BC11B9386104A5F0AE /* Responses */,
+			);
+			name = Services;
+			path = CivicConnect/Classes/Services;
+			sourceTree = "<group>";
+		};
 		547FE7BE59B73C045A10943A669A2D8C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +385,41 @@
 				7570261E6ACC7105B21202B26AE43D97 /* Security.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		58C2C96F5072278B4FE1E9C697304288 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C2AF7A488F26732225EFD22AD18C44D /* loading.png */,
+				1B80801535728610EF634CDFF98F7A54 /* loading@2x.png */,
+				6FDC3B8C8B18C4BCA38CCC15E466BCCD /* loading@3x.png */,
+				1F80650C84311ADFD1800878577832D9 /* logo.png */,
+				87D02204C43B596C2D92BE9264B18970 /* logo@2x.png */,
+				5E62095784BA9BF359661A9E23DE7769 /* logo@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5A1BC876041179F47F7A5E505C8A1B4B /* Launcher */ = {
+			isa = PBXGroup;
+			children = (
+				835F4D815D56024CD76BEEE6CD83344D /* Launcher.swift */,
+				72C43E54C90C5FA701888BE9639AC8F4 /* UIApplicationLauncher.swift */,
+			);
+			name = Launcher;
+			path = Launcher;
+			sourceTree = "<group>";
+		};
+		5CFEDA91B02EA05FC67EC7BD1C0E7AD4 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				0D1F1E8EDE014EE28D29DF82A182DA3B /* ConnectSession.swift */,
+				F60ABA9413126F31F4F9218026985326 /* ConnectSessionProvider.swift */,
+				BD0F4E6A8C813D4A6D9C24DB94013783 /* DefaultConnectSession.swift */,
+				004E740A17D379478923A6939E8B4F2D /* DefaultConnectSessionProvider.swift */,
+			);
+			name = Session;
+			path = Session;
 			sourceTree = "<group>";
 		};
 		6930F7F46BBAD928A10CE6A1584392A8 /* Targets Support Files */ = {
@@ -385,25 +431,77 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		734712B837D4DDC2AD7EED995BEFF902 /* Models */ = {
+		69B05CC7EFB7E1B342ED599AC9FD1421 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				17F872B40DB7F9FF692EE98C31F0B105 /* UserData.swift */,
-				BD2B87A5E1C453FF39BFCD833BCB0E3D /* UserInfo.swift */,
+				F6E1D62E2FF99C462713C4EE4B851DB3 /* badge.svg */,
+				CA57D4881AFD8D9B17FF09FC8FA22AAE /* badge.svg */,
+				239E681A390ED5175E7F467A5980D0EB /* Bundle.html */,
+				165119149A01E012BAC95211CE6DDA06 /* Bundle.html */,
+				08A6C29FD804D16813CA6D9A2A827659 /* carat.png */,
+				7C726223C93CBBA6DF33683CBCF14FA3 /* carat.png */,
+				943646BDAFD340C48C5FE345A68EF558 /* CCConnectDelegate.html */,
+				D1837B338D06D8CDFA399EFD49A29C25 /* CCConnectDelegate.html */,
+				1D5C7670AD3E6B79CCFECBD086D02AFE /* CivicConnect.podspec */,
+				A04B4EDB3F5D31295AF5D3E5A029B297 /* CivicConnect.tgz */,
+				6E0577A7617A13C486B8C8652585E04A /* Classes.html */,
+				D2DD0644DDE9B601DEB80B0D9203DFCA /* Classes.html */,
+				A49A4B4E0E5E3A027B6EFB1868961C57 /* Connect.html */,
+				7D90DE6C74DDC1602A6C32D46955B99D /* Connect.html */,
+				7B5C7791B3726893EC575AD1D27E5B4B /* ConnectBundle.html */,
+				BD49D20724A0D0952986ECD41658371D /* ConnectBundle.html */,
+				AA8BEFB82AA3DE2F80EB76118CE8B5D8 /* ConnectButton.html */,
+				7FA02E6FBB9AA1794D27ECFE9359CB3E /* ConnectButton.html */,
+				1EB21812AD98D3524F8064F9820C95F7 /* ConnectDelegate.html */,
+				5F14F2D300C6E3EB51161A3AD1784295 /* ConnectDelegate.html */,
+				ED493C8F772B2C06AAAE02C4A1A2A342 /* ConnectError.html */,
+				D677A9F98DC3091BB5748387E930F6C7 /* ConnectError.html */,
+				913388A7FB853C479C14FC2CB7CEA277 /* ConnectStatus.html */,
+				A79BAB7BC078001AAF8871603ED064FA /* ConnectStatus.html */,
+				289A3868605001E3D2180AAA49C0FE22 /* dash.png */,
+				C022104F87FEB91DF1E746E33C8F8EC4 /* dash.png */,
+				BA6E65AF3DB9755FABB5F83907249159 /* docSet.dsidx */,
+				9166FF4C4A7E187B7072E673F0107D28 /* Enums.html */,
+				12402C5FD849C48E894E4F5FD868B1B6 /* Enums.html */,
+				33E859A82D98DAC383483727567D0469 /* Extensions.html */,
+				D4F1329D23141189897EFF3E56361BB5 /* Extensions.html */,
+				BF44D11A7AD7F20915F6DEA04590F61E /* gh.png */,
+				FBE00D1BF97C607239289D754F326B43 /* gh.png */,
+				0407C46EA4E84BC4D41F86C7226EC61B /* highlight.css */,
+				B19E91A60FC79CCE4075D02322665644 /* highlight.css */,
+				4974CC7B8373FC27C5390A0F0538BD8B /* index.html */,
+				5F9B0E920BACA11AB51CD2A291186A2C /* index.html */,
+				8F7851A55F42417AB935D1C2BD3BC649 /* Info.plist */,
+				274A8B2EA577ED627DC18D7BB3BDE3F9 /* jazzy.css */,
+				7EEBBA97531DD45494F9291D998944DF /* jazzy.css */,
+				2FFD1459829BDC1AEE73ED97EC4FFC05 /* jazzy.js */,
+				6DE475045E2CDA8BD00B0F7D83DAAD3A /* jazzy.js */,
+				D571BB4C0D023DE14070B7208F64251D /* jazzy.search.js */,
+				B0C4554D9F0F0A2A1EF9C14813DACD38 /* jazzy.search.js */,
+				1D84CD9AB0CBBBFBAC4A6DDA9FFF6B78 /* jquery.min.js */,
+				245A8D9F3DFAF193623DEAA28C4B8B85 /* jquery.min.js */,
+				09C36C276670A52927225AEF8BE8FC5E /* LICENSE */,
+				532574C6611239FA249A075703DCF3BB /* lunr.min.js */,
+				967CC9740BA6F180323BED1710EF0090 /* lunr.min.js */,
+				CBDEB3F9E2E98484CFF66AEEA5EF394C /* Protocols.html */,
+				D72996C45559952CF87E12A54494500C /* Protocols.html */,
+				B69E0C8A18700E2000755E97AACC0EF7 /* README.md */,
+				C6CC493E6D72C823901930F87C152018 /* ScopeRequestType.html */,
+				64D4784AA9E81311002E5070F03CC23A /* ScopeRequestType.html */,
+				17349404B20E9CCDC8733F2D5C25DF6E /* search.json */,
+				91704EC3A5233070D6C248EC161AF63C /* search.json */,
+				9B1D71035A7626EE846F6A3667F331DB /* spinner.gif */,
+				3AD27CD271300622F599C0F7399BEC8F /* spinner.gif */,
+				BB9FCA16098D9D7F40056589DA558AEA /* typeahead.jquery.js */,
+				5ED1E4F4A763F40C7618547F138DC3ED /* typeahead.jquery.js */,
+				79F58085DD72DBFA90C21B376D1200C0 /* undocumented.json */,
+				C2266F92BA81DAC2BF040EF16B960424 /* undocumented.json */,
+				D8355F0AF343FA1C406D101E50159CAD /* UserData.html */,
+				4CDC2E0662A054D92865F28D667546C2 /* UserData.html */,
+				DA1A34E50417E8FED19298E8F3F7BE11 /* UserInfo.html */,
+				6C5DB99E1A16592775E795D711B211B8 /* UserInfo.html */,
 			);
-			name = Models;
-			path = CivicConnect/Classes/Models;
-			sourceTree = "<group>";
-		};
-		7854F26B46615C1C854F0D829BE288D6 /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				E73A3CF90A21E5E35F1770BF31B9273F /* ConnectSession.swift */,
-				0E025FADA84230B75DE1442892045908 /* ConnectSessionProvider.swift */,
-				CC79270C019900CBD18DDB45DF6BFF76 /* DefaultConnectSession.swift */,
-				58222EC72E1F7AEBAE9C479637215BFF /* DefaultConnectSessionProvider.swift */,
-			);
-			path = Session;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -417,118 +515,51 @@
 			);
 			sourceTree = "<group>";
 		};
-		94998E0ABC1C80DE344018D956FB8347 /* Security */ = {
+		8890E8169CA77F1F28C455D89CA87147 /* Bundle */ = {
 			isa = PBXGroup;
 			children = (
-				F1AEED148913C7A0FF8A4DF1301D79E3 /* CCConnectSecurity.h */,
-				A7F8CC0DB0376420E6248181C6B146E7 /* CCConnectSecurity.m */,
+				126D9F5B8C4EEBACC7130E59F1D3A215 /* ConnectBundle.swift */,
 			);
-			name = Security;
-			path = CivicConnect/Classes/Security;
+			name = Bundle;
+			path = Bundle;
 			sourceTree = "<group>";
 		};
-		A7F95BF69A16E64F24B7E3BC2FD81C25 /* Utilities */ = {
+		9D8C9C8D30204B83785C8255258CCECD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				926127008807699B043FAAA5D781CBFE /* AsynchronousProvider.swift */,
-				ADC7CBD2A8204D67E9036498422EDCB5 /* AsynchronousRunner.swift */,
-				44C642516E2EC85A2F0DE7A2E99E6E64 /* DispatchQueueAsynchronousRunner.swift */,
-				02A65E1D39FF15258F8688520581700D /* AsyncTimer.swift */,
+				4E65719FD96C351A57B5B3588D5C4478 /* CivicConnect.modulemap */,
+				EDF79FA3445342B1429FE801FF5E19EE /* CivicConnect.xcconfig */,
+				96B7782FC3D67AFA5F1E9CF8370E7D1D /* CivicConnect-dummy.m */,
+				BFF0E4854D78C99440A6EA070FEC8617 /* CivicConnect-prefix.pch */,
+				83FC30AB70F2DF6EAD6B1101A533647D /* CivicConnect-umbrella.h */,
+				005BD9482FD93FC88D60738B72E1DAE0 /* Info.plist */,
+				3C8D1C8243A5DDD8ED56B6AD864FDD92 /* ResourceBundle-CivicConnect-Info.plist */,
 			);
-			name = Utilities;
-			path = CivicConnect/Classes/Utilities;
+			name = "Support Files";
+			path = "Pods/Target Support Files/CivicConnect";
 			sourceTree = "<group>";
 		};
-		B3658C0DFA59C7F8C418B1658AD2EF0D /* Services */ = {
+		B89DB6CCD9000FCBAACB4486848E4275 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				220C3110D0986608E880D869221AB94E /* ConnectService.swift */,
-				CE79EAB61C5734D3D3A196CEB922BA79 /* HttpClient */,
-				3D039A73E69D19C9568E9B8ADDB09627 /* Requests */,
-				EE9B5704A3F055567A871052D3BB8029 /* Responses */,
+				79490B1CE42A293900909C48201C777E /* UserData.swift */,
+				6143FCB49961F13444A7BF353F3E7E12 /* UserInfo.swift */,
 			);
-			name = Services;
-			path = CivicConnect/Classes/Services;
+			name = Models;
+			path = CivicConnect/Classes/Models;
 			sourceTree = "<group>";
 		};
-		C32B030AD2868C6B1F19726DADAB5185 /* UI */ = {
+		C28A8E5186FBF2BC11B9386104A5F0AE /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				DC52ED95C30C4D1005EA45EB082A0CD0 /* ConnectButton.swift */,
+				DEF0C7951C280037CDBA826A0BC80440 /* AuthCodeAction.swift */,
+				FD24D096104EBCB742F26923C2CFB7FA /* AuthCodeType.swift */,
+				037971A2C51F8E0632DBC9482084BAA1 /* GetAuthCodeResponse.swift */,
+				14084B1AA1ED75DA04E325C3F4DA0D5D /* GetEncryptedUserDataResponse.swift */,
+				726FEC029485B653A2AA81565A960F27 /* GetScopeRequestResponse.swift */,
 			);
-			name = UI;
-			path = CivicConnect/Classes/UI;
-			sourceTree = "<group>";
-		};
-		C6197DF03628F839F9A79E354D90F718 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				BDF36E99CDCE1722C9C9F0B79C32D9CE /* badge.svg */,
-				B7311FFFF92A370DAE1AE5462E718822 /* Bundle.html */,
-				176E63E1E13D718178776B9CF4E4C7EA /* Bundle.html */,
-				4D7F98825A9BAE6BDF7A216EAD142BEB /* carat.png */,
-				E5795E0902CDE2E8C3F32101CAD009D4 /* carat.png */,
-				EB1C20A0BD75FEC1278B620FDBA77C6C /* CCConnectDelegate.html */,
-				F5053733DA099B95056FFC21EAC42491 /* CCConnectDelegate.html */,
-				5FC20E80931A4BAD831C6DE085FFBD8E /* CivicConnect.podspec */,
-				2CFDE7D7DA1BF58DEE12DE4900A53F1E /* CivicConnect.tgz */,
-				7648C49F3D5748AD5FD49C4E8C8252C3 /* Classes.html */,
-				04AE9A023C21243D1D4BE039D30F8361 /* Classes.html */,
-				598A11EC04BFEF5E531379839BE58694 /* Connect.html */,
-				EE43450E705878B7FDDFFF6A2FA68085 /* Connect.html */,
-				670C19A309D916A1282CB93D98374A4D /* ConnectBundle.html */,
-				E34FA943C4CE18DA89FFD09671B99B91 /* ConnectBundle.html */,
-				549A52FEDAB30493020933359675ADAD /* ConnectButton.html */,
-				2A35338A7B162A3FBD998BD8453F48D7 /* ConnectButton.html */,
-				058533FD2AC3CC6680A01B397EC15CDD /* ConnectDelegate.html */,
-				CF2D06C63EC71C403F6587CC2CD72F2D /* ConnectDelegate.html */,
-				D7BD6A2CBFD49F77045190A55700F624 /* ConnectError.html */,
-				7683E85426C2B7B34F387F55446529FF /* ConnectError.html */,
-				D62761134621EA002613DF77A84BD1E4 /* ConnectStatus.html */,
-				146756CCD1A27789ECEFAA265B9DEB88 /* ConnectStatus.html */,
-				831560777EA993A838D2DD614E68E1AC /* dash.png */,
-				38B46C8734199334BBCBA11822DC7680 /* dash.png */,
-				A0B5D3E785556910DF24685DE62CF2C9 /* docSet.dsidx */,
-				DF912228FF1C1027AF24EA0A663BB819 /* Enums.html */,
-				47702D6FD6DCB0BF982782DDED5CD3C2 /* Enums.html */,
-				0260E4E167BD29F2C4E001AAEA883527 /* Extensions.html */,
-				78F365DB66160CDB70681BD06618D58A /* Extensions.html */,
-				2326C07F7CC2F33903A4C4152224E32B /* gh.png */,
-				6900FB7356EBBB7B6448538F74769023 /* gh.png */,
-				A38AFACC4DE077E608EF761957F97C53 /* highlight.css */,
-				D297C6B8D697D901642ED00F61980B0C /* highlight.css */,
-				C363AA61F52C4C3EB3E9EAC7D7268C99 /* index.html */,
-				A6753E9097A63291029C2A9B83A3B42E /* index.html */,
-				8EC39CFB6D6E18E3B3490189AFB3CCD3 /* Info.plist */,
-				4AD7693F86332CB3588A48B67F869EB8 /* jazzy.css */,
-				E8034CCD38544AE4DE86E8AD52550F42 /* jazzy.css */,
-				F1F0818C6A2E5C4325CA637DBBCDDAAD /* jazzy.js */,
-				A52A812BDC0EEBF3C41EB0C1A504463F /* jazzy.js */,
-				E5F3EDD839FC9C8559D71C8A10B421EF /* jazzy.search.js */,
-				0CEB905EF6415485263CE47EDB6046BA /* jazzy.search.js */,
-				FCAF6A4D62CF44684EC75A88B333E1F1 /* jquery.min.js */,
-				B08547948D6246B7A270D7A60AB7BF11 /* jquery.min.js */,
-				4B24B585D8A26323F3E727748AD06778 /* LICENSE */,
-				360DB47B306159967173E44F80DB43BC /* lunr.min.js */,
-				4B0554EA61BB1ACB59010EEB22463727 /* lunr.min.js */,
-				F586C0432B1BF51D217BE8B1AA5E2984 /* Protocols.html */,
-				9F87FEE4F671E9E741B294DBF0C91612 /* Protocols.html */,
-				E3A5E0EAB27A6BA050D9A233DD00EE45 /* README.md */,
-				E8599175669B273A34D7206101690B1F /* ScopeRequestType.html */,
-				B903669F310FCAD6CC0A99FC76F8A328 /* ScopeRequestType.html */,
-				7E12775D6C33DA799F3505227D13A723 /* search.json */,
-				977D4C0D2FCA8295BABBDE72B466B5AB /* search.json */,
-				1013B90655DF7B03B8E56780CD108216 /* spinner.gif */,
-				2A514B1E4469CB7B12C6E36F34F43D41 /* spinner.gif */,
-				F0D00EC7E0DEF9936DA9DE9D62389518 /* typeahead.jquery.js */,
-				342609479D8CDAACAAB405C25F25DCAB /* typeahead.jquery.js */,
-				7D2B882642B1DDB110930E243D610910 /* undocumented.json */,
-				8323DE7DA6A5AF0B8DEB764062CFFDEF /* UserData.html */,
-				1686CB89ABC26AF282B7E250E8A11443 /* UserData.html */,
-				5E50BA81362D94A241D26DF42D94AE7F /* UserInfo.html */,
-				AF02E2E08754C0BD6C87023CBA21A79B /* UserInfo.html */,
-			);
-			name = Pod;
+			name = Responses;
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		C79D7CA3D81ED0F89A9F6D834C599139 /* Pods-CivicConnect_Tests */ = {
@@ -549,65 +580,45 @@
 			path = "Target Support Files/Pods-CivicConnect_Tests";
 			sourceTree = "<group>";
 		};
-		CDCCBF1CA35D6EF5B304A8128CE8741A /* Support Files */ = {
+		DE7CE36750511C5963A691FE81E60355 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				650521727A98FF955473B9B31C510272 /* CivicConnect.modulemap */,
-				181F497247AA04708188654CB1545EA2 /* CivicConnect.xcconfig */,
-				5A1E1E278D538FA88BFA73E2AE00319E /* CivicConnect-dummy.m */,
-				DC0C51110016EA6AD5A149453E0B7BB2 /* CivicConnect-prefix.pch */,
-				B12E44AAA7660749F5D84AF959E4AAF3 /* CivicConnect-umbrella.h */,
-				5C44DA732FDE50B113A39BB404B5683D /* Info.plist */,
-				D098D23E262E2B6720F23F1DC6CA641A /* ResourceBundle-CivicConnect-Info.plist */,
+				70A27BDCA9CEC69044E1F4E65AF4AF5E /* AsynchronousProvider.swift */,
+				EC42AB795EB4489480A274CFCDD23C68 /* AsynchronousRunner.swift */,
+				742C4CD63A87959B583B513B0CC1C090 /* AsyncTimer.swift */,
+				F78B2616E2F69D6473C11D8E87E570CB /* DispatchQueueAsynchronousRunner.swift */,
 			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/CivicConnect";
+			name = Utilities;
+			path = CivicConnect/Classes/Utilities;
 			sourceTree = "<group>";
 		};
-		CE79EAB61C5734D3D3A196CEB922BA79 /* HttpClient */ = {
+		EC40930A99C9DF003F04F8EE392380C6 /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
-				75FBE2A112F04E16C149F2C8304BC9AA /* HttpClient.swift */,
-				49C4F56A93E25AE274A5D174ED4F4811 /* HttpRequest.swift */,
+				053720562B175128B90B1C681FC30585 /* HttpClient.swift */,
+				DD88EE4A7F5D12A3AD7AE86DA17B5AA0 /* HttpRequest.swift */,
 			);
+			name = HttpClient;
 			path = HttpClient;
 			sourceTree = "<group>";
 		};
-		D80620B20C33C7EE0F70194D79A5EFA8 /* Errors */ = {
+		F1A740291DD471F06262C554A5EF991F /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				EE8D4BE5C96E39DC21D6AB06D0823F94 /* ConnectError.swift */,
+				0C27E90CD305029D19F41AA9648D9CE9 /* CCConnectSecurity.h */,
+				F939A0ADB8257BE23359871DFE9B9A66 /* CCConnectSecurity.m */,
 			);
+			name = Security;
+			path = CivicConnect/Classes/Security;
+			sourceTree = "<group>";
+		};
+		FA57C28A22E4B5F0095EE2DEE20E0D32 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				FBE8642FFA2373B0F0F4468722F10D36 /* ConnectError.swift */,
+			);
+			name = Errors;
 			path = Errors;
-			sourceTree = "<group>";
-		};
-		EE9B5704A3F055567A871052D3BB8029 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-				15848067738DA4149885C6B9FF4CBB94 /* AuthCodeAction.swift */,
-				97D628BF421AB844EEE0156025204E21 /* AuthCodeType.swift */,
-				4ABCD70570CEE577EC0DE02ADCBC7F07 /* GetAuthCodeResponse.swift */,
-				16E2C8725BC0CE44E43CEE9AC394540B /* GetEncryptedUserDataResponse.swift */,
-				A6343698A4084318CE69E60C5576DD89 /* GetScopeRequestResponse.swift */,
-			);
-			path = Responses;
-			sourceTree = "<group>";
-		};
-		F5E5D15BBAD0D42EDFD11B030AD7AF5B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				6F38472DA3A84BA5C66507209D747269 /* Config.swift */,
-				148B632AF2F4EF6903526387078FACC6 /* Connect.swift */,
-				2C25EC416A2638E320F0E809F8228BB1 /* ConnectDelegate.swift */,
-				6636A3486351B846C6A17B44B1BC2628 /* ConnectStatus.swift */,
-				F97E73D426F6180D741D38B92CB54B0B /* ScopeRequestType.swift */,
-				0000A5929374B637A30C151FC595A48C /* Bundle */,
-				D80620B20C33C7EE0F70194D79A5EFA8 /* Errors */,
-				43E6BD2C79A85BDDD3FF4A6F86E743B9 /* Launcher */,
-				7854F26B46615C1C854F0D829BE288D6 /* Session */,
-			);
-			name = Core;
-			path = CivicConnect/Classes/Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,7 +657,7 @@
 			buildConfigurationList = 4719BA586FDD240CE38CBA6639400980 /* Build configuration list for PBXNativeTarget "CivicConnect" */;
 			buildPhases = (
 				006FA7208315595AC349AD77905862F9 /* Headers */,
-				914608932002AB9FD52BA867B755FB20 /* Sources */,
+				8A07543F2F2219981EB7018CB857F486 /* Sources */,
 				599F93E5399333E65C82FBFD09CD7A8E /* Frameworks */,
 				F197A317058C44DF8723A76DAECE7C5B /* Resources */,
 			);
@@ -791,45 +802,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		914608932002AB9FD52BA867B755FB20 /* Sources */ = {
+		8A07543F2F2219981EB7018CB857F486 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A5040A2AD91E99C06542CF2E24B0463 /* AsynchronousProvider.swift in Sources */,
-				E3C286F5660735B47FE9E002CEA428A6 /* AsynchronousRunner.swift in Sources */,
-				8FB512394B3016670D0EED721295287D /* AuthCodeAction.swift in Sources */,
-				245F4D908B2E1D736F0412AF6E514D2A /* AuthCodeType.swift in Sources */,
-				39B59DF59FFB27832449AA515942F9D3 /* CCConnectSecurity.m in Sources */,
-				8D53CB5076DEB0E48DBECF3EC290A856 /* CivicConnect-dummy.m in Sources */,
-				C6941D6CACF4126142ED18EB48847D40 /* Config.swift in Sources */,
-				35EF03C1CD05227C960A616F1E4146FF /* Connect.swift in Sources */,
-				4F30C8C973A1C70A82F90BEFA21C3E15 /* ConnectBundle.swift in Sources */,
-				AE0FABD8853A9A25DD0B6566B93B966F /* ConnectButton.swift in Sources */,
-				6B9814A48C34B18DFB9FEB53E4E88BBA /* ConnectDelegate.swift in Sources */,
-				0277DF0AA04D30D0F8E7C072A3D16258 /* ConnectError.swift in Sources */,
-				EDD560474A64D946E69489E8A6148245 /* ConnectService.swift in Sources */,
-				56AE2378E3C9A153EA60D8073322E6F7 /* ConnectSession.swift in Sources */,
-				DAEBC0909F9271BF95BFD34C227499ED /* ConnectSessionProvider.swift in Sources */,
-				7C0D83F1BA57BD2BADFC01EC84903093 /* ConnectStatus.swift in Sources */,
-				89B11E5C09E71BD8B9A0F97C21AB8623 /* DefaultConnectSession.swift in Sources */,
-				1F714A09A5F40B6068EEB4D7BDDC0DAC /* DefaultConnectSessionProvider.swift in Sources */,
-				9481295F1C855307871C4C2E4D0BB751 /* DeviceInfo.swift in Sources */,
-				08B71E9B0570D317141DA48F9BB9F58C /* DispatchQueueAsynchronousRunner.swift in Sources */,
-				34E8CC1D0AF370034EC76F5FEE8BA052 /* GetAuthCodeRequest.swift in Sources */,
-				C2DE9040A468D37AB70769A4B071F25D /* GetAuthCodeResponse.swift in Sources */,
-				BED9E5F58BF6E1B7227A9B4C286E69EB /* GetEncryptedUserDataRequest.swift in Sources */,
-				901AD940F96C8EEAC74199147AA62D89 /* GetEncryptedUserDataResponse.swift in Sources */,
-				51D06C2191DF11F5270537D4DF46333B /* GetScopeRequestRequest.swift in Sources */,
-				00ADCF0C14E04F9ACFACA3124E9ACA16 /* GetScopeRequestResponse.swift in Sources */,
-				52E3D2CB899F83641E3FD9B5272C1035 /* HttpClient.swift in Sources */,
-				148B9374314723CD5C03B4F3530744E0 /* HttpRequest.swift in Sources */,
-				63427B52377CBAA6FACE3371B41F4C21 /* Launcher.swift in Sources */,
-				8AD7A2CF3524F2D193C5009CF9240A60 /* AsyncTimer.swift in Sources */,
-				36F6BEB8BA363F2731F6C8CBC0EDD0E9 /* ScopeRequestType.swift in Sources */,
-				CE37B1A33ADF4DCD2C95E65E750DD4BE /* UIApplicationLauncher.swift in Sources */,
-				A0EBF6A8C4ED531301E076F5ACA9CBB3 /* UserData.swift in Sources */,
-				AD2DDB2D33E4D9A5965822144669B458 /* UserInfo.swift in Sources */,
-				2A0C1EBFAAEC045EB02F4A6819875504 /* VerificationLevel.swift in Sources */,
+				E1FA1DE580C263EE8F9C5BC825AC375B /* AsynchronousProvider.swift in Sources */,
+				45F96E095C17DCE14A1D7D1276F306A6 /* AsynchronousRunner.swift in Sources */,
+				A3AA172961A9A85D0109663B9C9E758E /* AsyncTimer.swift in Sources */,
+				3BE3E5309D81B39A1A5B7753DF728469 /* AuthCodeAction.swift in Sources */,
+				1A6AC1FA3AAA126E0AAC531F546A3EBE /* AuthCodeType.swift in Sources */,
+				F6A96154539BA64FE5F52F3933528E69 /* CCConnectSecurity.m in Sources */,
+				B2CF44FD654205E0A76389E66C5B0F80 /* CivicConnect-dummy.m in Sources */,
+				AB6308A1680634991C8550232E2F1F34 /* Config.swift in Sources */,
+				356BED3E250947989044092016AD3882 /* Connect.swift in Sources */,
+				1B3A230B3B64CEB44B61D015821E5858 /* ConnectBundle.swift in Sources */,
+				C6373815553ABE9C9D81CEC4A07E6635 /* ConnectButton.swift in Sources */,
+				C879E2382A2E8640318C286F7DFEACF4 /* ConnectDelegate.swift in Sources */,
+				5F9EAF25F35761CDB82FD50ED534675E /* ConnectError.swift in Sources */,
+				A457C2F26236135C9368F82E0B220082 /* ConnectService.swift in Sources */,
+				6FA6D96940769696639E70DAE1F3A794 /* ConnectSession.swift in Sources */,
+				D2F11D3206CD664AE89C539CADB43514 /* ConnectSessionProvider.swift in Sources */,
+				E1DAFAF2E4015159A9BB60A92417136A /* ConnectStatus.swift in Sources */,
+				2F47E4F222587020C6C09664537B6371 /* DefaultConnectSession.swift in Sources */,
+				51488C7971D54D70B06DBBBEF6382415 /* DefaultConnectSessionProvider.swift in Sources */,
+				9B5C419AF4B678A475D3A3A0ADC89777 /* DeviceInfo.swift in Sources */,
+				CA00CF0DD1409AA9B4858C8268199FAC /* DispatchQueueAsynchronousRunner.swift in Sources */,
+				1617E43B2800739AE1757C3778185402 /* GetAuthCodeRequest.swift in Sources */,
+				E93C1156FD539CF40918E4B335041A2A /* GetAuthCodeResponse.swift in Sources */,
+				4C58D3AFE788118310168C7BED022BD5 /* GetEncryptedUserDataRequest.swift in Sources */,
+				E809F9EFA3C8A9E6ADF63139E3C83903 /* GetEncryptedUserDataResponse.swift in Sources */,
+				09E561245F2C8CEFD9B179D8E77798D2 /* GetScopeRequestRequest.swift in Sources */,
+				E23D0E87B4F4DAB6BCC54493C7A26C0C /* GetScopeRequestResponse.swift in Sources */,
+				E0872EF28052D785A4E45B444430D8FC /* HttpClient.swift in Sources */,
+				43F512292388CA5DB8D38D3CCE3F44C9 /* HttpRequest.swift in Sources */,
+				3FFB8837D8A4EFF3343511EB92289C0F /* Launcher.swift in Sources */,
+				140434D5783B7CFF2C3352A71C0D52E6 /* ScopeRequestType.swift in Sources */,
+				475C8F7FE26B0C727731E2FF37F79B4C /* UIApplicationLauncher.swift in Sources */,
+				559008FAF99B3EA5132BAD597B9F7A6A /* UserData.swift in Sources */,
+				3979CFF35953050F3A6A76406137EE34 /* UserInfo.swift in Sources */,
+				62C6DFFBBC449B808E6C58539D56C197 /* VerificationLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,7 +944,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -943,7 +955,7 @@
 		};
 		55949ED840DC30472B65D752798E06D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 181F497247AA04708188654CB1545EA2 /* CivicConnect.xcconfig */;
+			baseConfigurationReference = EDF79FA3445342B1429FE801FF5E19EE /* CivicConnect.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CivicConnect";
@@ -959,7 +971,7 @@
 		};
 		587650AF75AE9221020A6A95838A03E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 181F497247AA04708188654CB1545EA2 /* CivicConnect.xcconfig */;
+			baseConfigurationReference = EDF79FA3445342B1429FE801FF5E19EE /* CivicConnect.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1055,7 +1067,7 @@
 		};
 		7792E3A24CA4DD11CD062FA10DAF9567 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 181F497247AA04708188654CB1545EA2 /* CivicConnect.xcconfig */;
+			baseConfigurationReference = EDF79FA3445342B1429FE801FF5E19EE /* CivicConnect.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CivicConnect";
@@ -1165,7 +1177,7 @@
 		};
 		D72D5EFDB1893DEB286A9C640A09227A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 181F497247AA04708188654CB1545EA2 /* CivicConnect.xcconfig */;
+			baseConfigurationReference = EDF79FA3445342B1429FE801FF5E19EE /* CivicConnect.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1187,7 +1199,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

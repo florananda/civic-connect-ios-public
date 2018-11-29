@@ -29,5 +29,13 @@ public class MockConnectDelegate: NSObject, ConnectDelegate, CCConnectDelegate {
     public func connectDidChangeStatus(_ newStatus: ConnectStatus) {
         lastStatus = newStatus
     }
+
+    var lastToken: String?
+    var shouldFetchUserData: Bool = true
+
+    public func connectShouldFetchUserData(withToken token: String) -> Bool {
+        lastToken = token
+        return shouldFetchUserData
+    }
     
 }
