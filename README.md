@@ -141,6 +141,7 @@ The delegate is the way the library communicates back to the partner via the fol
 | `func connectDidFailWithError(_ error: ConnectError)` | This method is fired off when an error occurs inside the `ConnectSession` due to service errors, session errors, etc. |
 | `func connectDidFinishWithUserId(_ userId: String, andUserInfo userInfo: [UserInfo])` | This method is fired off when the `ConnectSession` has retrieved the user data from the servers. |
 | `func connectDidChangeStatus(_ newStatus: ConnectStatus)` | This method is fired off when the state of the `ConnectSession` changes. It provides an easy way to know what is happening in the background. |
+| `func connectShouldFetchUserData(withToken token: String) -> Bool` | This method is fired off when the `ConnectSession` receives the JWT token from the server. At this point we ask the delegate whether we should continue to fetch the user data using the JWT token. Returning true will allow the `ConnectSession` to retrieve the user data, while false ends the session. For Swift this method is implmemented by default and returns true through the use of extensions. |
 
 After connecting with Civic, a `ConnectSession` is created to handle the connection between the partner app and Civic. Once the `ConnectSession` is created, you have two ways of handling the session. Either handling the `URL` that was used to open the partner app via the `Connect.handle(url:)` method or by calling the `Connect.startPollingForUserData()` method. These methods will be described below.
 
@@ -319,6 +320,10 @@ It means you have supplied the incorrect Application Identifier. Please ensure y
 ### What does it mean when I get `Unauthorized: mobileId not found in partner platform list`?
 
 It means you have not supplied the correct Bundle ID or have not configured your mobile application on the [Integration Portal](https://integrate.civic.com/login).
+
+### How do I just retrieve the JWT token so that I can handle the user data on my side?
+
+In order to retrieve the JWT token only, in your implementation for the `ConnectDelegate`, implement the `func connectShouldFetchUserData(withToken token: String) -> Bool` function and return false. The `token` provided in that function is the JWT token and can be handled by whichever way needed.
 
 ## Author
 
