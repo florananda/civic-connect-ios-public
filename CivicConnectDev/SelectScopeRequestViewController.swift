@@ -50,12 +50,14 @@ class SelectScopeRequestViewController: UIViewController {
                                                      ScopeRequestData(type: .proofOfResidence),
                                                      ScopeRequestData(type: .proofOfIdentity),
                                                      ScopeRequestData(type: .proofOfAge)]
-    private let callback: (ScopeRequestType) -> Void
+    private let callback: (ScopeRequestType, Bool) -> Void
     
     private let titleLabel = UILabel()
     private let tableView = UITableView(frame: .zero, style: .plain)
+    private let tokenOnlyLabel = UILabel()
+    private let tokenSwitch = UISwitch()
     
-    init(callback: @escaping (ScopeRequestType) -> Void) {
+    init(callback: @escaping (ScopeRequestType, Bool) -> Void) {
         self.callback = callback
         super.init(nibName: .none, bundle: .none)
     }
@@ -77,6 +79,15 @@ class SelectScopeRequestViewController: UIViewController {
         titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+
+        tokenOnlyLabel.translatesAutoresizingMaskIntoConstraints = false
+        tokenOnlyLabel.text = "Only retrieve JWT token?"
+        tokenOnlyLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        tokenOnlyLabel.textColor = .white
+        view.addSubview(tokenOnlyLabel)
+        tokenOnlyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
+        tokenOnlyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+        tokenOnlyLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32).isActive = true
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(SubtitleCell.self, forCellReuseIdentifier: "Cell")
@@ -88,7 +99,14 @@ class SelectScopeRequestViewController: UIViewController {
         tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 32).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: tokenOnlyLabel.bottomAnchor, constant: -32).isActive = true
+
+        tokenSwitch.translatesAutoresizingMaskIntoConstraints = false
+        tokenSwitch.isOn = false
+        tokenSwitch.onTintColor = .white
+        view.addSubview(tokenSwitch)
+        tokenSwitch.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+        tokenSwitch.centerYAnchor.constraint(equalTo: tokenOnlyLabel.centerYAnchor).isActive = true
     }
     
     private func setupBackground() {
@@ -129,7 +147,7 @@ extension SelectScopeRequestViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let scopeRequest = scopeRequests[indexPath.row]
-        callback(scopeRequest.type)
+        callback(scopeRequest.type, tokenSwitch.isOn)
         navigationController?.popViewController(animated: true)
     }
 

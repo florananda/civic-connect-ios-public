@@ -39,6 +39,7 @@ class LoginViewController: UIViewController, ConnectDelegate {
     let createdLabel = UILabel()
     
     var scopeRequestType: ScopeRequestType = .basicSignup
+    var tokenOnly: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +111,7 @@ class LoginViewController: UIViewController, ConnectDelegate {
     
     private func setupScopeRequestLabel() {
         scopeRequestLabel.translatesAutoresizingMaskIntoConstraints = false
-        scopeRequestLabel.text = convertToString(from: scopeRequestType)
+        scopeRequestLabel.text = convertToString(from: scopeRequestType, tokenOnly: tokenOnly)
         scopeRequestLabel.font = UIFont.systemFont(ofSize: 10)
         scopeRequestLabel.textColor = .white
         scopeRequestLabel.textAlignment = .center
@@ -123,7 +124,7 @@ class LoginViewController: UIViewController, ConnectDelegate {
     
     private func setupScopeRequestButton() {
         scopeRequestButton.translatesAutoresizingMaskIntoConstraints = false
-        scopeRequestButton.setTitle("Change Scope Request Type", for: .normal)
+        scopeRequestButton.setTitle("Settings", for: .normal)
         scopeRequestButton.setTitleColor(.white, for: .normal)
         scopeRequestButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 10)
         scopeRequestButton.titleLabel?.textAlignment = .center
@@ -173,28 +174,36 @@ class LoginViewController: UIViewController, ConnectDelegate {
     }
     
     @objc private func changeScopeRequestButtonTapped() {
-        let selection = SelectScopeRequestViewController { newScopeRequestType in
+        let selection = SelectScopeRequestViewController { newScopeRequestType, tokenOnly in
             self.scopeRequestType = newScopeRequestType
+            self.tokenOnly = tokenOnly
             self.connectButton.setType(newScopeRequestType)
-            self.scopeRequestLabel.text = self.convertToString(from: newScopeRequestType)
+            self.scopeRequestLabel.text = self.convertToString(from: newScopeRequestType, tokenOnly: tokenOnly)
         }
         
         navigationController?.pushViewController(selection, animated: true)
     }
     
-    private func convertToString(from scopeRequestType: ScopeRequestType) -> String {
+    private func convertToString(from scopeRequestType: ScopeRequestType, tokenOnly: Bool) -> String {
+        var scopeRequestString: String
         switch scopeRequestType {
         case .basicSignup:
-            return "Basic Signup"
+            scopeRequestString = "Basic Signup"
         case .anonymousLogin:
-            return "Anonymous Login"
+            scopeRequestString = "Anonymous Login"
         case .proofOfResidence:
-            return "Proof of Residence"
+            scopeRequestString = "Proof of Residence"
         case .proofOfIdentity:
-            return "Proof of Identity"
+            scopeRequestString = "Proof of Identity"
         case .proofOfAge:
-            return "Proof of Age"
+            scopeRequestString = "Proof of Age"
         }
+
+        if tokenOnly {
+            scopeRequestString += " (Token Only)"
+        }
+
+        return scopeRequestString
     }
     
     ////////////////////////////////////////////////////////////////////////
@@ -225,6 +234,10 @@ class LoginViewController: UIViewController, ConnectDelegate {
             status = "...authorized and retrieving data..."
         }
         statusLabel.text = status
+    }
+
+    func connectShouldFetchUserData(withToken token: String) -> Bool {
+        return !tokenOnly
     }
     ////////////////////////////////////////////////////////////////////////
     
