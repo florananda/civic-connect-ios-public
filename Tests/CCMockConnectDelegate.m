@@ -22,4 +22,9 @@
     self.lastStatus = newStatus;
 }
 
+- (BOOL)connectShouldFetchUserDataWithToken:(NSString *)token {
+    self.lastToken = token;
+    return self.shouldFetchUserData;
+}
+
 @end

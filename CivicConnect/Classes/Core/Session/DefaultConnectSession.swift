@@ -161,9 +161,13 @@ private extension DefaultConnectSession {
     func getUserData(_ timer: AsyncTimer) {
         do {
             let authCodeResponse = try getAuthCode(withUUID: response?.uuid)
-            let encryptedUserDataResponse = try getEncryptedUserData(withAuthCodeResponse: authCodeResponse)
-            let userData = try verifyAndDecryptUserData(withEncryptedUserDataResponse: encryptedUserDataResponse)
-            sendSuccessFeeback(withUserData: userData)
+            try handleAuthCodeStatusCode(authCodeResponse.statusCode)
+            if let token = authCodeResponse.authResponse,
+                delegate?.connectShouldFetchUserData(withToken: token) ?? false {
+                let encryptedUserDataResponse = try getEncryptedUserData(withAuthCodeResponse: authCodeResponse)
+                let userData = try verifyAndDecryptUserData(withEncryptedUserDataResponse: encryptedUserDataResponse)
+                sendSuccessFeeback(withUserData: userData)
+            }
         } catch let error as ConnectError where error.statusCode == 202 {
             return
         } catch let error as ConnectError {
@@ -191,7 +195,6 @@ private extension DefaultConnectSession {
         guard let jwtToken = response.authResponse,
             let action = response.action,
             let type = response.type else {
-                try handleAuthCodeStatusCode(response.statusCode)
                 throw ConnectError.authenticationUnknownError
         }
         
