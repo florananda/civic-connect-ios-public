@@ -57,7 +57,7 @@ Before being able to use the library, you will need to initialize it with the co
 | ---- | -------- | ----------- |
 | Application Identifier | Yes | Identifier used to identify the third party. |
 | Mobile Application Identifier | Yes | Identifier used by the mobile app. |
-| Secret | Yes | Secret provided to the partner via the Integration Portal. |
+| Secret | No | Secret provided to the partner via the Integration Portal. Optional if you just require the JWT token. |
 | Redirect Scheme | No | Scheme used to open the third party app. (This requires the third party to add a `URL Types` scheme in the `Info.plist` file. |
 
 ##### Swift
@@ -80,14 +80,14 @@ A convenient way to initialize the library is to load the fields via the `Info.p
 
 ##### Swift
 ```swift
-let connect = try Connect.initialize(withBundle: Bundle.main)
+let connect = try Connect.initialize(withBundle: Bundle.main, secret: <INSERT SECRET HERE>)
 ```
 
 ##### Objective-C
 ```objc
 NSError *error;
 NSBundle *bundle = [NSBundle mainBundle];
-CCConnect *connect = [CCConnect initializeWithBundle:bundle error:&error];
+CCConnect *connect = [CCConnect initializeWithBundle:bundle secret:<INSERT SECRET HERE> error:&error];
 ```
 
 The library will look through the `Info.plist` to find the following fields:
@@ -96,7 +96,7 @@ The library will look through the `Info.plist` to find the following fields:
 | ---- | ---- | -------- |
 | CFBundleIdentifier (Bundle Identifier - By default this should already exist) | `String` | Yes |
 | CivicApplicationIdentifier | `String` | Yes |
-| CivicSecret | `String` | Yes |
+| CivicSecret *deprecated | `String` | Yes |
 | CivicRedirectScheme | `String` | No |
 
 Please note: `CivicRedirectScheme` requires you to add a `URL Type` to the `Info.plist` with an identifier and at least one scheme. The scheme needs to be equal to the `CivicRedirectScheme` field.
@@ -277,6 +277,7 @@ The following table shows the potential errors that can occur via the library:
 | scopeRequestTimeOut | 925 | Scope request timed out. |
 | verificationFailed | 931 | Failed to verify the response. |
 | decryptionFailed | 932 | Failed to decrypt response data. |
+| secretNotFound | 933 | Cannot find secret. Please ensure you provide the library with a valid secret. |
 | decodingFailed | 997 | Failed to decode the json to an object. |
 | authenticationUnknownError | 998 | Unknown authentication error. |
 | unknown | 999 | Unknown error. |
