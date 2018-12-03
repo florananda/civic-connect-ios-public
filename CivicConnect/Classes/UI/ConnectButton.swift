@@ -207,5 +207,14 @@ extension ConnectButton: ConnectDelegate {
     public func connectDidChangeStatus(_ newStatus: ConnectStatus) {
         delegate?.connectDidChangeStatus(newStatus)
     }
+
+    public func connectShouldFetchUserData(withToken token: String) -> Bool {
+        let shouldFetchUserData = delegate?.connectShouldFetchUserData(withToken: token) ?? false
+        if !shouldFetchUserData {
+            buttonState = previousState
+        }
+
+        return shouldFetchUserData
+    }
     
 }

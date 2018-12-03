@@ -237,6 +237,10 @@ class LoginViewController: UIViewController, ConnectDelegate {
     }
 
     func connectShouldFetchUserData(withToken token: String) -> Bool {
+        if tokenOnly {
+            statusLabel.text = token
+        }
+
         return !tokenOnly
     }
     ////////////////////////////////////////////////////////////////////////
