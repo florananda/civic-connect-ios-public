@@ -17,70 +17,42 @@
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
       "line": 14,
-      "symbol": "ConnectBundle.secret",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 15,
       "symbol": "ConnectBundle.redirectScheme",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 16,
+      "line": 15,
       "symbol": "ConnectBundle.urlSchemes",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 17,
-      "symbol": "ConnectBundle.devMode",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 23,
+      "line": 21,
       "symbol": "Bundle.applicationIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 28,
+      "line": 26,
       "symbol": "Bundle.mobileApplicationIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 33,
-      "symbol": "Bundle.secret",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 38,
+      "line": 31,
       "symbol": "Bundle.redirectScheme",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 43,
+      "line": 36,
       "symbol": "Bundle.urlSchemes",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/justinguedes/Work/Civic/code/ios/connect/CivicConnect/Classes/Core/Bundle/ConnectBundle.swift",
-      "line": 59,
-      "symbol": "Bundle.devMode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
