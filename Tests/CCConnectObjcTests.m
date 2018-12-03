@@ -36,7 +36,7 @@
                                                                           urlSchemes:nil];
     
     NSError *error;
-    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle error:&error];
+    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle secret:nil error:&error];
     
     XCTAssertNil(error);
     XCTAssertNotNil(serviceUnderTest);
@@ -50,7 +50,7 @@
                                                                           urlSchemes:nil];
     
     NSError *error;
-    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle error:&error];
+    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle secret:nil error:&error];
     
     XCTAssertNotNil(error);
     XCTAssertNil(serviceUnderTest);
@@ -64,13 +64,13 @@
                                                                           urlSchemes:nil];
     
     NSError *error;
-    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle error:&error];
+    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle secret:nil error:&error];
     
     XCTAssertNotNil(error);
     XCTAssertNil(serviceUnderTest);
 }
 
-- (void)testShouldThrowErrorWhenInitializingConnectWithBundleThatReturnsNilSecret {
+- (void)testShouldThrowErrorWhenInitializingConnectWithBundleThatReturnsNilSecretUsingDeprecatedInitialize {
     id<CCConnectBundle> bundle = [[CCTestBundle alloc] initWithApplicationIdentifier:@"applicationIdentifier"
                                                          mobileApplicationIdentifier:@"com.civic.connect.sample"
                                                                               secret:nil
@@ -92,7 +92,7 @@
                                                                           urlSchemes:@[]];
     
     NSError *error;
-    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle error:&error];
+    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle secret:nil error:&error];
     
     XCTAssertNotNil(error);
     XCTAssertNil(serviceUnderTest);
@@ -106,7 +106,7 @@
                                                                           urlSchemes:@[@"two", @"three"]];
     
     NSError *error;
-    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle error:&error];
+    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle secret:nil error:&error];
     
     XCTAssertNotNil(error);
     XCTAssertNil(serviceUnderTest);
@@ -120,7 +120,7 @@
                                                                           urlSchemes:@[@"one", @"two", @"three"]];
     
     NSError *error;
-    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle error:&error];
+    CCConnect *serviceUnderTest = [CCConnect initializeWithBundle:bundle secret:nil error:&error];
     
     XCTAssertNil(error);
     XCTAssertNotNil(serviceUnderTest);

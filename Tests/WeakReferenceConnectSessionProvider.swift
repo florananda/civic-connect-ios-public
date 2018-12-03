@@ -18,7 +18,7 @@ class WeakReferenceConnectSessionProvider: CivicConnect.ConnectSessionProvider {
         self.session = session
     }
 
-    func create(withApplicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?) -> CivicConnect.ConnectSession {
+    func create(withApplicationIdentifier: String, mobileApplicationIdentifier: String, secret: String?, redirectScheme: String?) -> CivicConnect.ConnectSession {
         return session!
     }
     

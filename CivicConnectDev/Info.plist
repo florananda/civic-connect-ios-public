@@ -37,8 +37,6 @@
 	<string>&lt;INSERT HERE&gt;</string>
 	<key>CivicRedirectScheme</key>
 	<string>civicconnectlink</string>
-	<key>CivicSecret</key>
-	<string>&lt;INSERT HERE&gt;</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

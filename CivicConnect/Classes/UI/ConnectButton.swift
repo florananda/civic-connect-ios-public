@@ -76,8 +76,8 @@ enum ConnectButtonState {
     ///   - bundle: `ConnectBundle` instance to create the `Connect` instance.
     ///   - type: The type of scope request for the button.
     ///   - delegate: The delegate for the session.
-    public convenience init(_ bundle: ConnectBundle, type: ScopeRequestType = .basicSignup, delegate: ConnectDelegate) throws {
-        let connect = try Connect.initialize(withBundle: bundle)
+    public convenience init(_ bundle: ConnectBundle, secret: String?, type: ScopeRequestType = .basicSignup, delegate: ConnectDelegate) throws {
+        let connect = try Connect.initialize(withBundle: bundle, secret: secret)
         self.init(connect, type: type, delegate: delegate)
     }
     

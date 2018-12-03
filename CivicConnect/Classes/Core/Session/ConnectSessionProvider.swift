@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ConnectSessionProvider {
-    func create(withApplicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?) -> ConnectSession
+    func create(withApplicationIdentifier: String, mobileApplicationIdentifier: String, secret: String?, redirectScheme: String?) -> ConnectSession
 }

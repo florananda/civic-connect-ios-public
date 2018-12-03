@@ -28,7 +28,7 @@ extension Bundle: ConnectBundle {
         let bundleIdentifierKey = kCFBundleIdentifierKey as String
         return infoDictionary?[bundleIdentifierKey] as? String
     }
-    
+
     public var secret: String? {
         let secretKey = "CivicSecret"
         return infoDictionary?[secretKey] as? String

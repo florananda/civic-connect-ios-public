@@ -450,6 +450,35 @@ class DefaultConnectSessionTests: XCTestCase {
         XCTAssertEqual(ConnectError.decodingFailed, mockDelegate.lastError)
         XCTAssertNil(serviceUnderTest.pollingTimer)
     }
+
+    func testShouldThrowErrorWhenPollingForUserDataAndSecretNotProvided() {
+        let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 0)
+        let authCodeResponse = CivicConnect.GetAuthCodeResponse(authResponse: "jwtToken", statusCode: 200, message: .none, action: .dataDispatched, type: .code)
+        let userDataResponse = CivicConnect.GetEncryptedUserDataResponse(encryptedData: "e80d4ef4b549bb60f7f2518e3b0fba048fc62989dadb5b7148f619ba75",
+                                                                         iv: "cca4a8fe0ed3abb05567dee851fe1249",
+                                                                         publicKey: "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXQ28DvvV4pQAsesoVfaUQ2A38\nr4AxuQl0ZtJ3daDTmxI52X8yGg9f4ch0XO8R6mYgriIbDTWwvAomDvx3eVXG512K\nu2Ig2omi63lMACSCe+2IZlxqd0OUtqlWaaouoRLFmxPhCyIFZjRAvjke9I9S+drI\n5cDpgphPbIaYV+MBiQIDAQAB\n-----END PUBLIC KEY-----",
+                                                                         signature: "6f31ebd6d3bf58baa070340789569a97375ced6c978273fbc6b897aa27374f27e45f4d061bbaab668f8810bd89468b07d4636292d7dfc962217dffa8fd96febd6b929f7714926bd722e82942b9c4cba56948d5b51ef57e2270a5e13d2b2cf2c1cbb4f41a2317f3b7b69e3de59c49467c2583b515be3a2b52b210f3c5f128a0e0")
+
+        let mockDelegate = MockConnectDelegate()
+        let mockService = MockConnectService()
+        let serviceUnderTest = CivicConnect.DefaultConnectSession(applicationIdentifier: applicationIdentifier,
+                                                                  mobileApplicationIdentifier: mobileApplicationIdentifier,
+                                                                  secret: nil,
+                                                                  redirectScheme: redirectScheme,
+                                                                  service: mockService)
+        serviceUnderTest.delegate = mockDelegate
+        serviceUnderTest.response = response
+
+        mockService.getAuthCodeRequestResult = authCodeResponse
+        mockService.getUserDataRequestResult = userDataResponse
+
+        serviceUnderTest.startPollingForUserData()
+        mockAsyncRunner.fireOffTimer()
+
+        XCTAssertNil(mockDelegate.lastUserData)
+        XCTAssertEqual(ConnectError.secretNotFound, mockDelegate.lastError)
+        XCTAssertNil(serviceUnderTest.pollingTimer)
+    }
     
     func testShouldThrowErrorWhenPollingForUserDataAndGetAuthCodeFails() {
         let response = CivicConnect.GetScopeRequestResponse(scopeRequestString: "test", uuid: "uuid", isTest: true, status: 0, timeout: 0)

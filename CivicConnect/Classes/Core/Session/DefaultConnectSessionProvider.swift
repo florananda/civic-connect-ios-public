@@ -9,7 +9,7 @@ import Foundation
 
 class DefaultConnectSessionProvider: ConnectSessionProvider {
     
-    func create(withApplicationIdentifier applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?) -> ConnectSession {
+    func create(withApplicationIdentifier applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String?, redirectScheme: String?) -> ConnectSession {
         return DefaultConnectSession(applicationIdentifier: applicationIdentifier, mobileApplicationIdentifier: mobileApplicationIdentifier, secret: secret, redirectScheme: redirectScheme)
     }
     
