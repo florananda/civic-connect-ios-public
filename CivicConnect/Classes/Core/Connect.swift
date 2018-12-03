@@ -30,7 +30,6 @@ private func getSecretFrom(bundle: ConnectBundle) throws -> String {
 
     return secret
 }
-
 private func getRedirectSchemeFrom(bundle: ConnectBundle) throws -> String? {
     guard let redirectScheme = bundle.redirectScheme else {
         return .none
@@ -50,13 +49,13 @@ public class Connect: NSObject {
     
     private let applicationIdentifier: String
     private let mobileApplicationIdentifier: String
-    private let secret: String
+    private let secret: String?
     private let redirectScheme: String?
     
     private let sessionProvider: ConnectSessionProvider
     private var session: ConnectSession?
     
-    init(sessionProvider: ConnectSessionProvider, applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?) {
+    init(sessionProvider: ConnectSessionProvider, applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String?, redirectScheme: String?) {
         self.sessionProvider = sessionProvider
         self.applicationIdentifier = applicationIdentifier
         self.mobileApplicationIdentifier = mobileApplicationIdentifier
@@ -69,25 +68,41 @@ public class Connect: NSObject {
     /// - Parameters:
     ///   - applicationIdentifier: The identifier that Civic provided to the partner.
     ///   - mobileApplicationIdentifier: The identifier of the partner app (the bundle identifier).
-    ///   - secret: The secret provided from the integration portal.
+    ///   - secret: The secret provided from the integration portal. Optional if you just require the
+    ///             JWT token.
     ///   - redirectScheme: An optional scheme that the Civic app will use to redirect to the partner app.
-    @objc public convenience init(applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?) {
+    @objc public convenience init(applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String?, redirectScheme: String?) {
         self.init(sessionProvider: DefaultConnectSessionProvider(),
                   applicationIdentifier: applicationIdentifier,
                   mobileApplicationIdentifier: mobileApplicationIdentifier,
                   secret: secret,
                   redirectScheme: redirectScheme)
     }
-    
+
     /// A convenience method that takes in a `Bundle` to construct the Connect class.
     ///
     /// - Parameter bundle: A bundle that provides the application, mobile identifiers.
     /// - Throws: Either a ConnectError.cannotFindApplicationId or ConnectError.cannotFindBundleId depending on
     ///           which field it cannot find.
+    @available(*, deprecated, message: "Rather use `initialize(withBundle:secret:)`. Loading the secret from `Info.plist` is not secure.")
     @objc public static func initialize(withBundle bundle: ConnectBundle) throws -> Connect {
         let applicationIdentifier = try getApplicationIdentifierFrom(bundle: bundle)
         let mobileApplicationIdentifier = try getMobileApplicationIdentifierFrom(bundle: bundle)
         let secret = try getSecretFrom(bundle: bundle)
+        let redirectScheme = try getRedirectSchemeFrom(bundle: bundle)
+        return Connect(applicationIdentifier: applicationIdentifier, mobileApplicationIdentifier: mobileApplicationIdentifier, secret: secret, redirectScheme: redirectScheme)
+    }
+    
+    /// A convenience method that takes in a `Bundle` to construct the Connect class.
+    ///
+    /// - Parameter bundle: A bundle that provides the application, mobile identifiers.
+    /// - Parameter secret: The secret provided from the integration portal. Optional if you just require the
+    ///                     JWT token.
+    /// - Throws: Either a ConnectError.cannotFindApplicationId or ConnectError.cannotFindBundleId depending on
+    ///           which field it cannot find.
+    @objc public static func initialize(withBundle bundle: ConnectBundle, secret: String?) throws -> Connect {
+        let applicationIdentifier = try getApplicationIdentifierFrom(bundle: bundle)
+        let mobileApplicationIdentifier = try getMobileApplicationIdentifierFrom(bundle: bundle)
         let redirectScheme = try getRedirectSchemeFrom(bundle: bundle)
         return Connect(applicationIdentifier: applicationIdentifier, mobileApplicationIdentifier: mobileApplicationIdentifier, secret: secret, redirectScheme: redirectScheme)
     }

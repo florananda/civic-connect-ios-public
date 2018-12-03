@@ -57,6 +57,7 @@ extension ConnectError {
     
     static let verificationFailed = ConnectError(statusCode: 931, message: "Failed to verify the response.")
     static let decryptionFailed = ConnectError(statusCode: 932, message: "Failed to decrypt response data.")
+    static let secretNotFound = ConnectError(statusCode: 933, message: "Cannot find secret. Please ensure you provide the library with a valid secret.")
     
     // General Errors
     

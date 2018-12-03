@@ -16,7 +16,7 @@ class DefaultConnectSession: ConnectSession {
     
     private let applicationIdentifier: String
     private let mobileApplicationIdentifier: String
-    private let secret: String
+    private let secret: String?
     private let redirectScheme: String?
     
     weak var delegate: ConnectDelegate?
@@ -28,7 +28,7 @@ class DefaultConnectSession: ConnectSession {
     var pollingTimer: AsyncTimer?
     var timeOutTimer: AsyncTimer?
     
-    init(applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?, launcher: Launcher = UIApplicationLauncher(), service: ConnectService = ConnectServiceImplementation()) {
+    init(applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String?, redirectScheme: String?, launcher: Launcher = UIApplicationLauncher(), service: ConnectService = ConnectServiceImplementation()) {
         self.applicationIdentifier = applicationIdentifier
         self.mobileApplicationIdentifier = mobileApplicationIdentifier
         self.secret = secret
@@ -238,7 +238,11 @@ private extension DefaultConnectSession {
         guard ConnectSecurity.verifyHexString(response.encryptedData, usingPublicKey: response.publicKey, signature: response.signature) else {
             throw ConnectError.verificationFailed
         }
-        
+
+        guard let secret = secret else {
+            throw ConnectError.secretNotFound
+        }
+
         guard let decryptedData = ConnectSecurity.decryptHexString(response.encryptedData, usingSecret: secret, iv: response.iv) else {
             throw ConnectError.decryptionFailed
         }

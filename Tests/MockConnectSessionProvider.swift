@@ -18,7 +18,7 @@ import Foundation
     var lastRedirectScheme: String?
     var createResult: CivicConnect.ConnectSession?
     
-    public func create(withApplicationIdentifier applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String, redirectScheme: String?) -> CivicConnect.ConnectSession {
+    public func create(withApplicationIdentifier applicationIdentifier: String, mobileApplicationIdentifier: String, secret: String?, redirectScheme: String?) -> CivicConnect.ConnectSession {
         lastApplicationIdentifier = applicationIdentifier
         lastMobileApplicationIdentifier = mobileApplicationIdentifier
         lastSecret = secret
