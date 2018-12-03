@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           CivicConnect Docs
         </a>
-         (81% documented)
+         (83% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -172,8 +172,8 @@ it, simply add the following line to your Podfile:</p>
 </tr>
 <tr>
 <td>Secret</td>
-<td>Yes</td>
-<td>Secret provided to the partner via the Integration Portal.</td>
+<td>No</td>
+<td>Secret provided to the partner via the Integration Portal. Optional if you just require the JWT token.</td>
 </tr>
 <tr>
 <td>Redirect Scheme</td>
@@ -196,12 +196,12 @@ it, simply add the following line to your Podfile:</p>
 
 <p>A convenient way to initialize the library is to load the fields via the <code>Info.plist</code>:</p>
 <h5 id='swift' class='heading'>Swift</h5>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">connect</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Connect</span><span class="o">.</span><span class="nf">initialize</span><span class="p">(</span><span class="nv">withBundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">connect</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Connect</span><span class="o">.</span><span class="nf">initialize</span><span class="p">(</span><span class="nv">withBundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">secret</span><span class="p">:</span> <span class="o">&lt;</span><span class="kt">INSERT</span> <span class="kt">SECRET</span> <span class="kt">HERE</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
 <h5 id='objective-c' class='heading'>Objective-C</h5>
 <pre class="highlight objective_c"><code><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span>
 <span class="n">NSBundle</span> <span class="o">*</span><span class="n">bundle</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSBundle</span> <span class="nf">mainBundle</span><span class="p">];</span>
-<span class="n">CCConnect</span> <span class="o">*</span><span class="n">connect</span> <span class="o">=</span> <span class="p">[</span><span class="n">CCConnect</span> <span class="nf">initializeWithBundle</span><span class="p">:</span><span class="n">bundle</span> <span class="nf">error</span><span class="p">:</span><span class="o">&amp;</span><span class="n">error</span><span class="p">];</span>
+<span class="n">CCConnect</span> <span class="o">*</span><span class="n">connect</span> <span class="o">=</span> <span class="p">[</span><span class="n">CCConnect</span> <span class="nf">initializeWithBundle</span><span class="p">:</span><span class="n">bundle</span> <span class="nf">secret</span><span class="p">:</span><span class="o">&lt;</span><span class="n">INSERT</span> <span class="n">SECRET</span> <span class="n">HERE</span><span class="o">&gt;</span> <span class="n">error</span><span class="o">:&amp;</span><span class="n">error</span><span class="p">];</span>
 </code></pre>
 
 <p>The library will look through the <code>Info.plist</code> to find the following fields:</p>
@@ -224,7 +224,7 @@ it, simply add the following line to your Podfile:</p>
 <td>Yes</td>
 </tr>
 <tr>
-<td>CivicSecret</td>
+<td>CivicSecret *deprecated</td>
 <td><code>String</code></td>
 <td>Yes</td>
 </tr>
@@ -326,6 +326,10 @@ it, simply add the following line to your Podfile:</p>
 <tr>
 <td><code>func connectDidChangeStatus(_ newStatus: ConnectStatus)</code></td>
 <td>This method is fired off when the state of the <code>ConnectSession</code> changes. It provides an easy way to know what is happening in the background.</td>
+</tr>
+<tr>
+<td><code>func connectShouldFetchUserData(withToken token: String) -&gt; Bool</code></td>
+<td>This method is fired off when the <code>ConnectSession</code> receives the JWT token from the server. At this point we ask the delegate whether we should continue to fetch the user data using the JWT token. Returning true will allow the <code>ConnectSession</code> to retrieve the user data, while false ends the session. For Swift this method is implmemented by default and returns true through the use of extensions.</td>
 </tr>
 </tbody></table>
 
@@ -499,6 +503,11 @@ it, simply add the following line to your Podfile:</p>
 <td>Failed to decrypt response data.</td>
 </tr>
 <tr>
+<td>secretNotFound</td>
+<td>933</td>
+<td>Cannot find secret. Please ensure you provide the library with a valid secret.</td>
+</tr>
+<tr>
 <td>decodingFailed</td>
 <td>997</td>
 <td>Failed to decode the json to an object.</td>
@@ -581,6 +590,9 @@ it, simply add the following line to your Podfile:</p>
 <h3 id='what-does-it-mean-when-i-get-code-unauthorized-mobileid-not-found-in-partner-platform-list-code' class='heading'>What does it mean when I get <code>Unauthorized: mobileId not found in partner platform list</code>?</h3>
 
 <p>It means you have not supplied the correct Bundle ID or have not configured your mobile application on the <a href="https://integrate.civic.com/login">Integration Portal</a>.</p>
+<h3 id='how-do-i-just-retrieve-the-jwt-token-so-that-i-can-handle-the-user-data-on-my-side' class='heading'>How do I just retrieve the JWT token so that I can handle the user data on my side?</h3>
+
+<p>In order to retrieve the JWT token only, in your implementation for the <code><a href="Protocols/ConnectDelegate.html">ConnectDelegate</a></code>, implement the <code>func connectShouldFetchUserData(withToken token: String) -&gt; Bool</code> function and return false. The <code>token</code> provided in that function is the JWT token and can be handled by whichever way needed.</p>
 <h2 id='author' class='heading'>Author</h2>
 
 <p>See also the list of <a href="https://github.com/civicteam/ios-civic-connect/contributors">contributors</a> who participated in this project.</p>
@@ -598,7 +610,7 @@ it, simply add the following line to your Podfile:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://civic.com/" target="_blank" rel="external">Civic Technologies</a>. All rights reserved. (Last updated: 2018-11-27)</p>
+      <p>&copy; 2018 <a class="link" href="https://civic.com/" target="_blank" rel="external">Civic Technologies</a>. All rights reserved. (Last updated: 2018-12-03)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

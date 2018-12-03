@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           CivicConnect Docs
         </a>
-         (81% documented)
+         (83% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -147,7 +147,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">applicationIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">mobileApplicationIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">secret</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">redirectScheme</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">applicationIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">mobileApplicationIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">secret</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">redirectScheme</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -187,7 +187,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The secret provided from the integration portal.</p>
+                                  <p>The secret provided from the integration portal. Optional if you just require the
+    JWT token.</p>
                                 </div>
                               </td>
                             </tr>
@@ -235,7 +236,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "Rather use `initialize(withBundle:secret:﹚`. Loading the secret from `Info.plist` is not secure.")</span>
+<span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">withBundle</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConnectBundle.html">ConnectBundle</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Connect</span></code></pre>
 
                         </div>
@@ -253,6 +255,72 @@
                               <td>
                                 <div>
                                   <p>A bundle that provides the application, mobile identifiers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CivicConnect@objc(cs)CCConnect(cm)initializeWithBundle:secret:error:"></a>
+                    <a name="//apple_ref/swift/Method/initialize(withBundle:secret:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CivicConnect@objc(cs)CCConnect(cm)initializeWithBundle:secret:error:">initialize(withBundle:secret:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience method that takes in a <code>Bundle</code> to construct the Connect class.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Either a ConnectError.cannotFindApplicationId or ConnectError.cannotFindBundleId depending on
+      which field it cannot find.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">withBundle</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConnectBundle.html">ConnectBundle</a></span><span class="p">,</span> <span class="nv">secret</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Connect</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bundle that provides the application, mobile identifiers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The secret provided from the integration portal. Optional if you just require the
+                JWT token.</p>
                                 </div>
                               </td>
                             </tr>
@@ -515,7 +583,7 @@ type. (Should only be available to Swift)</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://civic.com/" target="_blank" rel="external">Civic Technologies</a>. All rights reserved. (Last updated: 2018-11-27)</p>
+      <p>&copy; 2018 <a class="link" href="https://civic.com/" target="_blank" rel="external">Civic Technologies</a>. All rights reserved. (Last updated: 2018-12-03)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
