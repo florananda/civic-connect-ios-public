@@ -162,12 +162,7 @@ private extension DefaultConnectSession {
         do {
             let authCodeResponse = try getAuthCode(withUUID: response?.uuid)
             try handleAuthCodeStatusCode(authCodeResponse.statusCode)
-            if let token = authCodeResponse.authResponse,
-                delegate?.connectShouldFetchUserData(withToken: token) ?? false {
-                let encryptedUserDataResponse = try getEncryptedUserData(withAuthCodeResponse: authCodeResponse)
-                let userData = try verifyAndDecryptUserData(withEncryptedUserDataResponse: encryptedUserDataResponse)
-                sendSuccessFeeback(withUserData: userData)
-            }
+            checkIfShouldFetchUserData(usingAuthCodeResponse: authCodeResponse, andExecute: getUserData(withAuthCodeResponse:))
         } catch let error as ConnectError where error.statusCode == 202 {
             return
         } catch let error as ConnectError {
@@ -176,9 +171,22 @@ private extension DefaultConnectSession {
             let connectError = ConnectError(error: error)
             sendErrorFeedback(connectError)
         }
-        
+
         timer.invalidate()
         self.pollingTimer = nil
+    }
+
+    func getUserData(withAuthCodeResponse authCodeResponse: GetAuthCodeResponse) {
+        do {
+            let encryptedUserDataResponse = try getEncryptedUserData(withAuthCodeResponse: authCodeResponse)
+            let userData = try verifyAndDecryptUserData(withEncryptedUserDataResponse: encryptedUserDataResponse)
+            sendSuccessFeeback(withUserData: userData)
+        } catch let error as ConnectError {
+            sendErrorFeedback(error)
+        } catch {
+            let connectError = ConnectError(error: error)
+            sendErrorFeedback(connectError)
+        }
     }
     
     func getAuthCode(withUUID uuid: String?) throws -> GetAuthCodeResponse {
@@ -189,6 +197,17 @@ private extension DefaultConnectSession {
         sendStatusFeedback(.authorizing)
         let request = GetAuthCodeRequest(uuid: uuid)
         return try service.getAuthCode(request)
+    }
+
+    func checkIfShouldFetchUserData(usingAuthCodeResponse authCodeResponse: GetAuthCodeResponse, andExecute execution: @escaping (GetAuthCodeResponse) -> Void) {
+        AsynchronousProvider.runOnMain { [weak self] in
+            if let token = authCodeResponse.authResponse,
+                self?.delegate?.connectShouldFetchUserData(withToken: token) ?? false {
+                AsynchronousProvider.runInBackground {
+                    execution(authCodeResponse)
+                }
+            }
+        }
     }
     
     func getEncryptedUserData(withAuthCodeResponse response: GetAuthCodeResponse) throws -> GetEncryptedUserDataResponse {
