@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CivicConnect'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = 'An easy way to integrate your iOS app with the Civic Secure Identity App.'
   s.description      = <<-DESC
 This library allows your iOS application to connect with the Civic Secure Identity App to authenticate users for specific information. More description coming soon.
